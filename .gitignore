@@ -87,3 +87,7 @@ Media
 Music/
 Pictures/
 Videos/
+Mail
+.config/syncthing
+.vim_mru_files
+.recordingpid

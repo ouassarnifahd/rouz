@@ -1,0 +1,75 @@
+[general]
+accounts = hotmail, gmail, ensicaen, ensicaen
+#starttls = yes
+ssl = yes
+pythonfile = ~/.config/mutt/credentials/imappwd.py
+
+[Account hotmail]
+localrepository = hotmail-local
+remoterepository = hotmail-remote
+
+[Repository hotmail-remote]
+auth_mechanisms = LOGIN
+type = IMAP
+remoteuser = ouassarnifahd@hotmail.com
+remotepasseval = mailpasswd("hotmail")
+remotehost = imap-mail.outlook.com
+remoteport = 993
+sslcacertfile = /etc/ssl/certs/ca-certificates.crt
+
+[Repository hotmail-local]
+type = Maildir
+localfolders = ~/Mail/hotmail
+
+[Account gmail]
+localrepository = gmail-local
+remoterepository = gmail-remote
+
+[Repository gmail-remote]
+auth_mechanisms = LOGIN
+type = Gmail
+remoteuser = ouss.fahd.1996@gmail.com
+remotepasseval = mailpasswd("gmail")
+remoteport = 993
+folderfilter = lambda foldername: foldername not in ['[Gmail]/All Mail']
+sslcacertfile = /etc/ssl/certs/ca-certificates.crt
+ssl_version = tls1_2
+
+[Repository gmail-local]
+type = Maildir
+localfolders = ~/Mail/gmail
+
+[Account ensicaen]
+localrepository = ensicaen-local
+remoterepository = ensicaen-remote
+
+[Repository ensicaen-remote]
+auth_mechanisms = LOGIN
+type = IMAP
+remoteuser = ouassarni@ecole.ensicaen.fr
+remotepasseval = mailpasswd("ensicaen")
+remotehost = smtp.ensicaen.fr
+remoteport = 993
+sslcacertfile = /etc/ssl/certs/ca-certificates.crt
+
+[Repository ensicaen-local]
+type = Maildir
+localfolders = ~/Mail/ensicaen
+
+[Account ensicaen]
+localrepository = ensicaen-local
+remoterepository = ensicaen-remote
+
+[Repository ensicaen-remote]
+auth_mechanisms = LOGIN
+type = IMAP
+remoteuser = ouassarni@ecole.ensicaen.fr
+remotepasseval = mailpasswd("ensicaen")
+remotehost = smtp.ensicaen.fr
+remoteport = 993
+ssl=no
+#sslcacertfile = /etc/ssl/certs/ca-certificates.crt
+
+[Repository ensicaen-local]
+type = Maildir
+localfolders = ~/Mail/ensicaen
