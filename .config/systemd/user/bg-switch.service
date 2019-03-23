@@ -1,0 +1,10 @@
+[Unit]
+Description=Switch background
+ 
+[Service]
+Type=oneshot
+Environment=DISPLAY=:0
+ExecStart=/usr/bin/bash /home/kalinka/.bg_switcher
+ 
+#[Install]
+#WantedBy=basic.target                                                        

@@ -1,0 +1,461 @@
+time 1542634488
+new [description:"Thales" due:"1543186800" entry:"1542634488" modified:"1542634488" scheduled:"1543100400" status:"pending" uuid:"55efc79a-89c6-4da8-82ad-55ebe2f6e4f0"]
+---
+time 1542643238
+new [description:"Learning Unix-like OSes" due:"2147382000" entry:"1542643238" modified:"1542643238" priority:"M" recur:"daily" status:"recurring" uuid:"a57eeb71-4c70-4f6b-990c-52f87f64a14d"]
+---
+time 1542643244
+new [description:"Learning Unix-like OSes" due:"2147382000" entry:"1542643244" imask:"0" modified:"1542643238" parent:"a57eeb71-4c70-4f6b-990c-52f87f64a14d" priority:"M" recur:"daily" status:"pending" uuid:"f6bee4e1-679e-443d-9dd8-d1985a2ea5b9"]
+---
+time 1542643244
+old [description:"Learning Unix-like OSes" due:"2147382000" entry:"1542643238" modified:"1542643238" priority:"M" recur:"daily" status:"recurring" uuid:"a57eeb71-4c70-4f6b-990c-52f87f64a14d"]
+new [description:"Learning Unix-like OSes" due:"2147382000" entry:"1542643238" mask:"-" modified:"1542643244" priority:"M" recur:"daily" status:"recurring" uuid:"a57eeb71-4c70-4f6b-990c-52f87f64a14d"]
+---
+time 1542643846
+old [description:"Thales" due:"1543186800" entry:"1542634488" modified:"1542634488" scheduled:"1543100400" status:"pending" uuid:"55efc79a-89c6-4da8-82ad-55ebe2f6e4f0"]
+new [description:"Thales id =" due:"1543186800" entry:"1542634488" modified:"1542643846" priority:"H" scheduled:"1543100400" status:"pending" uuid:"55efc79a-89c6-4da8-82ad-55ebe2f6e4f0"]
+---
+time 1542643893
+old [description:"Thales id =" due:"1543186800" entry:"1542634488" modified:"1542643846" priority:"H" scheduled:"1543100400" status:"pending" uuid:"55efc79a-89c6-4da8-82ad-55ebe2f6e4f0"]
+new [description:"Thales id =" due:"1543186800" end:"1542643891" entry:"1542634488" modified:"1542643893" priority:"H" scheduled:"1543100400" status:"deleted" uuid:"55efc79a-89c6-4da8-82ad-55ebe2f6e4f0"]
+---
+time 1542643968
+new [description:"Thales Project\n" due:"1543186800" entry:"1542643968" modified:"1542643968" priority:"H" recur:"weekly" status:"recurring" uuid:"690880b6-1b95-497f-ac10-0270684f3abf"]
+---
+time 1542643973
+new [description:"Thales Project\n" due:"1543186800" entry:"1542643973" imask:"0" modified:"1542643968" parent:"690880b6-1b95-497f-ac10-0270684f3abf" priority:"H" recur:"weekly" status:"pending" uuid:"669dbec6-44fe-40c3-bba2-07d4ef0070fe"]
+---
+time 1542643973
+old [description:"Thales Project\n" due:"1543186800" entry:"1542643968" modified:"1542643968" priority:"H" recur:"weekly" status:"recurring" uuid:"690880b6-1b95-497f-ac10-0270684f3abf"]
+new [description:"Thales Project\n" due:"1543186800" entry:"1542643968" mask:"-" modified:"1542643973" priority:"H" recur:"weekly" status:"recurring" uuid:"690880b6-1b95-497f-ac10-0270684f3abf"]
+---
+time 1542644478
+old [description:"Learning Unix-like OSes" due:"2147382000" entry:"1542643238" mask:"-" modified:"1542643244" priority:"M" recur:"daily" status:"recurring" uuid:"a57eeb71-4c70-4f6b-990c-52f87f64a14d"]
+new [description:"Learning Unix-like OSes" due:"2147382000" entry:"1542643238" mask:"X" modified:"1542644478" priority:"M" recur:"daily" status:"recurring" uuid:"a57eeb71-4c70-4f6b-990c-52f87f64a14d"]
+---
+time 1542644478
+old [description:"Learning Unix-like OSes" due:"2147382000" entry:"1542643244" imask:"0" modified:"1542643238" parent:"a57eeb71-4c70-4f6b-990c-52f87f64a14d" priority:"M" recur:"daily" status:"pending" uuid:"f6bee4e1-679e-443d-9dd8-d1985a2ea5b9"]
+new [description:"Learning Unix-like OSes" due:"2147382000" end:"1542644476" entry:"1542643244" imask:"0" modified:"1542644478" parent:"a57eeb71-4c70-4f6b-990c-52f87f64a14d" priority:"M" recur:"daily" status:"deleted" uuid:"f6bee4e1-679e-443d-9dd8-d1985a2ea5b9"]
+---
+time 1542644572
+old [description:"Thales Project\n" due:"1543186800" entry:"1542643973" imask:"0" modified:"1542643968" parent:"690880b6-1b95-497f-ac10-0270684f3abf" priority:"H" recur:"weekly" status:"pending" uuid:"669dbec6-44fe-40c3-bba2-07d4ef0070fe"]
+new [description:"Thales Project\n" due:"1543186800" entry:"1542643973" imask:"0" modified:"1542644572" parent:"690880b6-1b95-497f-ac10-0270684f3abf" priority:"H" recur:"weekly" start:"1542644572" status:"pending" uuid:"669dbec6-44fe-40c3-bba2-07d4ef0070fe"]
+---
+time 1542644869
+new [description:"Adding some sense to my work\/life" entry:"1542644869" modified:"1542644869" project:"work" status:"pending" tags:"work,GTD" uuid:"30c3bb37-ec4e-43d9-89e4-e1084eaa095b"]
+---
+time 1542655925
+old [description:"Thales Project\n" due:"1543186800" entry:"1542643973" imask:"0" modified:"1542644572" parent:"690880b6-1b95-497f-ac10-0270684f3abf" priority:"H" recur:"weekly" start:"1542644572" status:"pending" uuid:"669dbec6-44fe-40c3-bba2-07d4ef0070fe"]
+new [description:"Thales Project\n" due:"1543186800" entry:"1542643973" imask:"0" modified:"1542655925" parent:"690880b6-1b95-497f-ac10-0270684f3abf" priority:"H" project:"Thales" recur:"weekly" start:"1542644572" status:"pending" uuid:"669dbec6-44fe-40c3-bba2-07d4ef0070fe"]
+---
+time 1542655931
+old [description:"Thales Project\n" due:"1543186800" entry:"1542643968" mask:"-" modified:"1542643973" priority:"H" recur:"weekly" status:"recurring" uuid:"690880b6-1b95-497f-ac10-0270684f3abf"]
+new [description:"Thales Project\n" due:"1543186800" entry:"1542643968" mask:"-" modified:"1542655931" priority:"H" project:"Thales" recur:"weekly" status:"recurring" uuid:"690880b6-1b95-497f-ac10-0270684f3abf"]
+---
+time 1542754922
+new [description:"Quest from Scratch" entry:"1542754922" modified:"1542754922" project:"Linux" status:"pending" tags:"Linux,Hobby,work" uuid:"d306c475-5e54-4448-8eb1-de3d26931f58"]
+---
+time 1542754992
+old [description:"Quest from Scratch" entry:"1542754922" modified:"1542754922" project:"Linux" status:"pending" tags:"Linux,Hobby,work" uuid:"d306c475-5e54-4448-8eb1-de3d26931f58"]
+new [description:"Linux from Scratch" entry:"1542754922" modified:"1542754992" project:"Linux" status:"pending" tags:"Linux,Hobby,work" uuid:"d306c475-5e54-4448-8eb1-de3d26931f58"]
+---
+time 1542755044
+old [description:"Adding some sense to my work\/life" entry:"1542644869" modified:"1542644869" project:"work" status:"pending" tags:"work,GTD" uuid:"30c3bb37-ec4e-43d9-89e4-e1084eaa095b"]
+new [description:"Adding some sense to my work\/life" entry:"1542644869" modified:"1542755044" project:"Work" status:"pending" tags:"work,GTD" uuid:"30c3bb37-ec4e-43d9-89e4-e1084eaa095b"]
+---
+time 1542755070
+old [description:"Linux from Scratch" entry:"1542754922" modified:"1542754992" project:"Linux" status:"pending" tags:"Linux,Hobby,work" uuid:"d306c475-5e54-4448-8eb1-de3d26931f58"]
+new [description:"Linux from Scratch" entry:"1542754922" modified:"1542755070" project:"Linux" start:"1542755070" status:"pending" tags:"Linux,Hobby,work" uuid:"d306c475-5e54-4448-8eb1-de3d26931f58"]
+---
+time 1543321229
+new [description:"Thales Project\n" due:"1543791600" entry:"1543321229" imask:"1" modified:"1542655931" parent:"690880b6-1b95-497f-ac10-0270684f3abf" priority:"H" project:"Thales" recur:"weekly" status:"pending" uuid:"73a9a37b-dd03-4ceb-94f5-c2520e514269"]
+---
+time 1543321229
+old [description:"Thales Project\n" due:"1543186800" entry:"1542643968" mask:"-" modified:"1542655931" priority:"H" project:"Thales" recur:"weekly" status:"recurring" uuid:"690880b6-1b95-497f-ac10-0270684f3abf"]
+new [description:"Thales Project\n" due:"1543186800" entry:"1542643968" mask:"--" modified:"1543321229" priority:"H" project:"Thales" recur:"weekly" status:"recurring" uuid:"690880b6-1b95-497f-ac10-0270684f3abf"]
+---
+time 1543321369
+new [description:"Website" due:"1546297199" entry:"1543321369" modified:"1543321369" project:"TODO" status:"pending" uuid:"5630242e-5265-4612-be1c-da00296f2feb"]
+---
+time 1543321389
+new [description:"CV\/Resume" due:"1546297199" entry:"1543321389" modified:"1543321389" project:"TODO" status:"pending" uuid:"5fd25dcc-5ebd-471e-836c-5bdcceccc11c"]
+---
+time 1543321405
+old [description:"Thales Project\n" due:"1543186800" entry:"1542643973" imask:"0" modified:"1542655925" parent:"690880b6-1b95-497f-ac10-0270684f3abf" priority:"H" project:"Thales" recur:"weekly" start:"1542644572" status:"pending" uuid:"669dbec6-44fe-40c3-bba2-07d4ef0070fe"]
+new [description:"Thales Project\n" due:"1543186800" entry:"1542643973" imask:"0" modified:"1543321405" parent:"690880b6-1b95-497f-ac10-0270684f3abf" priority:"H" project:"Thales" recur:"weekly" status:"pending" uuid:"669dbec6-44fe-40c3-bba2-07d4ef0070fe"]
+---
+time 1543321416
+old [description:"Thales Project\n" due:"1543186800" entry:"1542643968" mask:"--" modified:"1543321229" priority:"H" project:"Thales" recur:"weekly" status:"recurring" uuid:"690880b6-1b95-497f-ac10-0270684f3abf"]
+new [description:"Thales Project\n" due:"1543186800" entry:"1542643968" mask:"+-" modified:"1543321416" priority:"H" project:"Thales" recur:"weekly" status:"recurring" uuid:"690880b6-1b95-497f-ac10-0270684f3abf"]
+---
+time 1543321416
+old [description:"Thales Project\n" due:"1543186800" entry:"1542643973" imask:"0" modified:"1543321405" parent:"690880b6-1b95-497f-ac10-0270684f3abf" priority:"H" project:"Thales" recur:"weekly" status:"pending" uuid:"669dbec6-44fe-40c3-bba2-07d4ef0070fe"]
+new [description:"Thales Project\n" due:"1543186800" end:"1543321416" entry:"1542643973" imask:"0" modified:"1543321416" parent:"690880b6-1b95-497f-ac10-0270684f3abf" priority:"H" project:"Thales" recur:"weekly" status:"completed" uuid:"669dbec6-44fe-40c3-bba2-07d4ef0070fe"]
+---
+time 1543321434
+old [description:"Linux from Scratch" entry:"1542754922" modified:"1542755070" project:"Linux" start:"1542755070" status:"pending" tags:"Linux,Hobby,work" uuid:"d306c475-5e54-4448-8eb1-de3d26931f58"]
+new [description:"Linux from Scratch" end:"1543321434" entry:"1542754922" modified:"1543321434" project:"Linux" status:"completed" tags:"Linux,Hobby,work" uuid:"d306c475-5e54-4448-8eb1-de3d26931f58"]
+---
+time 1543321471
+old [description:"Thales Project\n" due:"1543791600" entry:"1543321229" imask:"1" modified:"1542655931" parent:"690880b6-1b95-497f-ac10-0270684f3abf" priority:"H" project:"Thales" recur:"weekly" status:"pending" uuid:"73a9a37b-dd03-4ceb-94f5-c2520e514269"]
+new [description:"Thales Project\n" due:"1543791600" entry:"1543321229" imask:"1" modified:"1543321471" parent:"690880b6-1b95-497f-ac10-0270684f3abf" priority:"H" project:"Thales" recur:"weekly" start:"1543321471" status:"pending" uuid:"73a9a37b-dd03-4ceb-94f5-c2520e514269"]
+---
+time 1543321509
+old [description:"CV\/Resume" due:"1546297199" entry:"1543321389" modified:"1543321389" project:"TODO" status:"pending" uuid:"5fd25dcc-5ebd-471e-836c-5bdcceccc11c"]
+new [description:"CV\/Resume" due:"1546297199" entry:"1543321389" modified:"1543321509" priority:"H" project:"TODO" status:"pending" uuid:"5fd25dcc-5ebd-471e-836c-5bdcceccc11c"]
+---
+time 1543321519
+old [description:"Website" due:"1546297199" entry:"1543321369" modified:"1543321369" project:"TODO" status:"pending" uuid:"5630242e-5265-4612-be1c-da00296f2feb"]
+new [description:"Website" due:"1546297199" entry:"1543321369" modified:"1543321519" priority:"M" project:"TODO" status:"pending" uuid:"5630242e-5265-4612-be1c-da00296f2feb"]
+---
+time 1543321531
+old [description:"Website" due:"1546297199" entry:"1543321369" modified:"1543321519" priority:"M" project:"TODO" status:"pending" uuid:"5630242e-5265-4612-be1c-da00296f2feb"]
+new [description:"Website" due:"1546297199" entry:"1543321369" modified:"1543321531" priority:"M" project:"TODO" status:"pending" tags:"work" uuid:"5630242e-5265-4612-be1c-da00296f2feb"]
+---
+time 1543321538
+old [description:"CV\/Resume" due:"1546297199" entry:"1543321389" modified:"1543321509" priority:"H" project:"TODO" status:"pending" uuid:"5fd25dcc-5ebd-471e-836c-5bdcceccc11c"]
+new [description:"CV\/Resume" due:"1546297199" entry:"1543321389" modified:"1543321538" priority:"H" project:"TODO" status:"pending" tags:"work" uuid:"5fd25dcc-5ebd-471e-836c-5bdcceccc11c"]
+---
+time 1543321557
+old [description:"Thales Project\n" due:"1543791600" entry:"1543321229" imask:"1" modified:"1543321471" parent:"690880b6-1b95-497f-ac10-0270684f3abf" priority:"H" project:"Thales" recur:"weekly" start:"1543321471" status:"pending" uuid:"73a9a37b-dd03-4ceb-94f5-c2520e514269"]
+new [description:"Thales Project\n" due:"1543791600" entry:"1543321229" imask:"1" modified:"1543321557" parent:"690880b6-1b95-497f-ac10-0270684f3abf" priority:"H" project:"Thales" recur:"weekly" start:"1543321471" status:"pending" tags:"work" uuid:"73a9a37b-dd03-4ceb-94f5-c2520e514269"]
+---
+time 1543321566
+old [description:"Thales Project\n" due:"1543186800" entry:"1542643968" mask:"+-" modified:"1543321416" priority:"H" project:"Thales" recur:"weekly" status:"recurring" uuid:"690880b6-1b95-497f-ac10-0270684f3abf"]
+new [description:"Thales Project\n" due:"1543186800" entry:"1542643968" mask:"+-" modified:"1543321566" priority:"H" project:"Thales" recur:"weekly" status:"recurring" tags:"work" uuid:"690880b6-1b95-497f-ac10-0270684f3abf"]
+---
+time 1543321583
+old [description:"Thales Project\n" due:"1543791600" entry:"1543321229" imask:"1" modified:"1543321557" parent:"690880b6-1b95-497f-ac10-0270684f3abf" priority:"H" project:"Thales" recur:"weekly" start:"1543321471" status:"pending" tags:"work" uuid:"73a9a37b-dd03-4ceb-94f5-c2520e514269"]
+new [description:"Thales Project\n" due:"1543791600" entry:"1543321229" imask:"1" modified:"1543321583" parent:"690880b6-1b95-497f-ac10-0270684f3abf" priority:"H" project:"Thales" recur:"weekly" status:"pending" tags:"work" uuid:"73a9a37b-dd03-4ceb-94f5-c2520e514269"]
+---
+time 1543321814
+old [description:"Linux from Scratch" end:"1543321434" entry:"1542754922" modified:"1543321434" project:"Linux" status:"completed" tags:"Linux,Hobby,work" uuid:"d306c475-5e54-4448-8eb1-de3d26931f58"]
+new [description:"Linux from Scratch" end:"1543321434" entry:"1542754922" modified:"1543321814" project:"Linux" status:"pending" tags:"Linux,Hobby,work" uuid:"d306c475-5e54-4448-8eb1-de3d26931f58"]
+---
+time 1543321895
+new [description:"setting up mails calcdav etc." due:"1546297199" entry:"1543321895" modified:"1543321895" priority:"M" project:"TODO" status:"pending" uuid:"4bae2122-3d9f-4bdd-a142-fb44014b7bbf"]
+---
+time 1543321928
+old [description:"setting up mails calcdav etc." due:"1546297199" entry:"1543321895" modified:"1543321895" priority:"M" project:"TODO" status:"pending" uuid:"4bae2122-3d9f-4bdd-a142-fb44014b7bbf"]
+new [description:"setting up mails calcdav etc." due:"1546297199" entry:"1543321895" modified:"1543321928" priority:"M" project:"TODO" status:"pending" tags:"work" uuid:"4bae2122-3d9f-4bdd-a142-fb44014b7bbf"]
+---
+time 1543322002
+old [description:"CV\/Resume" due:"1546297199" entry:"1543321389" modified:"1543321538" priority:"H" project:"TODO" status:"pending" tags:"work" uuid:"5fd25dcc-5ebd-471e-836c-5bdcceccc11c"]
+new [description:"CV\/Resume" due:"1546297199" entry:"1543321389" modified:"1543322002" priority:"H" project:"TODO" start:"1543322002" status:"pending" tags:"work" uuid:"5fd25dcc-5ebd-471e-836c-5bdcceccc11c"]
+---
+time 1543341980
+old [description:"CV\/Resume" due:"1546297199" entry:"1543321389" modified:"1543322002" priority:"H" project:"TODO" start:"1543322002" status:"pending" tags:"work" uuid:"5fd25dcc-5ebd-471e-836c-5bdcceccc11c"]
+new [description:"CV\/Resume" due:"1546297199" entry:"1543321389" modified:"1543341980" priority:"H" project:"TODO" status:"pending" tags:"work" uuid:"5fd25dcc-5ebd-471e-836c-5bdcceccc11c"]
+---
+time 1543342024
+old [description:"CV\/Resume" due:"1546297199" entry:"1543321389" modified:"1543341980" priority:"H" project:"TODO" status:"pending" tags:"work" uuid:"5fd25dcc-5ebd-471e-836c-5bdcceccc11c"]
+new [description:"CV\/Resume" due:"1543705199" entry:"1543321389" modified:"1543342024" priority:"H" project:"TODO" status:"pending" tags:"work" uuid:"5fd25dcc-5ebd-471e-836c-5bdcceccc11c"]
+---
+time 1543354455
+new [description:"Device Drivers" entry:"1543354455" modified:"1543354455" project:"Studies" status:"pending" tags:"Linux" uuid:"472da995-1ee5-4335-8ed6-1c72850e20b7"]
+---
+time 1543354481
+old [description:"Device Drivers" entry:"1543354455" modified:"1543354455" project:"Studies" status:"pending" tags:"Linux" uuid:"472da995-1ee5-4335-8ed6-1c72850e20b7"]
+new [description:"Device Drivers" entry:"1543354455" modified:"1543354481" project:"Studies" status:"pending" tags:"Linux,study" uuid:"472da995-1ee5-4335-8ed6-1c72850e20b7"]
+---
+time 1543354493
+old [description:"Device Drivers" entry:"1543354455" modified:"1543354481" project:"Studies" status:"pending" tags:"Linux,study" uuid:"472da995-1ee5-4335-8ed6-1c72850e20b7"]
+new [description:"Device Drivers" entry:"1543354455" modified:"1543354493" priority:"M" project:"Studies" status:"pending" tags:"Linux,study" uuid:"472da995-1ee5-4335-8ed6-1c72850e20b7"]
+---
+time 1543354559
+old [description:"Device Drivers" entry:"1543354455" modified:"1543354493" priority:"M" project:"Studies" status:"pending" tags:"Linux,study" uuid:"472da995-1ee5-4335-8ed6-1c72850e20b7"]
+new [description:"Device Drivers" due:"1543618800" entry:"1543354455" modified:"1543354559" priority:"M" project:"Studies" status:"pending" tags:"Linux,study" uuid:"472da995-1ee5-4335-8ed6-1c72850e20b7"]
+---
+time 1543354617
+old [description:"Device Drivers" due:"1543618800" entry:"1543354455" modified:"1543354559" priority:"M" project:"Studies" status:"pending" tags:"Linux,study" uuid:"472da995-1ee5-4335-8ed6-1c72850e20b7"]
+new [description:"Device Drivers" due:"1545174000" entry:"1543354455" modified:"1543354617" priority:"M" project:"Studies" status:"pending" tags:"Linux,study" uuid:"472da995-1ee5-4335-8ed6-1c72850e20b7"]
+---
+time 1543354682
+old [description:"setting up mails calcdav etc." due:"1546297199" entry:"1543321895" modified:"1543321928" priority:"M" project:"TODO" status:"pending" tags:"work" uuid:"4bae2122-3d9f-4bdd-a142-fb44014b7bbf"]
+new [description:"setting up mails calcdav etc." due:"1543705199" entry:"1543321895" modified:"1543354682" priority:"M" project:"TODO" status:"pending" tags:"work" uuid:"4bae2122-3d9f-4bdd-a142-fb44014b7bbf"]
+---
+time 1543358722
+new [description:"Dotfiles backuptask" due:"1546297199" entry:"1543358722" modified:"1543358722" priority:"L" project:"ArchLinux" status:"pending" tags:"Linux" uuid:"689061d3-060d-4ff9-9ba7-419d9273722d"]
+---
+time 1543864620
+new [description:"Thales Project\n" due:"1544396400" entry:"1543864620" imask:"2" modified:"1543321566" parent:"690880b6-1b95-497f-ac10-0270684f3abf" priority:"H" project:"Thales" recur:"weekly" status:"pending" tags:"work" uuid:"ce7d146d-f851-4efd-8af6-81067584dbc6"]
+---
+time 1543864620
+old [description:"Thales Project\n" due:"1543186800" entry:"1542643968" mask:"+-" modified:"1543321566" priority:"H" project:"Thales" recur:"weekly" status:"recurring" tags:"work" uuid:"690880b6-1b95-497f-ac10-0270684f3abf"]
+new [description:"Thales Project\n" due:"1543186800" entry:"1542643968" mask:"+--" modified:"1543864620" priority:"H" project:"Thales" recur:"weekly" status:"recurring" tags:"work" uuid:"690880b6-1b95-497f-ac10-0270684f3abf"]
+---
+time 1543876192
+old [description:"Thales Project\n" due:"1543186800" entry:"1542643968" mask:"+--" modified:"1543864620" priority:"H" project:"Thales" recur:"weekly" status:"recurring" tags:"work" uuid:"690880b6-1b95-497f-ac10-0270684f3abf"]
+new [description:"Thales Project\n" due:"1543186800" entry:"1542643968" mask:"++-" modified:"1543876192" priority:"H" project:"Thales" recur:"weekly" status:"recurring" tags:"work" uuid:"690880b6-1b95-497f-ac10-0270684f3abf"]
+---
+time 1543876192
+old [description:"Thales Project\n" due:"1543791600" entry:"1543321229" imask:"1" modified:"1543321583" parent:"690880b6-1b95-497f-ac10-0270684f3abf" priority:"H" project:"Thales" recur:"weekly" status:"pending" tags:"work" uuid:"73a9a37b-dd03-4ceb-94f5-c2520e514269"]
+new [description:"Thales Project\n" due:"1543791600" end:"1543876192" entry:"1543321229" imask:"1" modified:"1543876192" parent:"690880b6-1b95-497f-ac10-0270684f3abf" priority:"H" project:"Thales" recur:"weekly" status:"completed" tags:"work" uuid:"73a9a37b-dd03-4ceb-94f5-c2520e514269"]
+---
+time 1544113808
+new [description:"Learn PGP encryption for emails" entry:"1544113808" modified:"1544113808" priority:"M" project:"TODO" status:"pending" tags:"security" uuid:"31b08bd8-ea23-4771-96a3-671a5e0f3642"]
+---
+time 1544113845
+old [description:"CV\/Resume" due:"1543705199" entry:"1543321389" modified:"1543342024" priority:"H" project:"TODO" status:"pending" tags:"work" uuid:"5fd25dcc-5ebd-471e-836c-5bdcceccc11c"]
+new [description:"CV\/Resume" due:"1546297199" entry:"1543321389" modified:"1544113845" priority:"H" project:"TODO" status:"pending" tags:"work" uuid:"5fd25dcc-5ebd-471e-836c-5bdcceccc11c"]
+---
+time 1544119060
+old [description:"setting up mails calcdav etc." due:"1543705199" entry:"1543321895" modified:"1543354682" priority:"M" project:"TODO" status:"pending" tags:"work" uuid:"4bae2122-3d9f-4bdd-a142-fb44014b7bbf"]
+new [description:"setting up mails calcdav etc." due:"1543705199" entry:"1543321895" modified:"1544119060" priority:"M" project:"Work" status:"pending" tags:"mail,sync" uuid:"4bae2122-3d9f-4bdd-a142-fb44014b7bbf"]
+---
+time 1544119156
+old [description:"CV\/Resume" due:"1546297199" entry:"1543321389" modified:"1544113845" priority:"H" project:"TODO" status:"pending" tags:"work" uuid:"5fd25dcc-5ebd-471e-836c-5bdcceccc11c"]
+new [description:"CV\/Resume" due:"1546297199" entry:"1543321389" modified:"1544119156" priority:"H" project:"Personal" status:"pending" tags:"resume" uuid:"5fd25dcc-5ebd-471e-836c-5bdcceccc11c"]
+---
+time 1544119208
+old [description:"Website" due:"1546297199" entry:"1543321369" modified:"1543321531" priority:"M" project:"TODO" status:"pending" tags:"work" uuid:"5630242e-5265-4612-be1c-da00296f2feb"]
+new [description:"Website" due:"1546297199" entry:"1543321369" modified:"1544119208" priority:"M" project:"Personal" status:"pending" tags:"blog,resume" uuid:"5630242e-5265-4612-be1c-da00296f2feb"]
+---
+time 1544119346
+new [description:"Background and desktop animations" entry:"1544119346" modified:"1544119346" project:"ArchLinux" status:"pending" tags:"presentation" uuid:"8610636d-1718-49b8-acf7-6ae2dcc4cb61"]
+---
+time 1544119374
+old [description:"Thales Project\n" due:"1544396400" entry:"1543864620" imask:"2" modified:"1543321566" parent:"690880b6-1b95-497f-ac10-0270684f3abf" priority:"H" project:"Thales" recur:"weekly" status:"pending" tags:"work" uuid:"ce7d146d-f851-4efd-8af6-81067584dbc6"]
+new [description:"Thales Project\n" due:"1544396400" entry:"1543864620" imask:"2" modified:"1544119374" parent:"690880b6-1b95-497f-ac10-0270684f3abf" priority:"H" project:"Work" recur:"weekly" status:"pending" tags:"Thales" uuid:"ce7d146d-f851-4efd-8af6-81067584dbc6"]
+---
+time 1544119377
+old [description:"Thales Project\n" due:"1543186800" entry:"1542643968" mask:"++-" modified:"1543876192" priority:"H" project:"Thales" recur:"weekly" status:"recurring" tags:"work" uuid:"690880b6-1b95-497f-ac10-0270684f3abf"]
+new [description:"Thales Project\n" due:"1543186800" entry:"1542643968" mask:"++-" modified:"1544119377" priority:"H" project:"Work" recur:"weekly" status:"recurring" tags:"Thales" uuid:"690880b6-1b95-497f-ac10-0270684f3abf"]
+---
+time 1544119456
+old [description:"Learn PGP encryption for emails" entry:"1544113808" modified:"1544113808" priority:"M" project:"TODO" status:"pending" tags:"security" uuid:"31b08bd8-ea23-4771-96a3-671a5e0f3642"]
+new [description:"Learn PGP encryption for emails" entry:"1544113808" modified:"1544119456" priority:"M" project:"Personal" status:"pending" tags:"security" uuid:"31b08bd8-ea23-4771-96a3-671a5e0f3642"]
+---
+time 1544119475
+old [description:"Learn PGP encryption for emails" entry:"1544113808" modified:"1544119456" priority:"M" project:"Personal" status:"pending" tags:"security" uuid:"31b08bd8-ea23-4771-96a3-671a5e0f3642"]
+new [description:"Learn PGP encryption for emails" entry:"1544113808" modified:"1544119475" priority:"M" project:"Personal" status:"pending" tags:"security,TODO" uuid:"31b08bd8-ea23-4771-96a3-671a5e0f3642"]
+---
+time 1544119510
+old [description:"setting up mails calcdav etc." due:"1543705199" entry:"1543321895" modified:"1544119060" priority:"M" project:"Work" status:"pending" tags:"mail,sync" uuid:"4bae2122-3d9f-4bdd-a142-fb44014b7bbf"]
+new [description:"setting up mails calcdav etc." due:"1543705199" entry:"1543321895" modified:"1544119510" priority:"M" project:"Work" status:"pending" tags:"mail,sync,TODO" uuid:"4bae2122-3d9f-4bdd-a142-fb44014b7bbf"]
+---
+time 1544119879
+new [description:"Bootchart diapo" due:"1544396400" entry:"1544119879" modified:"1544119879" priority:"H" project:"Work" status:"pending" tags:"Thales" uuid:"cd474389-c1f7-44f6-bd58-742ee0acc39b"]
+---
+time 1544120753
+old [description:"Device Drivers" due:"1545174000" entry:"1543354455" modified:"1543354617" priority:"M" project:"Studies" status:"pending" tags:"Linux,study" uuid:"472da995-1ee5-4335-8ed6-1c72850e20b7"]
+new [description:"Device Drivers" due:"1545174000" entry:"1543354455" modified:"1544120753" priority:"M" project:"Studies" status:"pending" tags:"Linux,homework" uuid:"472da995-1ee5-4335-8ed6-1c72850e20b7"]
+---
+time 1544121254
+new [description:"Bootloader Orange Pi Zero inspection" due:"2147382000" entry:"1544121254" modified:"1544121254" project:"Hobbies" status:"pending" tags:"Linux,DIY" uuid:"01de9cdf-e76a-4809-83de-e778900d5e15"]
+---
+time 1544551845
+new [description:"Thales Project\n" due:"1545001200" entry:"1544551845" imask:"3" modified:"1544119377" parent:"690880b6-1b95-497f-ac10-0270684f3abf" priority:"H" project:"Work" recur:"weekly" status:"pending" tags:"Thales" uuid:"1e08d823-97c5-4a77-af91-fd976269bc05"]
+---
+time 1544551845
+old [description:"Thales Project\n" due:"1543186800" entry:"1542643968" mask:"++-" modified:"1544119377" priority:"H" project:"Work" recur:"weekly" status:"recurring" tags:"Thales" uuid:"690880b6-1b95-497f-ac10-0270684f3abf"]
+new [description:"Thales Project\n" due:"1543186800" entry:"1542643968" mask:"++--" modified:"1544551845" priority:"H" project:"Work" recur:"weekly" status:"recurring" tags:"Thales" uuid:"690880b6-1b95-497f-ac10-0270684f3abf"]
+---
+time 1547218169
+new [description:"Thales Project\n" due:"1545606000" entry:"1547218169" imask:"4" modified:"1544551845" parent:"690880b6-1b95-497f-ac10-0270684f3abf" priority:"H" project:"Work" recur:"weekly" status:"pending" tags:"Thales" uuid:"37795824-c95c-4704-9837-4fca6862efd6"]
+---
+time 1547218169
+new [description:"Thales Project\n" due:"1546210800" entry:"1547218169" imask:"5" modified:"1544551845" parent:"690880b6-1b95-497f-ac10-0270684f3abf" priority:"H" project:"Work" recur:"weekly" status:"pending" tags:"Thales" uuid:"e1defba4-726b-4cbc-b10e-aae9fa47c160"]
+---
+time 1547218169
+new [description:"Thales Project\n" due:"1546815600" entry:"1547218169" imask:"6" modified:"1544551845" parent:"690880b6-1b95-497f-ac10-0270684f3abf" priority:"H" project:"Work" recur:"weekly" status:"pending" tags:"Thales" uuid:"1b3a5da6-2271-4743-a2a4-f7bac1626099"]
+---
+time 1547218169
+new [description:"Thales Project\n" due:"1547420400" entry:"1547218169" imask:"7" modified:"1544551845" parent:"690880b6-1b95-497f-ac10-0270684f3abf" priority:"H" project:"Work" recur:"weekly" status:"pending" tags:"Thales" uuid:"67a4c856-6a91-41ab-8a03-96b4013be851"]
+---
+time 1547218169
+old [description:"Thales Project\n" due:"1543186800" entry:"1542643968" mask:"++--" modified:"1544551845" priority:"H" project:"Work" recur:"weekly" status:"recurring" tags:"Thales" uuid:"690880b6-1b95-497f-ac10-0270684f3abf"]
+new [description:"Thales Project\n" due:"1543186800" entry:"1542643968" mask:"++------" modified:"1547218169" priority:"H" project:"Work" recur:"weekly" status:"recurring" tags:"Thales" uuid:"690880b6-1b95-497f-ac10-0270684f3abf"]
+---
+time 1547218207
+old [description:"Thales Project\n" due:"1543186800" entry:"1542643968" mask:"++------" modified:"1547218169" priority:"H" project:"Work" recur:"weekly" status:"recurring" tags:"Thales" uuid:"690880b6-1b95-497f-ac10-0270684f3abf"]
+new [description:"Thales Project\n" due:"1543186800" entry:"1542643968" mask:"+++-----" modified:"1547218207" priority:"H" project:"Work" recur:"weekly" status:"recurring" tags:"Thales" uuid:"690880b6-1b95-497f-ac10-0270684f3abf"]
+---
+time 1547218207
+old [description:"Thales Project\n" due:"1544396400" entry:"1543864620" imask:"2" modified:"1544119374" parent:"690880b6-1b95-497f-ac10-0270684f3abf" priority:"H" project:"Work" recur:"weekly" status:"pending" tags:"Thales" uuid:"ce7d146d-f851-4efd-8af6-81067584dbc6"]
+new [description:"Thales Project\n" due:"1544396400" end:"1547218207" entry:"1543864620" imask:"2" modified:"1547218207" parent:"690880b6-1b95-497f-ac10-0270684f3abf" priority:"H" project:"Work" recur:"weekly" status:"completed" tags:"Thales" uuid:"ce7d146d-f851-4efd-8af6-81067584dbc6"]
+---
+time 1547218215
+old [description:"Bootchart diapo" due:"1544396400" entry:"1544119879" modified:"1544119879" priority:"H" project:"Work" status:"pending" tags:"Thales" uuid:"cd474389-c1f7-44f6-bd58-742ee0acc39b"]
+new [description:"Bootchart diapo" due:"1544396400" end:"1547218215" entry:"1544119879" modified:"1547218215" priority:"H" project:"Work" status:"completed" tags:"Thales" uuid:"cd474389-c1f7-44f6-bd58-742ee0acc39b"]
+---
+time 1547218229
+old [description:"Thales Project\n" due:"1543186800" entry:"1542643968" mask:"+++-----" modified:"1547218207" priority:"H" project:"Work" recur:"weekly" status:"recurring" tags:"Thales" uuid:"690880b6-1b95-497f-ac10-0270684f3abf"]
+new [description:"Thales Project\n" due:"1543186800" entry:"1542643968" mask:"++++----" modified:"1547218229" priority:"H" project:"Work" recur:"weekly" status:"recurring" tags:"Thales" uuid:"690880b6-1b95-497f-ac10-0270684f3abf"]
+---
+time 1547218229
+old [description:"Thales Project\n" due:"1545001200" entry:"1544551845" imask:"3" modified:"1544119377" parent:"690880b6-1b95-497f-ac10-0270684f3abf" priority:"H" project:"Work" recur:"weekly" status:"pending" tags:"Thales" uuid:"1e08d823-97c5-4a77-af91-fd976269bc05"]
+new [description:"Thales Project\n" due:"1545001200" end:"1547218229" entry:"1544551845" imask:"3" modified:"1547218229" parent:"690880b6-1b95-497f-ac10-0270684f3abf" priority:"H" project:"Work" recur:"weekly" status:"completed" tags:"Thales" uuid:"1e08d823-97c5-4a77-af91-fd976269bc05"]
+---
+time 1547218239
+old [description:"Thales Project\n" due:"1543186800" entry:"1542643968" mask:"++++----" modified:"1547218229" priority:"H" project:"Work" recur:"weekly" status:"recurring" tags:"Thales" uuid:"690880b6-1b95-497f-ac10-0270684f3abf"]
+new [description:"Thales Project\n" due:"1543186800" entry:"1542643968" mask:"+++++---" modified:"1547218239" priority:"H" project:"Work" recur:"weekly" status:"recurring" tags:"Thales" uuid:"690880b6-1b95-497f-ac10-0270684f3abf"]
+---
+time 1547218239
+old [description:"Thales Project\n" due:"1545606000" entry:"1547218169" imask:"4" modified:"1544551845" parent:"690880b6-1b95-497f-ac10-0270684f3abf" priority:"H" project:"Work" recur:"weekly" status:"pending" tags:"Thales" uuid:"37795824-c95c-4704-9837-4fca6862efd6"]
+new [description:"Thales Project\n" due:"1545606000" end:"1547218239" entry:"1547218169" imask:"4" modified:"1547218239" parent:"690880b6-1b95-497f-ac10-0270684f3abf" priority:"H" project:"Work" recur:"weekly" status:"completed" tags:"Thales" uuid:"37795824-c95c-4704-9837-4fca6862efd6"]
+---
+time 1547218252
+old [description:"Thales Project\n" due:"1543186800" entry:"1542643968" mask:"+++++---" modified:"1547218239" priority:"H" project:"Work" recur:"weekly" status:"recurring" tags:"Thales" uuid:"690880b6-1b95-497f-ac10-0270684f3abf"]
+new [description:"Thales Project\n" due:"1543186800" entry:"1542643968" mask:"++++++--" modified:"1547218252" priority:"H" project:"Work" recur:"weekly" status:"recurring" tags:"Thales" uuid:"690880b6-1b95-497f-ac10-0270684f3abf"]
+---
+time 1547218252
+old [description:"Thales Project\n" due:"1546210800" entry:"1547218169" imask:"5" modified:"1544551845" parent:"690880b6-1b95-497f-ac10-0270684f3abf" priority:"H" project:"Work" recur:"weekly" status:"pending" tags:"Thales" uuid:"e1defba4-726b-4cbc-b10e-aae9fa47c160"]
+new [description:"Thales Project\n" due:"1546210800" end:"1547218252" entry:"1547218169" imask:"5" modified:"1547218252" parent:"690880b6-1b95-497f-ac10-0270684f3abf" priority:"H" project:"Work" recur:"weekly" status:"completed" tags:"Thales" uuid:"e1defba4-726b-4cbc-b10e-aae9fa47c160"]
+---
+time 1547218252
+old [description:"Thales Project\n" due:"1543186800" entry:"1542643968" mask:"++++++--" modified:"1547218252" priority:"H" project:"Work" recur:"weekly" status:"recurring" tags:"Thales" uuid:"690880b6-1b95-497f-ac10-0270684f3abf"]
+new [description:"Thales Project\n" due:"1543186800" entry:"1542643968" mask:"+++++++-" modified:"1547218252" priority:"H" project:"Work" recur:"weekly" status:"recurring" tags:"Thales" uuid:"690880b6-1b95-497f-ac10-0270684f3abf"]
+---
+time 1547218252
+old [description:"Thales Project\n" due:"1546815600" entry:"1547218169" imask:"6" modified:"1544551845" parent:"690880b6-1b95-497f-ac10-0270684f3abf" priority:"H" project:"Work" recur:"weekly" status:"pending" tags:"Thales" uuid:"1b3a5da6-2271-4743-a2a4-f7bac1626099"]
+new [description:"Thales Project\n" due:"1546815600" end:"1547218252" entry:"1547218169" imask:"6" modified:"1547218252" parent:"690880b6-1b95-497f-ac10-0270684f3abf" priority:"H" project:"Work" recur:"weekly" status:"completed" tags:"Thales" uuid:"1b3a5da6-2271-4743-a2a4-f7bac1626099"]
+---
+time 1547218311
+old [description:"Device Drivers" due:"1545174000" entry:"1543354455" modified:"1544120753" priority:"M" project:"Studies" status:"pending" tags:"Linux,homework" uuid:"472da995-1ee5-4335-8ed6-1c72850e20b7"]
+new [description:"Device Drivers" due:"1547679600" entry:"1543354455" modified:"1547218311" priority:"M" project:"Studies" status:"pending" tags:"Linux,homework" uuid:"472da995-1ee5-4335-8ed6-1c72850e20b7"]
+---
+time 1548195511
+new [description:"Thales Project\n" due:"1548025200" entry:"1548195511" imask:"8" modified:"1547218252" parent:"690880b6-1b95-497f-ac10-0270684f3abf" priority:"H" project:"Work" recur:"weekly" status:"pending" tags:"Thales" uuid:"8746c163-4899-45b0-bbbd-631798dd45b9"]
+---
+time 1548195511
+new [description:"Thales Project\n" due:"1548630000" entry:"1548195511" imask:"9" modified:"1547218252" parent:"690880b6-1b95-497f-ac10-0270684f3abf" priority:"H" project:"Work" recur:"weekly" status:"pending" tags:"Thales" uuid:"96ea4392-8d77-49dd-9bb2-27c8d28e1e5b"]
+---
+time 1548195511
+old [description:"Thales Project\n" due:"1543186800" entry:"1542643968" mask:"+++++++-" modified:"1547218252" priority:"H" project:"Work" recur:"weekly" status:"recurring" tags:"Thales" uuid:"690880b6-1b95-497f-ac10-0270684f3abf"]
+new [description:"Thales Project\n" due:"1543186800" entry:"1542643968" mask:"+++++++---" modified:"1548195511" priority:"H" project:"Work" recur:"weekly" status:"recurring" tags:"Thales" uuid:"690880b6-1b95-497f-ac10-0270684f3abf"]
+---
+time 1548195602
+old [description:"Device Drivers" due:"1547679600" entry:"1543354455" modified:"1547218311" priority:"M" project:"Studies" status:"pending" tags:"Linux,homework" uuid:"472da995-1ee5-4335-8ed6-1c72850e20b7"]
+new [description:"Device Drivers" due:"1547679600" end:"1548195598" entry:"1543354455" modified:"1548195602" priority:"M" project:"Studies" status:"completed" tags:"Linux,homework" uuid:"472da995-1ee5-4335-8ed6-1c72850e20b7"]
+---
+time 1548195617
+old [description:"Thales Project\n" due:"1543186800" entry:"1542643968" mask:"+++++++---" modified:"1548195511" priority:"H" project:"Work" recur:"weekly" status:"recurring" tags:"Thales" uuid:"690880b6-1b95-497f-ac10-0270684f3abf"]
+new [description:"Thales Project\n" due:"1543186800" entry:"1542643968" mask:"++++++++--" modified:"1548195617" priority:"H" project:"Work" recur:"weekly" status:"recurring" tags:"Thales" uuid:"690880b6-1b95-497f-ac10-0270684f3abf"]
+---
+time 1548195617
+old [description:"Thales Project\n" due:"1547420400" entry:"1547218169" imask:"7" modified:"1544551845" parent:"690880b6-1b95-497f-ac10-0270684f3abf" priority:"H" project:"Work" recur:"weekly" status:"pending" tags:"Thales" uuid:"67a4c856-6a91-41ab-8a03-96b4013be851"]
+new [description:"Thales Project\n" due:"1547420400" end:"1548195602" entry:"1547218169" imask:"7" modified:"1548195617" parent:"690880b6-1b95-497f-ac10-0270684f3abf" priority:"H" project:"Work" recur:"weekly" status:"completed" tags:"Thales" uuid:"67a4c856-6a91-41ab-8a03-96b4013be851"]
+---
+time 1548195619
+old [description:"Thales Project\n" due:"1543186800" entry:"1542643968" mask:"++++++++--" modified:"1548195617" priority:"H" project:"Work" recur:"weekly" status:"recurring" tags:"Thales" uuid:"690880b6-1b95-497f-ac10-0270684f3abf"]
+new [description:"Thales Project\n" due:"1543186800" entry:"1542643968" mask:"+++++++++-" modified:"1548195619" priority:"H" project:"Work" recur:"weekly" status:"recurring" tags:"Thales" uuid:"690880b6-1b95-497f-ac10-0270684f3abf"]
+---
+time 1548195619
+old [description:"Thales Project\n" due:"1548025200" entry:"1548195511" imask:"8" modified:"1547218252" parent:"690880b6-1b95-497f-ac10-0270684f3abf" priority:"H" project:"Work" recur:"weekly" status:"pending" tags:"Thales" uuid:"8746c163-4899-45b0-bbbd-631798dd45b9"]
+new [description:"Thales Project\n" due:"1548025200" end:"1548195617" entry:"1548195511" imask:"8" modified:"1548195619" parent:"690880b6-1b95-497f-ac10-0270684f3abf" priority:"H" project:"Work" recur:"weekly" status:"completed" tags:"Thales" uuid:"8746c163-4899-45b0-bbbd-631798dd45b9"]
+---
+time 1552323576
+new [description:"Thales Project\n" due:"1549234800" entry:"1552323576" imask:"10" modified:"1548195619" parent:"690880b6-1b95-497f-ac10-0270684f3abf" priority:"H" project:"Work" recur:"weekly" status:"pending" tags:"Thales" uuid:"87ad6f72-4805-473d-a0cf-f7e218a49a65"]
+---
+time 1552323576
+new [description:"Thales Project\n" due:"1549839600" entry:"1552323576" imask:"11" modified:"1548195619" parent:"690880b6-1b95-497f-ac10-0270684f3abf" priority:"H" project:"Work" recur:"weekly" status:"pending" tags:"Thales" uuid:"b3d4af46-7259-4476-bacd-06a8f6c52d23"]
+---
+time 1552323576
+new [description:"Thales Project\n" due:"1550444400" entry:"1552323576" imask:"12" modified:"1548195619" parent:"690880b6-1b95-497f-ac10-0270684f3abf" priority:"H" project:"Work" recur:"weekly" status:"pending" tags:"Thales" uuid:"8334e3c8-4423-49a4-801a-827d46d502b2"]
+---
+time 1552323576
+new [description:"Thales Project\n" due:"1551049200" entry:"1552323576" imask:"13" modified:"1548195619" parent:"690880b6-1b95-497f-ac10-0270684f3abf" priority:"H" project:"Work" recur:"weekly" status:"pending" tags:"Thales" uuid:"8676c496-ce6b-4f29-814e-9781d852abc6"]
+---
+time 1552323576
+new [description:"Thales Project\n" due:"1551654000" entry:"1552323576" imask:"14" modified:"1548195619" parent:"690880b6-1b95-497f-ac10-0270684f3abf" priority:"H" project:"Work" recur:"weekly" status:"pending" tags:"Thales" uuid:"5c97088c-3a91-444b-a6d4-b732f9319f57"]
+---
+time 1552323576
+new [description:"Thales Project\n" due:"1552258800" entry:"1552323576" imask:"15" modified:"1548195619" parent:"690880b6-1b95-497f-ac10-0270684f3abf" priority:"H" project:"Work" recur:"weekly" status:"pending" tags:"Thales" uuid:"e9a770ee-a54b-4f26-85a3-c89c6830201d"]
+---
+time 1552323576
+new [description:"Thales Project\n" due:"1552863600" entry:"1552323576" imask:"16" modified:"1548195619" parent:"690880b6-1b95-497f-ac10-0270684f3abf" priority:"H" project:"Work" recur:"weekly" status:"pending" tags:"Thales" uuid:"1f1ad726-0bd1-43cd-89fe-ef58e774215f"]
+---
+time 1552323576
+old [description:"Thales Project\n" due:"1543186800" entry:"1542643968" mask:"+++++++++-" modified:"1548195619" priority:"H" project:"Work" recur:"weekly" status:"recurring" tags:"Thales" uuid:"690880b6-1b95-497f-ac10-0270684f3abf"]
+new [description:"Thales Project\n" due:"1543186800" entry:"1542643968" mask:"+++++++++--------" modified:"1552323576" priority:"H" project:"Work" recur:"weekly" status:"recurring" tags:"Thales" uuid:"690880b6-1b95-497f-ac10-0270684f3abf"]
+---
+time 1552323635
+old [description:"Thales Project\n" due:"1543186800" entry:"1542643968" mask:"+++++++++--------" modified:"1552323576" priority:"H" project:"Work" recur:"weekly" status:"recurring" tags:"Thales" uuid:"690880b6-1b95-497f-ac10-0270684f3abf"]
+new [description:"Thales Project\n" due:"1543186800" entry:"1542643968" mask:"++++++++++-------" modified:"1552323635" priority:"H" project:"Work" recur:"weekly" status:"recurring" tags:"Thales" uuid:"690880b6-1b95-497f-ac10-0270684f3abf"]
+---
+time 1552323635
+old [description:"Thales Project\n" due:"1548630000" entry:"1548195511" imask:"9" modified:"1547218252" parent:"690880b6-1b95-497f-ac10-0270684f3abf" priority:"H" project:"Work" recur:"weekly" status:"pending" tags:"Thales" uuid:"96ea4392-8d77-49dd-9bb2-27c8d28e1e5b"]
+new [description:"Thales Project\n" due:"1548630000" end:"1552323632" entry:"1548195511" imask:"9" modified:"1552323635" parent:"690880b6-1b95-497f-ac10-0270684f3abf" priority:"H" project:"Work" recur:"weekly" status:"completed" tags:"Thales" uuid:"96ea4392-8d77-49dd-9bb2-27c8d28e1e5b"]
+---
+time 1552323635
+old [description:"Thales Project\n" due:"1543186800" entry:"1542643968" mask:"++++++++++-------" modified:"1552323635" priority:"H" project:"Work" recur:"weekly" status:"recurring" tags:"Thales" uuid:"690880b6-1b95-497f-ac10-0270684f3abf"]
+new [description:"Thales Project\n" due:"1543186800" entry:"1542643968" mask:"+++++++++++------" modified:"1552323635" priority:"H" project:"Work" recur:"weekly" status:"recurring" tags:"Thales" uuid:"690880b6-1b95-497f-ac10-0270684f3abf"]
+---
+time 1552323635
+old [description:"Thales Project\n" due:"1549234800" entry:"1552323576" imask:"10" modified:"1548195619" parent:"690880b6-1b95-497f-ac10-0270684f3abf" priority:"H" project:"Work" recur:"weekly" status:"pending" tags:"Thales" uuid:"87ad6f72-4805-473d-a0cf-f7e218a49a65"]
+new [description:"Thales Project\n" due:"1549234800" end:"1552323635" entry:"1552323576" imask:"10" modified:"1552323635" parent:"690880b6-1b95-497f-ac10-0270684f3abf" priority:"H" project:"Work" recur:"weekly" status:"completed" tags:"Thales" uuid:"87ad6f72-4805-473d-a0cf-f7e218a49a65"]
+---
+time 1552323635
+old [description:"Thales Project\n" due:"1543186800" entry:"1542643968" mask:"+++++++++++------" modified:"1552323635" priority:"H" project:"Work" recur:"weekly" status:"recurring" tags:"Thales" uuid:"690880b6-1b95-497f-ac10-0270684f3abf"]
+new [description:"Thales Project\n" due:"1543186800" entry:"1542643968" mask:"++++++++++++-----" modified:"1552323635" priority:"H" project:"Work" recur:"weekly" status:"recurring" tags:"Thales" uuid:"690880b6-1b95-497f-ac10-0270684f3abf"]
+---
+time 1552323635
+old [description:"Thales Project\n" due:"1549839600" entry:"1552323576" imask:"11" modified:"1548195619" parent:"690880b6-1b95-497f-ac10-0270684f3abf" priority:"H" project:"Work" recur:"weekly" status:"pending" tags:"Thales" uuid:"b3d4af46-7259-4476-bacd-06a8f6c52d23"]
+new [description:"Thales Project\n" due:"1549839600" end:"1552323635" entry:"1552323576" imask:"11" modified:"1552323635" parent:"690880b6-1b95-497f-ac10-0270684f3abf" priority:"H" project:"Work" recur:"weekly" status:"completed" tags:"Thales" uuid:"b3d4af46-7259-4476-bacd-06a8f6c52d23"]
+---
+time 1552323635
+old [description:"Thales Project\n" due:"1543186800" entry:"1542643968" mask:"++++++++++++-----" modified:"1552323635" priority:"H" project:"Work" recur:"weekly" status:"recurring" tags:"Thales" uuid:"690880b6-1b95-497f-ac10-0270684f3abf"]
+new [description:"Thales Project\n" due:"1543186800" entry:"1542643968" mask:"+++++++++++++----" modified:"1552323635" priority:"H" project:"Work" recur:"weekly" status:"recurring" tags:"Thales" uuid:"690880b6-1b95-497f-ac10-0270684f3abf"]
+---
+time 1552323635
+old [description:"Thales Project\n" due:"1550444400" entry:"1552323576" imask:"12" modified:"1548195619" parent:"690880b6-1b95-497f-ac10-0270684f3abf" priority:"H" project:"Work" recur:"weekly" status:"pending" tags:"Thales" uuid:"8334e3c8-4423-49a4-801a-827d46d502b2"]
+new [description:"Thales Project\n" due:"1550444400" end:"1552323635" entry:"1552323576" imask:"12" modified:"1552323635" parent:"690880b6-1b95-497f-ac10-0270684f3abf" priority:"H" project:"Work" recur:"weekly" status:"completed" tags:"Thales" uuid:"8334e3c8-4423-49a4-801a-827d46d502b2"]
+---
+time 1552323635
+old [description:"Thales Project\n" due:"1543186800" entry:"1542643968" mask:"+++++++++++++----" modified:"1552323635" priority:"H" project:"Work" recur:"weekly" status:"recurring" tags:"Thales" uuid:"690880b6-1b95-497f-ac10-0270684f3abf"]
+new [description:"Thales Project\n" due:"1543186800" entry:"1542643968" mask:"++++++++++++++---" modified:"1552323635" priority:"H" project:"Work" recur:"weekly" status:"recurring" tags:"Thales" uuid:"690880b6-1b95-497f-ac10-0270684f3abf"]
+---
+time 1552323635
+old [description:"Thales Project\n" due:"1551049200" entry:"1552323576" imask:"13" modified:"1548195619" parent:"690880b6-1b95-497f-ac10-0270684f3abf" priority:"H" project:"Work" recur:"weekly" status:"pending" tags:"Thales" uuid:"8676c496-ce6b-4f29-814e-9781d852abc6"]
+new [description:"Thales Project\n" due:"1551049200" end:"1552323635" entry:"1552323576" imask:"13" modified:"1552323635" parent:"690880b6-1b95-497f-ac10-0270684f3abf" priority:"H" project:"Work" recur:"weekly" status:"completed" tags:"Thales" uuid:"8676c496-ce6b-4f29-814e-9781d852abc6"]
+---
+time 1552323635
+old [description:"Thales Project\n" due:"1543186800" entry:"1542643968" mask:"++++++++++++++---" modified:"1552323635" priority:"H" project:"Work" recur:"weekly" status:"recurring" tags:"Thales" uuid:"690880b6-1b95-497f-ac10-0270684f3abf"]
+new [description:"Thales Project\n" due:"1543186800" entry:"1542643968" mask:"+++++++++++++++--" modified:"1552323635" priority:"H" project:"Work" recur:"weekly" status:"recurring" tags:"Thales" uuid:"690880b6-1b95-497f-ac10-0270684f3abf"]
+---
+time 1552323635
+old [description:"Thales Project\n" due:"1551654000" entry:"1552323576" imask:"14" modified:"1548195619" parent:"690880b6-1b95-497f-ac10-0270684f3abf" priority:"H" project:"Work" recur:"weekly" status:"pending" tags:"Thales" uuid:"5c97088c-3a91-444b-a6d4-b732f9319f57"]
+new [description:"Thales Project\n" due:"1551654000" end:"1552323635" entry:"1552323576" imask:"14" modified:"1552323635" parent:"690880b6-1b95-497f-ac10-0270684f3abf" priority:"H" project:"Work" recur:"weekly" status:"completed" tags:"Thales" uuid:"5c97088c-3a91-444b-a6d4-b732f9319f57"]
+---
+time 1552323635
+old [description:"Thales Project\n" due:"1543186800" entry:"1542643968" mask:"+++++++++++++++--" modified:"1552323635" priority:"H" project:"Work" recur:"weekly" status:"recurring" tags:"Thales" uuid:"690880b6-1b95-497f-ac10-0270684f3abf"]
+new [description:"Thales Project\n" due:"1543186800" entry:"1542643968" mask:"++++++++++++++++-" modified:"1552323635" priority:"H" project:"Work" recur:"weekly" status:"recurring" tags:"Thales" uuid:"690880b6-1b95-497f-ac10-0270684f3abf"]
+---
+time 1552323635
+old [description:"Thales Project\n" due:"1552258800" entry:"1552323576" imask:"15" modified:"1548195619" parent:"690880b6-1b95-497f-ac10-0270684f3abf" priority:"H" project:"Work" recur:"weekly" status:"pending" tags:"Thales" uuid:"e9a770ee-a54b-4f26-85a3-c89c6830201d"]
+new [description:"Thales Project\n" due:"1552258800" end:"1552323635" entry:"1552323576" imask:"15" modified:"1552323635" parent:"690880b6-1b95-497f-ac10-0270684f3abf" priority:"H" project:"Work" recur:"weekly" status:"completed" tags:"Thales" uuid:"e9a770ee-a54b-4f26-85a3-c89c6830201d"]
+---
+time 1552323635
+old [description:"Thales Project\n" due:"1543186800" entry:"1542643968" mask:"++++++++++++++++-" modified:"1552323635" priority:"H" project:"Work" recur:"weekly" status:"recurring" tags:"Thales" uuid:"690880b6-1b95-497f-ac10-0270684f3abf"]
+new [description:"Thales Project\n" due:"1543186800" entry:"1542643968" mask:"+++++++++++++++++" modified:"1552323635" priority:"H" project:"Work" recur:"weekly" status:"recurring" tags:"Thales" uuid:"690880b6-1b95-497f-ac10-0270684f3abf"]
+---
+time 1552323635
+old [description:"Thales Project\n" due:"1552863600" entry:"1552323576" imask:"16" modified:"1548195619" parent:"690880b6-1b95-497f-ac10-0270684f3abf" priority:"H" project:"Work" recur:"weekly" status:"pending" tags:"Thales" uuid:"1f1ad726-0bd1-43cd-89fe-ef58e774215f"]
+new [description:"Thales Project\n" due:"1552863600" end:"1552323635" entry:"1552323576" imask:"16" modified:"1552323635" parent:"690880b6-1b95-497f-ac10-0270684f3abf" priority:"H" project:"Work" recur:"weekly" status:"completed" tags:"Thales" uuid:"1f1ad726-0bd1-43cd-89fe-ef58e774215f"]
+---
+time 1552323768
+new [description:"Xen on ARM" due:"2147382000" entry:"1552323768" modified:"1552323768" project:"Hobbies" status:"pending" tags:"Linux,DIY" uuid:"dc3da826-7b21-4334-b4ca-8b1e34773cbd"]
+---
+time 1552323788
+new [description:"NAS Orange Pi Zero" due:"2147382000" entry:"1552323788" modified:"1552323788" project:"Hobbies" status:"pending" tags:"Linux,DIY" uuid:"b3136dc5-6a06-4735-a9ea-a218e472ebf3"]
+---
+time 1552323842
+old [description:"Bootloader Orange Pi Zero inspection" due:"2147382000" entry:"1544121254" modified:"1544121254" project:"Hobbies" status:"pending" tags:"Linux,DIY" uuid:"01de9cdf-e76a-4809-83de-e778900d5e15"]
+new [description:"Bootloader Orange Pi Zero inspection" due:"2147382000" entry:"1544121254" modified:"1552323842" project:"Hobbies" status:"pending" tags:"Linux,DIY,Hypervisor" uuid:"01de9cdf-e76a-4809-83de-e778900d5e15"]
+---
+time 1552323851
+old [description:"Bootloader Orange Pi Zero inspection" due:"2147382000" entry:"1544121254" modified:"1552323842" project:"Hobbies" status:"pending" tags:"Linux,DIY,Hypervisor" uuid:"01de9cdf-e76a-4809-83de-e778900d5e15"]
+new [description:"Bootloader Orange Pi Zero inspection" due:"2147382000" entry:"1544121254" modified:"1552323851" project:"Hobbies" status:"pending" tags:"Linux,DIY" uuid:"01de9cdf-e76a-4809-83de-e778900d5e15"]
+---
+time 1552323856
+old [description:"Xen on ARM" due:"2147382000" entry:"1552323768" modified:"1552323768" project:"Hobbies" status:"pending" tags:"Linux,DIY" uuid:"dc3da826-7b21-4334-b4ca-8b1e34773cbd"]
+new [description:"Xen on ARM" due:"2147382000" entry:"1552323768" modified:"1552323856" project:"Hobbies" status:"pending" tags:"Linux,DIY,Hypervisor" uuid:"dc3da826-7b21-4334-b4ca-8b1e34773cbd"]
+---
+time 1552323874
+new [description:"FreeBSD Orange Pi Zero" due:"2147382000" entry:"1552323874" modified:"1552323874" project:"Hobbies" status:"pending" tags:"Linux,DIY" uuid:"892e8b9c-b9a9-4758-bf23-1dbd3ad99be1"]
+---
+time 1552323928
+old [description:"FreeBSD Orange Pi Zero" due:"2147382000" entry:"1552323874" modified:"1552323874" project:"Hobbies" status:"pending" tags:"Linux,DIY" uuid:"892e8b9c-b9a9-4758-bf23-1dbd3ad99be1"]
+new [description:"FreeBSD Orange Pi Zero" due:"2147382000" entry:"1552323874" modified:"1552323928" project:"Hobbies" status:"pending" tags:"DIY,Unix" uuid:"892e8b9c-b9a9-4758-bf23-1dbd3ad99be1"]
+---

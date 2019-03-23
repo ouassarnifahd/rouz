@@ -1,0 +1,28 @@
+Xft*autohint:  1
+Xft*lcdfilter: lcddefault
+Xft*hintstyle: hintfull
+Xft*hinting:   true
+Xft*antialias: 1
+Xft*dpi:       96
+Xft*rgba:      rgb
+
+Xcursor*size:  22
+
+st*pixelsize: 14
+*font: xft:Source Code Pro for Powerline:pixelsize=14,xft:Font Awesome 5 Free Regular:pixelsize=14,xft:IPAGothic:regular
+
+*background: 	[70]#000000
+*foreground:	#FFFFFF
+
+! exeption
+*color12: rgb:5c/5c/ff
+
+! rofi
+!rodi*modi: run,ssh,window
+rofi*font: "Source Code Pro for Powerline" 20
+!rofi*markup: pango
+rofi*terminal: st -f mono:pixelsize=14
+rofi*width: 70
+rofi*lines: 10
+#rofi*show-icons: true
+#rofi*opacity: 70

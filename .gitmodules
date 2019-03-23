@@ -1,0 +1,12 @@
+[submodule ".config/mutt"]
+	path = .config/mutt
+	url = https://github.com/LukeSmithxyz/mutt-wizard.git
+[submodule ".vim_runtime"]
+	path = .vim_runtime
+	url = https://github.com/amix/vimrc.git
+[submodule ".vim/bundle/vim-airline"]
+	path = .vim/bundle/vim-airline
+	url = https://github.com/vim-airline/vim-airline
+[submodule ".vim/bundle/vimtex"]
+	path = .vim/bundle/vimtex
+	url = https://github.com/lervag/vimtex.git

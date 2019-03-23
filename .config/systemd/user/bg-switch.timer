@@ -1,0 +1,10 @@
+[Unit]
+Description=Switch background timer
+
+[Timer]
+OnCalendar=*:0/30
+Persistent=true
+Unit=bg-switch.service
+ 
+[Install]
+WantedBy=timers.target
