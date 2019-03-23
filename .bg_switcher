@@ -1,6 +1,6 @@
 #!/bin/bash
 
-wallpaper_dir=$HOME/.wallpaper
+wallpaper_dir=$HOME/Pictures/Wallpapers
 
 #temp_dir=/tmp/wall
 #mkdir -p $temp_dir
