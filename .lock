@@ -12,4 +12,4 @@ i3lock -u -i /tmp/screen.png
 # Clean
 rm /tmp/screen.png
 # lock ttys
-sudo vlock-original -ans
+#sudo vlock-original -ans

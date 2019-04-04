@@ -237,7 +237,6 @@ mode "resize" {
         # back to normal: Enter or Escape or $mod+r
         bindsym Return mode "default"
         bindsym Escape mode "default"
-        bindsym $mod+r mode "default"
 }
 
 # projector mode VGA
@@ -275,10 +274,26 @@ bar {
 }
 #exec_always --no-startup-id $HOME/.config/polybar/launch.sh
 
+# Playerctl control
+set $PLAYER_MENU "Prev[o], Play/Pause[p], Next[^], Stop[$]"
+bindsym $mod+Shift+p mode $PLAYER_MENU
+mode $PLAYER_MENU {
+    bindsym o exec playerctl previous
+    bindsym p exec playerctl play-pause
+    bindsym dead_circumflex exec playerctl next
+    bindsym dollar exec playerctl stop
+    bindsym parenright exec playerctl volume 0.1-
+    bindsym plus exec playerctl volume 0.1+
+    bindsym Return mode "default"
+    bindsym Escape mode "default"
+}
+
+
 # Useful
 bindsym $mod+r exec i3-sensible-terminal -f mono:pixelsize=14 -e ranger
 bindsym $mod+x exec vlock-original -ans
 bindsym $mod+i exec /home/kalinka/.bg_switcher
+bindsym $mod+Shift+h exec i3-sensible-terminal -f mono:pixelsize=14 -e 'htop'
 
 # Gaps
 for_window [class="^.*"] border pixel 4
@@ -303,6 +318,12 @@ for_window [instance="hidden_term"] move scratchpad
 for_window [instance="hidden_term"] border pixel 5
 for_window [instance="hidden_term"] sticky enable
 bindsym $mod+t [instance="hidden_term"] scratchpad show; [instance="hidden_term"] move position center 
+
+# Screenshot:
+bindsym $mod+Shift+exclam exec --no-startup-id scrot ~/Pictures/Screenshots/%Y-%m-%d-%T-screenshot.png
+
+# Screencast:
+bindsym $mod+exclam exec --no-startup-id ~/.local/lib/i3cmds/dmenurecord
 
 # Video: webcam
 for_window [title="mpvfloat"] floating enable
@@ -351,7 +372,7 @@ bindsym $mod+n exec --no-startup-id
 bindsym $mod+comma exec --no-startup-id
 bindsym $mod+semicolon exec --no-startup-id
 bindsym $mod+colon exec --no-startup-id
-bindsym $mod+exclam exec --no-startup-id bash ~/.local/lib/i3cmds/dmenurecord
+#bindsym $mod+exclam exec --no-startup-id
 #bindsym $mod+Shift+a exec --no-startup-id
 bindsym $mod+Shift+z exec --no-startup-id
 #bindsym $mod+Shift+e exec --no-startup-id
@@ -361,7 +382,7 @@ bindsym $mod+Shift+y exec --no-startup-id
 bindsym $mod+Shift+u exec --no-startup-id
 bindsym $mod+Shift+i exec --no-startup-id
 bindsym $mod+Shift+o exec --no-startup-id
-bindsym $mod+Shift+p exec --no-startup-id
+#bindsym $mod+Shift+p exec --no-startup-id
 bindsym $mod+Shift+dead_circumflex exec --no-startup-id
 bindsym $mod+Shift+dollar exec --no-startup-id
 bindsym $mod+Shift+q exec --no-startup-id
@@ -369,7 +390,7 @@ bindsym $mod+Shift+s exec --no-startup-id
 bindsym $mod+Shift+d exec --no-startup-id
 bindsym $mod+Shift+f exec --no-startup-id
 bindsym $mod+Shift+g exec --no-startup-id
-bindsym $mod+Shift+h exec --no-startup-id
+#bindsym $mod+Shift+h exec --no-startup-id
 #bindsym $mod+Shift+j exec --no-startup-id
 #bindsym $mod+Shift+k exec --no-startup-id
 #bindsym $mod+Shift+l exec --no-startup-id
@@ -385,5 +406,5 @@ bindsym $mod+Shift+n exec --no-startup-id
 bindsym $mod+Shift+comma exec --no-startup-id
 bindsym $mod+Shift+semicolon exec --no-startup-id
 bindsym $mod+Shift+colon exec --no-startup-id
-bindsym $mod+Shift+exclam exec --no-startup-id scrot ~/Pictures/Screenshots/%Y-%m-%d-%T-screenshot.png
+#bindsym $mod+Shift+exclam exec --no-startup-id
 
