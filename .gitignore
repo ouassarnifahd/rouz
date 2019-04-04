@@ -91,3 +91,5 @@ Mail
 .config/syncthing
 .vim_mru_files
 .recordingpid
+.bash_history
+.zsh_history
