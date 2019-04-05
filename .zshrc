@@ -109,7 +109,10 @@ if [[ "$(iwgetid -r)" == "ensicaen" ]]; then
 fi
 
 # Browser
+export TERMINAL='st'
 export BROWSER='icecat'
+export EDITOR='vim'
+export VISUAL=$EDITOR
 
 # ida:
 export PATH=/opt/idafree-7.0:$PATH

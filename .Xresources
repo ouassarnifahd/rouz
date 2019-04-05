@@ -8,7 +8,7 @@ Xft*rgba:      rgb
 
 Xcursor*size:  22
 
-st*pixelsize: 14
+*pixelsize: 14
 *font: xft:Source Code Pro for Powerline:pixelsize=14,xft:Font Awesome 5 Free Regular:pixelsize=14,xft:IPAGothic:regular
 
 *background: 	[70]#000000
@@ -19,10 +19,10 @@ st*pixelsize: 14
 
 ! rofi
 !rodi*modi: run,ssh,window
-rofi*font: "Source Code Pro for Powerline" 20
+!rofi*font: "Source Code Pro for Powerline" 20
 !rofi*markup: pango
-rofi*terminal: st -f mono:pixelsize=14
-rofi*width: 70
-rofi*lines: 10
-#rofi*show-icons: true
-#rofi*opacity: 70
+!rofi*terminal: st -f mono:pixelsize=14
+!rofi*width: 70
+!rofi*lines: 10
+!rofi*show-icons: true
+!rofi*opacity: 70

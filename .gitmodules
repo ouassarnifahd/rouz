@@ -10,3 +10,12 @@
 [submodule ".vim/bundle/vimtex"]
 	path = .vim/bundle/vimtex
 	url = https://github.com/lervag/vimtex.git
+[submodule ".local/src/st"]
+	path = .local/src/st
+	url = https://git.suckless.org/st
+[submodule ".local/src/stagit"]
+	path = .local/src/stagit
+	url = git://git.codemadness.org/stagit
+[submodule ".local/src/voidrice"]
+	path = .local/src/voidrice
+	url = https://github.com/LukeSmithxyz/voidrice.git
