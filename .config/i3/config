@@ -31,7 +31,8 @@ font pango:monospace 10
 floating_modifier $mod
 
 # start a terminal
-bindsym $mod+Return exec i3-sensible-terminal -f mono:pixelsize=14
+set $vterm st -f mono:pixelsize=14
+bindsym $mod+Return exec $vterm
 
 # kill focused window
 bindsym $mod+Shift+a kill
@@ -290,10 +291,10 @@ mode $PLAYER_MENU {
 
 
 # Useful
-bindsym $mod+r exec i3-sensible-terminal -f mono:pixelsize=14 -e ranger
-bindsym $mod+x exec vlock-original -ans
-bindsym $mod+i exec /home/kalinka/.bg_switcher
-bindsym $mod+Shift+h exec i3-sensible-terminal -f mono:pixelsize=14 -e 'htop'
+bindsym $mod+r exec $vterm -e ranger
+bindsym $mod+x exec ~/.lock
+bindsym $mod+i exec ~/.bg_switcher
+bindsym $mod+Shift+h exec $vterm -e 'htop'
 
 # Gaps
 for_window [class="^.*"] border pixel 4
@@ -320,31 +321,31 @@ for_window [instance="hidden_term"] sticky enable
 bindsym $mod+t [instance="hidden_term"] scratchpad show; [instance="hidden_term"] move position center 
 
 # Screenshot:
-bindsym $mod+Shift+exclam exec --no-startup-id scrot ~/Pictures/Screenshots/%Y-%m-%d-%T-screenshot.png
+bindsym $mod+Shift+exclam exec scrot ~/Pictures/Screenshots/%Y-%m-%d-%T-screenshot.png
 
 # Screencast:
-bindsym $mod+exclam exec --no-startup-id ~/.local/lib/i3cmds/dmenurecord
+bindsym $mod+exclam exec ~/.local/lib/i3cmds/dmenurecord
 
 # Video: webcam
 for_window [title="mpvfloat"] floating enable
 for_window [title="mpvfloat"] sticky enable
 for_window [title="mpvfloat"] border pixel 0
 no_focus [title="mpvfloat"]
-bindsym $mod+c exec --no-startup-id $HOME/.local/bin/camtoggle
+bindsym $mod+c exec ~/.local/bin/camtoggle
 
 # tools
-exec syncthing --no-browser
-exec compton -f
-exec dunst -conf $HOME/.config/dunst/dunstrc
+exec --no-startup-id syncthing --no-browser
+exec --no-startup-id compton -f
+exec --no-startup-id dunst -conf ~/.config/dunst/dunstrc
 
 # unused
 # xev | grep -A2 --line-buffered '^KeyRelease' | sed -n '/keycode /s/^.*keycode \([0-9]*\).* (.*, \(.*\)).*$/\1 \2/p'
-bindsym $mod+a exec --no-startup-id
-#bindsym $mod+z exec --no-startup-id
-#bindsym $mod+e exec --no-startup-id
-#bindsym $mod+r exec --no-startup-id
-#bindsym $mod+t exec --no-startup-id
-bindsym $mod+y exec --no-startup-id
+bindsym $mod+a exec true
+#bindsym $mod+z exec true
+#bindsym $mod+e exec true
+#bindsym $mod+r exec true 
+#bindsym $mod+t exec true 
+bindsym $mod+y exec true
 bindsym $mod+u exec --no-startup-id
 #bindsym $mod+i exec --no-startup-id
 bindsym $mod+o exec --no-startup-id

@@ -19,7 +19,7 @@ if [ -f ~/.bash_aliases ]; then
 fi
 
 # default editor
-export VISUAL=vim
+export VISUAL='vim'
 export EDITOR="$VISUAL"
 
 # proxy settings

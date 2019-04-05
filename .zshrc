@@ -2,7 +2,7 @@
 export PATH=$HOME/.local/bin:/usr/local/bin:/bin:$PATH
 
 # Path to your oh-my-zsh installation.
-export ZSH="/home/kalinka/.oh-my-zsh"
+export ZSH="$HOME/.oh-my-zsh"
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
@@ -108,9 +108,11 @@ if [[ "$(iwgetid -r)" == "ensicaen" ]]; then
     setproxy
 fi
 
-# Browser
-export TERMINAL='st'
-export BROWSER='icecat'
+# Session global defs
+export WM='i3'
+export TERMINAL='st -f mono:pixelsize=14'
+export BROWSER='surf'
+export PAGER='less'
 export EDITOR='vim'
 export VISUAL=$EDITOR
 

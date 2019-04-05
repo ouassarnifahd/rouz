@@ -16,6 +16,21 @@
 [submodule ".local/src/stagit"]
 	path = .local/src/stagit
 	url = git://git.codemadness.org/stagit
+[submodule ".local/src/tabbed"]
+	path = .local/src/tabbed
+	url = https://git.suckless.org/tabbed
+[submodule ".local/src/surf"]
+	path = .local/src/surf
+	url = https://git.suckless.org/surf
 [submodule ".local/src/voidrice"]
 	path = .local/src/voidrice
 	url = https://github.com/LukeSmithxyz/voidrice.git
+[submodule ".local/src/nnn"]
+	path = .local/src/nnn
+	url = https://github.com/jarun/nnn.git
+[submodule ".local/src/sxiv"]
+	path = .local/src/sxiv
+	url = https://github.com/muennich/sxiv.git
+[submodule ".local/src/9base"]
+	path = .local/src/9base
+	url = https://git.suckless.org/9base
