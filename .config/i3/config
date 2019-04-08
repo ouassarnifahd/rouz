@@ -337,6 +337,7 @@ bindsym $mod+c exec ~/.local/bin/camtoggle
 exec --no-startup-id syncthing --no-browser
 exec --no-startup-id compton -f
 exec --no-startup-id dunst -conf ~/.config/dunst/dunstrc
+exec --no-startup-id xbanish
 
 # unused
 # xev | grep -A2 --line-buffered '^KeyRelease' | sed -n '/keycode /s/^.*keycode \([0-9]*\).* (.*, \(.*\)).*$/\1 \2/p'
