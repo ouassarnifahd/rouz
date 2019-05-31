@@ -5,6 +5,13 @@
 # this file and re-run i3-config-wizard(1).
 #
 
+# <SED> 
+# Auto import env vars from shell 
+set $VTERM st -f mono:pixelsize=14
+set $FILEMANAGER $VTERM -e ranger
+set $BROWSER icecat
+# </SED>
+
 # i3 config file (v4)
 # Please see https://i3wm.org/docs/userguide.html for a complete reference!
 set $mod Mod4
@@ -31,8 +38,7 @@ font pango:monospace 10
 floating_modifier $mod
 
 # start a terminal
-set $vterm st -f mono:pixelsize=14
-bindsym $mod+Return exec $vterm
+bindsym $mod+Return exec $VTERM
 
 # kill focused window
 bindsym $mod+Shift+a kill
@@ -46,24 +52,12 @@ bindsym $mod+d exec dmenu_run
 # bindsym $mod+d exec --no-startup-id i3-dmenu-desktop
 
 # change focus
-bindsym $mod+j focus left
-bindsym $mod+k focus down
-bindsym $mod+l focus up
-bindsym $mod+m focus right
-
-# alternatively, you can use the cursor keys:
 bindsym $mod+Left focus left
 bindsym $mod+Down focus down
 bindsym $mod+Up focus up
 bindsym $mod+Right focus right
 
 # move focused window
-bindsym $mod+Shift+j move left
-bindsym $mod+Shift+k move down
-bindsym $mod+Shift+l move up
-bindsym $mod+Shift+m move right
-
-# alternatively, you can use the cursor keys:
 bindsym $mod+Shift+Left move left
 bindsym $mod+Shift+Down move down
 bindsym $mod+Shift+Up move up
@@ -93,7 +87,7 @@ bindsym $mod+space focus mode_toggle
 bindsym $mod+q focus parent
 
 # focus the child container
-#bindsym $mod+d focus child
+bindsym $mod+a focus child
 
 # Define names for default workspaces for which we configure key bindings later on.
 # We use variables to avoid repeating the names in multiple places.
@@ -216,7 +210,7 @@ bindsym $mod+Shift+x restart
 bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -B 'Yes, exit i3' 'i3-msg exit'"
 
 # resize window (you can also use the mouse for that)
-bindsym $mod+Shift+r mode "resize"
+bindsym $mod+r mode "resize"
 mode "resize" {
         # These bindings trigger as soon as you enter the resize mode
 
@@ -263,7 +257,7 @@ bar {
     status_command i3blocks -c ~/.config/i3/blocks
     tray_output LVDS
     tray_padding 0
-    strip_workspace_numbers yes
+    #strip_workspace_numbers yes
     colors {
         background $bg-color
         separator #757575
@@ -273,10 +267,9 @@ bar {
         urgent_workspace   $urgent-bg-color   $urgent-bg-color   $text-color
     }
 }
-#exec_always --no-startup-id $HOME/.config/polybar/launch.sh
 
 # Playerctl control
-set $PLAYER_MENU "Prev[o], Play/Pause[p], Next[^], Stop[$]"
+set $PLAYER_MENU "Prev[o], Play/Pause[p], Next[^], Stop[$], Vol+[)], Vol-[=]"
 bindsym $mod+Shift+p mode $PLAYER_MENU
 mode $PLAYER_MENU {
     bindsym o exec playerctl previous
@@ -289,12 +282,13 @@ mode $PLAYER_MENU {
     bindsym Escape mode "default"
 }
 
-
 # Useful
-bindsym $mod+r exec $vterm -e ranger
 bindsym $mod+x exec ~/.lock
 bindsym $mod+i exec ~/.bg_switcher
-bindsym $mod+Shift+h exec $vterm -e 'htop'
+
+# Apps shortcuts
+bindsym $mod+Shift+r exec $FILEMANAGER
+bindsym $mod+Shift+b exec $BROWSER
 
 # Gaps
 for_window [class="^.*"] border pixel 4
@@ -320,6 +314,14 @@ for_window [instance="hidden_term"] border pixel 5
 for_window [instance="hidden_term"] sticky enable
 bindsym $mod+t [instance="hidden_term"] scratchpad show; [instance="hidden_term"] move position center 
 
+# Hidden Monitor
+for_window [instance="hidden_mon"] floating enable
+for_window [instance="hidden_mon"] resize set 1500 800
+for_window [instance="hidden_mon"] move scratchpad
+for_window [instance="hidden_mon"] border pixel 5
+for_window [instance="hidden_mon"] sticky enable
+bindsym $mod+m [instance="hidden_mon"] scratchpad show; [instance="hidden_mon"] move position center 
+
 # Screenshot:
 bindsym $mod+Shift+exclam exec scrot ~/Pictures/Screenshots/%Y-%m-%d-%T-screenshot.png
 
@@ -341,72 +343,72 @@ exec --no-startup-id xbanish
 
 # unused
 # xev | grep -A2 --line-buffered '^KeyRelease' | sed -n '/keycode /s/^.*keycode \([0-9]*\).* (.*, \(.*\)).*$/\1 \2/p'
-bindsym $mod+a exec true
+#bindsym $mod+a exec true
 #bindsym $mod+z exec true
 #bindsym $mod+e exec true
-#bindsym $mod+r exec true 
+#bindsym $mod+r exec true
 #bindsym $mod+t exec true 
 bindsym $mod+y exec true
-bindsym $mod+u exec --no-startup-id
-#bindsym $mod+i exec --no-startup-id
-bindsym $mod+o exec --no-startup-id
-#bindsym $mod+p exec --no-startup-id
-bindsym $mod+dead_circumflex exec --no-startup-id
-bindsym $mod+dollar exec --no-startup-id
-#bindsym $mod+q exec --no-startup-id
-#bindsym $mod+s exec --no-startup-id
-#bindsym $mod+d exec --no-startup-id
-#bindsym $mod+f exec --no-startup-id
-bindsym $mod+g exec --no-startup-id
-#bindsym $mod+h exec --no-startup-id
-#bindsym $mod+j exec --no-startup-id
-#bindsym $mod+k exec --no-startup-id
-#bindsym $mod+l exec --no-startup-id
-#bindsym $mod+m exec --no-startup-id
-bindsym $mod+ugrave exec --no-startup-id
-bindsym $mod+asterisk exec --no-startup-id
-bindsym $mod+w exec --no-startup-id
-#bindsym $mod+x exec --no-startup-id
-#bindsym $mod+c exec --no-startup-id
-#bindsym $mod+v exec --no-startup-id
-bindsym $mod+b exec --no-startup-id
-bindsym $mod+n exec --no-startup-id
-bindsym $mod+comma exec --no-startup-id
-bindsym $mod+semicolon exec --no-startup-id
-bindsym $mod+colon exec --no-startup-id
-#bindsym $mod+exclam exec --no-startup-id
-#bindsym $mod+Shift+a exec --no-startup-id
-bindsym $mod+Shift+z exec --no-startup-id
-#bindsym $mod+Shift+e exec --no-startup-id
-#bindsym $mod+Shift+r exec --no-startup-id
-bindsym $mod+Shift+t exec --no-startup-id
-bindsym $mod+Shift+y exec --no-startup-id
-bindsym $mod+Shift+u exec --no-startup-id
-bindsym $mod+Shift+i exec --no-startup-id
-bindsym $mod+Shift+o exec --no-startup-id
-#bindsym $mod+Shift+p exec --no-startup-id
-bindsym $mod+Shift+dead_circumflex exec --no-startup-id
-bindsym $mod+Shift+dollar exec --no-startup-id
-bindsym $mod+Shift+q exec --no-startup-id
-bindsym $mod+Shift+s exec --no-startup-id
-bindsym $mod+Shift+d exec --no-startup-id
-bindsym $mod+Shift+f exec --no-startup-id
-bindsym $mod+Shift+g exec --no-startup-id
-#bindsym $mod+Shift+h exec --no-startup-id
-#bindsym $mod+Shift+j exec --no-startup-id
-#bindsym $mod+Shift+k exec --no-startup-id
-#bindsym $mod+Shift+l exec --no-startup-id
-#bindsym $mod+Shift+m exec --no-startup-id
-bindsym $mod+Shift+ugrave exec --no-startup-id
-bindsym $mod+Shift+asterisk exec --no-startup-id
-bindsym $mod+Shift+w exec --no-startup-id
-#bindsym $mod+Shift+x exec --no-startup-id
-#bindsym $mod+Shift+c exec --no-startup-id
-bindsym $mod+Shift+v exec --no-startup-id
-bindsym $mod+Shift+b exec --no-startup-id
-bindsym $mod+Shift+n exec --no-startup-id
-bindsym $mod+Shift+comma exec --no-startup-id
-bindsym $mod+Shift+semicolon exec --no-startup-id
-bindsym $mod+Shift+colon exec --no-startup-id
-#bindsym $mod+Shift+exclam exec --no-startup-id
+bindsym $mod+u exec true 
+#bindsym $mod+i exec true
+bindsym $mod+o exec true
+#bindsym $mod+p exec true
+bindsym $mod+dead_circumflex exec true
+bindsym $mod+dollar exec true
+#bindsym $mod+q exec true
+#bindsym $mod+s exec true
+#bindsym $mod+d exec true
+#bindsym $mod+f exec true
+bindsym $mod+g exec true
+#bindsym $mod+h exec true
+bindsym $mod+j exec true
+bindsym $mod+k exec true
+bindsym $mod+l exec true
+#bindsym $mod+m exec true
+bindsym $mod+ugrave exec true
+bindsym $mod+asterisk exec true
+bindsym $mod+w exec true
+#bindsym $mod+x exec true
+#bindsym $mod+c exec true
+#bindsym $mod+v exec true
+bindsym $mod+b exec true
+bindsym $mod+n exec true
+bindsym $mod+comma exec true
+bindsym $mod+semicolon exec true
+bindsym $mod+colon exec true
+#bindsym $mod+exclam exec true
+#bindsym $mod+Shift+a exec true
+bindsym $mod+Shift+z exec true
+#bindsym $mod+Shift+e exec true
+#bindsym $mod+Shift+r exec true
+bindsym $mod+Shift+t exec true
+bindsym $mod+Shift+y exec true
+bindsym $mod+Shift+u exec true
+bindsym $mod+Shift+i exec true
+bindsym $mod+Shift+o exec true
+#bindsym $mod+Shift+p exec true
+bindsym $mod+Shift+dead_circumflex exec true
+bindsym $mod+Shift+dollar exec true
+bindsym $mod+Shift+q exec true
+bindsym $mod+Shift+s exec true
+bindsym $mod+Shift+d exec true
+bindsym $mod+Shift+f exec true
+bindsym $mod+Shift+g exec true
+bindsym $mod+Shift+h exec true
+bindsym $mod+Shift+j exec true
+bindsym $mod+Shift+k exec true
+bindsym $mod+Shift+l exec true
+bindsym $mod+Shift+m exec true
+bindsym $mod+Shift+ugrave exec true
+bindsym $mod+Shift+asterisk exec true
+bindsym $mod+Shift+w exec true
+#bindsym $mod+Shift+x exec true
+#bindsym $mod+Shift+c exec true
+bindsym $mod+Shift+v exec true
+#bindsym $mod+Shift+b exec true
+bindsym $mod+Shift+n exec  true
+bindsym $mod+Shift+comma exec true
+bindsym $mod+Shift+semicolon exec true
+bindsym $mod+Shift+colon exec true
+#bindsym $mod+Shift+exclam exec true
 

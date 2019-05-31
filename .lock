@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 
 # support for dpms
 revert() {
@@ -11,7 +11,7 @@ scrot /tmp/screen.png
 convert /tmp/screen.png -scale 10% -scale 1000% /tmp/screen.png
 
 # Effect ...
-[[ -f $1 ]] && convert /tmp/screen.png $1 -gravity center -composite -matte /tmp/screen.png
+[ -f $1 ] && convert /tmp/screen.png $1 -gravity center -composite -matte /tmp/screen.png
 
 # Pause music...
 [ ! $(playerctl status) = "Playing" ] || playerctl pause
@@ -19,7 +19,10 @@ convert /tmp/screen.png -scale 10% -scale 1000% /tmp/screen.png
 # Lock
 xset +dpms dpms 5 5 5
 i3lock -u -i /tmp/screen.png #&& echo mem > /sys/power/state 
+
 # Clean
+revert
 rm /tmp/screen.png
+
 # lock ttys
 #sudo vlock-original -ans

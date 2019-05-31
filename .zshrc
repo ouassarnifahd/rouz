@@ -27,7 +27,7 @@ CASE_SENSITIVE="true"
 # DISABLE_AUTO_UPDATE="true"
 
 # Uncomment the following line to change how often to auto-update (in days).
-# export UPDATE_ZSH_DAYS=13
+export UPDATE_ZSH_DAYS=30
 
 # Uncomment the following line to disable colors in ls.
 # DISABLE_LS_COLORS="true"
@@ -39,7 +39,7 @@ CASE_SENSITIVE="true"
 # ENABLE_CORRECTION="true"
 
 # Uncomment the following line to display red dots whilst waiting for completion.
-# COMPLETION_WAITING_DOTS="true"
+COMPLETION_WAITING_DOTS="true"
 
 # Uncomment the following line if you want to disable marking untracked files
 # under VCS as dirty. This makes repository status check for large repositories
@@ -71,8 +71,6 @@ source $ZSH/oh-my-zsh.sh
 # User configuration
 
 # Shrink very long paths
-#setopt prompt_subst
-#PS1='%n@%m $(shrink_path -f)>'
 zstyle :prompt:shrink_path fish yes
 
 # export MANPATH="/usr/local/man:$MANPATH"
@@ -107,14 +105,6 @@ source $HOME/.bash_aliases
 if [[ "$(iwgetid -r)" == "ensicaen" ]]; then
     setproxy
 fi
-
-# Session global defs
-export WM='i3'
-export TERMINAL='st -f mono:pixelsize=14'
-export BROWSER='surf'
-export PAGER='less'
-export EDITOR='vim'
-export VISUAL=$EDITOR
 
 # ida:
 export PATH=/opt/idafree-7.0:$PATH
