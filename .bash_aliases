@@ -10,13 +10,13 @@ alias jplay='mpv --volume=60 --script /usr/lib/mpv/mpris.so'
 
 alias mplay='jplay --audio-display=no --video=no'
 alias qmplay='mplay --really-quiet'
-alias heremplay='mplay **/*.{mp3,flac,m4a}(N)'
-alias qheremplay='qmplay **/*.{mp3,flac,m4a}(N)'
+alias heremplay="mplay **/*.{$MUSIC_EXT}(N)"
+alias qheremplay="qmplay **/*.{$MUSIC_EXT}(N)"
 alias herepeat='heremplay --loop-playlist=yes'
 alias qherepeat='qhereplay --loop-playlist=yes'
 
 alias vplay='jplay --fullscreen'
-alias herevplay='vplay *.{mp4,avi,mov,flv,mkv}(N)'
+alias herevplay="vplay *.{$VIDEO_EXT}(N)"
 
 # Youtube: music, video
 alias mytcli='mpsyt set show_video false, set search_music true,'

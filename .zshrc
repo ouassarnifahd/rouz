@@ -99,6 +99,7 @@ zstyle :prompt:shrink_path fish yes
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+source $HOME/.zsh_env
 source $HOME/.bash_aliases
 
 # use proxy?
