@@ -250,26 +250,61 @@ mode $MONITOR_MENU {
 }
 
 # Start i3bar to display a workspace bar (plus the system information i3status
-# finds out, if available)
+# finds out, if available) on primary monitor
 bar {
+    # identifier
+    id bar-0
+
     # show state
     mode hide
-    #hidden_state hide 
+    hidden_state hide 
     modifier none
     #binding_mode_indicator yes
     
     # output and position
     position bottom
     output primary
-    tray_output primary
+    #tray_output primary
     
     # content 
     strip_workspace_numbers yes
-    i3bar_command i3bar -t
+    i3bar_command i3bar
+    status_command i3blocks -c ~/.config/i3/blocks
+
+    # style
+    font pango:monospace, Font Awesome 5 Free 10
+    colors {
+        background $bg-color
+        separator #757575
+        #                  border             background         text
+        focused_workspace  $bg-color          $bg-color          $text-color
+        inactive_workspace $inactive-bg-color $inactive-bg-color $inactive-text-color
+        urgent_workspace   $urgent-bg-color   $urgent-bg-color   $text-color
+    }
+}
+# Start i3bar to display a workspace bar (plus the system information i3status
+# finds out, if available) for VGA monitor
+bar {
+    # identifier
+    id bar-1
+
+    # show state
+    mode dock
+    #hidden_state hide
+    #modifier none
+    #binding_mode_indicator yes
+    
+    # output and position
+    position bottom
+    output $(xrandr | grep -m 1 -Po "(VGA[\w-]+)")
+    
+    # content 
+    strip_workspace_numbers yes
+    i3bar_command i3bar
     status_command i3blocks -c ~/.config/i3/blocks
     
     # style
-    #font pango:monospace, Font Awesome 5 Free 10
+    font pango:monospace, Font Awesome 5 Free 10
     colors {
         background $bg-color
         separator #757575
@@ -300,6 +335,10 @@ mode $PLAYER_MENU {
 bindsym $mod+x exec ~/.lock
 bindsym $mod+i exec ~/.bg_switcher
 
+# Extra Fonts
+bindsym $mod+asterisk exec ~/.local/lib/i3cmds/dmenuunicode
+bindsym $mod+Shift+asterisk exec ~/.local/lib/i3cmds/dmenufontawesome
+
 # Apps shortcuts
 bindsym $mod+Shift+r exec $FILEMANAGER
 bindsym $mod+Shift+b exec $BROWSER
@@ -314,9 +353,17 @@ for_window [class="vlc"] floating enable
 for_window [class="mpv"] floating enable
 for_window [class="Pavucontrol"] floating enable
 
+# Caprine
+exec --no-startup-id caprine
+for_window [class="caprine"] floating enable
+for_window [class="caprine"] resize set 1200 700
+for_window [class="caprine"] move workspace $ws11
+for_window [class="caprine"] move position center
+
 # Discord
 exec --no-startup-id discord
 for_window [class="discord"] floating enable
+for_window [class="discord"] resize set 1200 700
 for_window [class="discord"] move workspace $ws12
 for_window [class="discord"] move position center
 
@@ -380,7 +427,7 @@ bindsym $mod+k exec true
 bindsym $mod+l exec true
 #bindsym $mod+m exec true
 bindsym $mod+ugrave exec true
-bindsym $mod+asterisk exec true
+#bindsym $mod+asterisk exec true
 bindsym $mod+w exec true
 #bindsym $mod+x exec true
 #bindsym $mod+c exec true
@@ -414,7 +461,7 @@ bindsym $mod+Shift+k exec true
 bindsym $mod+Shift+l exec true
 bindsym $mod+Shift+m exec true
 bindsym $mod+Shift+ugrave exec true
-bindsym $mod+Shift+asterisk exec true
+#bindsym $mod+Shift+asterisk exec true
 bindsym $mod+Shift+w exec true
 #bindsym $mod+Shift+x exec true
 #bindsym $mod+Shift+c exec true
