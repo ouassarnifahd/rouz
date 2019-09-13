@@ -18,11 +18,11 @@ convert /tmp/screen.png -scale 10% -scale 1000% /tmp/screen.png
 
 # Lock
 xset +dpms dpms 5 5 5
-i3lock -u -i /tmp/screen.png #&& echo mem > /sys/power/state 
+xmodmap $HOME/.xmodmap.lock
+i3lock -i /tmp/screen.png #&& echo mem > /sys/power/state 
 
 # Clean
 revert
+xmodmap $HOME/.xmodmap
 rm /tmp/screen.png
 
-# lock ttys
-#sudo vlock-original -ans

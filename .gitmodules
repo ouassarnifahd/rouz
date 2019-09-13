@@ -34,3 +34,6 @@
 [submodule ".local/src/9base"]
 	path = .local/src/9base
 	url = https://git.suckless.org/9base
+[submodule ".local/src/i3blocks-contrib"]
+	path = .local/src/i3blocks-contrib
+	url = https://github.com/vivien/i3blocks-contrib.git
