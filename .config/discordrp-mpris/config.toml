@@ -7,7 +7,7 @@ reconnect_wait = 1
 # The following can be overridden per player.
 [options]
 # Whether to show status for paused players.
-show_paused = true
+show_paused = false
 # Whether to show status for previously active and now stopped player.
 show_stopped = false
 # Available values are: "elapsed", "remaining" or "none".
