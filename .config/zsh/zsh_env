@@ -1,5 +1,5 @@
 # General
-source ~/.xenv
+source ~/.config/xorg/xenv
 
 # Multimedia
 export MUSIC_EXT="mp3,m4a,flac,wma"

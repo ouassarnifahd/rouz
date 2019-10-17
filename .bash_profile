@@ -2,4 +2,4 @@
 # ~/.bash_profile
 #
 
-[[ -f ~/.bashrc ]] && . ~/.bashrc
+[[ -f ~/config/shell/bashrc ]] && . ~/config/shell/bashrc

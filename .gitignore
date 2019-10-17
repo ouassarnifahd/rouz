@@ -20,6 +20,7 @@
 .config/lxterminal/
 .config/midori/
 .config/mimeapps.list
+.config/mpv/
 .config/mps-youtube/
 .config/mutt/
 .config/neofetch/
@@ -94,3 +95,7 @@ Mail
 .bash_history
 .zsh_history
 .zcompdump
+.distcc
+.links
+.config/Caprine
+.config/yaourt

@@ -37,3 +37,6 @@
 [submodule ".local/src/i3blocks-contrib"]
 	path = .local/src/i3blocks-contrib
 	url = https://github.com/vivien/i3blocks-contrib.git
+[submodule ".config/zsh/oh-my-zsh"]
+	path = .config/zsh/oh-my-zsh
+	url = https://github.com/robbyrussell/oh-my-zsh.git

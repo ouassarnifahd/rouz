@@ -1,0 +1,8 @@
+[Unit]
+Description=Local git server
+ 
+[Service]
+ExecStart=/bin/git daemon --base-path=/home/kalinka/Media/bigHDD/system/git --export-all --reuseaddr --enable=receive-pack --log-destination=syslog
+
+[Install]
+WantedBy=default.target

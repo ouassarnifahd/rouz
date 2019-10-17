@@ -1,11 +1,11 @@
 #!/bin/sh
 
-source ~/.xenv
+source ~/.config/xorg/xenv
 
 case $XDG_VTNR in
 	*)
-        [ -f ~/.Xresources ] && xrdb -merge ~/.Xresources
-        exec ~/.bg_switcher &
+        [ -f ~/.config/xorg/Xresources ] && xrdb -merge ~/.config/xorg/Xresources
+        exec ~/.config/xorg/bg_switcher &
         exec $VTERM -n hidden_term -e screen -S hidden_terminal &
         exec $VTERM -n hidden_mon -e screen -S hidden_monitor &
         exec $WM;;

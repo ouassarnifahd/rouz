@@ -4,7 +4,7 @@ Description=Switch background
 [Service]
 Type=oneshot
 Environment=DISPLAY=:0
-ExecStart=/usr/bin/bash /home/kalinka/.bg_switcher
+ExecStart=/usr/bin/bash /home/kalinka/.config/xorg/bg_switcher
  
 #[Install]
 #WantedBy=basic.target                                                        

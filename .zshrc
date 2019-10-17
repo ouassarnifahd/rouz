@@ -2,7 +2,7 @@
 export PATH=$HOME/.local/bin:/usr/local/bin:/bin:$PATH
 
 # Path to your oh-my-zsh installation.
-export ZSH="$HOME/.oh-my-zsh"
+export ZSH="$HOME/.config/zsh/oh-my-zsh"
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
@@ -99,8 +99,8 @@ zstyle :prompt:shrink_path fish yes
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-source $HOME/.zsh_env
-source $HOME/.bash_aliases
+source $HOME/.config/zsh/zsh_env
+source $HOME/.config/bash/bash_aliases
 
 # use proxy?
 if [[ "$(iwgetid -r)" == "ensicaen" ]]; then
