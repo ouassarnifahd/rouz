@@ -1,0 +1,12 @@
+# general
+**/.DS_Store
+
+# zsh plugs
+.zsh/.zplug/
+.zsh/plugins/
+
+# vim plugs
+.vim/cache/undo/*
+.vim/cache/mru_files
+.vim/plugged
+
