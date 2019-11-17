@@ -1,5 +1,7 @@
 setopt nullglob
 setopt vi
+setopt monitor
+set -m
 
 # fzf
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh

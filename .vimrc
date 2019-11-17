@@ -1,5 +1,5 @@
 " VIM
-"set runtimepath+=~/.vim/runtime
+let $VIM = expand('~/.vim')
 
 source ~/.vim/configs/plugins.vim
 source ~/.vim/configs/variables.vim

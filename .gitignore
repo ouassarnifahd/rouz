@@ -10,3 +10,7 @@
 .vim/cache/mru_files
 .vim/plugged
 
+# tmux plugs
+.tmux/plugins/*
+!.tmux/plugins/tpm
+

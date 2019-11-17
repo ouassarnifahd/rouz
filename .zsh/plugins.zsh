@@ -14,18 +14,21 @@ fi
 source "$ZPLUG_HOME/init.zsh"
 
 # zplugseption
-zplug 'zplug/zplug', hook-build:'zplug --self-manage'
+zplug "zplug/zplug", hook-build:'zplug --self-manage'
 
-zplug 'wfxr/forgit'
+zplug "wfxr/forgit"
+zplug "plugins/alias", from:oh-my-zsh
+zplug "plugins/taskwarrior", from:oh-my-zsh
 zplug "plugins/git", from:oh-my-zsh
-zplug "plugins/osx", from:oh-my-zsh
-zplug "themes/agnoster", from:oh-my-zsh, as:theme
+zplug "plugins/tmux", from:oh-my-zsh
 zplug "plugins/colored-man-pages", from:oh-my-zsh
+zplug "themes/agnoster", from:oh-my-zsh, as:theme
 zplug "chriskempson/base16-shell"
 zplug "zsh-users/zsh-autosuggestions"
 zplug "zsh-users/zsh-syntax-highlighting"
 zplug "zsh-users/zsh-history-substring-search"
 zplug "lib/clipboard", from:oh-my-zsh, if:"[[ $OSTYPE == *darwin* ]]"
+zplug "lib/directories", from:oh-my-zsh, if:"[[ $OSTYPE == *darwin* ]]"
 
 if ! zplug check --verbose; then
     printf "Install? [y/N]: "

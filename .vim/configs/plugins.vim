@@ -8,6 +8,7 @@ Plug 'tpope/vim-sensible'
 Plug 'tpope/vim-scriptease'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-vinegar'
+Plug 'tpope/vim-unimpaired'
 Plug 'jlanzarotta/bufexplorer'
 
 " theming and feel
@@ -17,18 +18,19 @@ Plug 'chriskempson/base16-vim'
 Plug 'ryanoasis/vim-devicons'
 
 " writing made beautiful!
-Plug 'junegunn/goyo.vim'
+Plug 'junegunn/goyo.vim', { 'on': 'Goyo' }
 Plug 'junegunn/limelight.vim'
 "Plug 'amix/vim-zenroom2'
 
 " completion and snippets
-"Plug 'Shougo/neocomplete.vim'
+Plug 'ycm-core/YouCompleteMe', { 'do': './install.py --clang-completer --system-libclang' }
 Plug 'MarcWeber/vim-addon-mw-utils'
 Plug 'tomtom/tlib_vim'
+Plug 'tomtom/tcomment_vim'
 Plug 'garbas/vim-snipmate'
 Plug 'honza/vim-snippets'
 
-" tags
+" ctags
 Plug 'majutsushi/tagbar'
 
 " linter
@@ -37,11 +39,15 @@ Plug 'scrooloose/syntastic'
 " git
 Plug 'tpope/vim-fugitive'
 "Plug 'airblade/vim-gitgutter'
-Plug 'mhinz/vim-signify' | set updatetime=100
+Plug 'mhinz/vim-signify' | set updatetime=400
 
 " files
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'yegappan/mru'
+
+" tmux integration
+Plug 'tmux-plugins/vim-tmux'
+Plug 'edkolev/tmuxline.vim'
 
 " workflow
 Plug 'wakatime/vim-wakatime' 

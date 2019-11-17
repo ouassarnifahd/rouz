@@ -1,8 +1,5 @@
 # global
 alias ls='ls -G'
-alias l='ls -alh'
-alias la='ls -a'
-alias ll='ls -lh'
 
 # coding
 alias clean='make clean'
