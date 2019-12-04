@@ -1,0 +1,15 @@
+#!/bin/sh
+
+# Session global defs
+#export WM='awesome'
+export WM='i3'
+export VTERM='st -f mono:pixelsize=14'
+export BROWSER='icecat'
+export PAGER='less'
+export EDITOR='vim'
+export VISUAL=$EDITOR
+
+#i3export() {
+#   echo 'Do nothing for now'
+#}
+

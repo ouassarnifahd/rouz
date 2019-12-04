@@ -1,0 +1,46 @@
+#!/bin/sh
+#
+# This script creates a local git repository for use with git daemon:
+# user@host$ (cd /path/to/repo && git daemon --detach --base-path=. --export-all --reuseaddr --informative-errors --enable=receive-pack)
+# user@host$ localrepo n local
+# user@host$ git clone git://127.0.0.1/local.git
+
+
+# This is the path of the local repository
+repodir="$HOME/Media/bigHDD/system/git"
+
+usage() {
+    echo "usage: $(basename $1) [OPTIONS] <repo-name>"
+    echo "options:"
+    echo "  n(ew)       Add a new repo if it doesnt exist"
+    echo "  a(dd)       Add an existing repo (symbolic link)"
+    echo "  d(elete)    Delete a repo if it exists"
+    echo "note:"
+    echo "  make sure to start the git daemon before:"
+    echo "  $ cd $repodir" 
+    echo "  $ git daemon --detach --basepath=. --export-all --reuseaddr --enable=receive-pack"
+    exit 1
+}
+
+if [[ $# == 2 ]]; then
+    # set repository name
+    reponame="$2"
+    repopath="$3"
+
+    # try the new/delete cases
+    case $1 in
+        n) # add new repo if it wasnt there
+            [ -d "$repodir/$reponame.git" ] || (mkdir -p "$repodir/$reponame.git" &&
+                cd "$repodir/$reponame.git" && git init --bare) ;;
+        a) # add existing repo (link) 
+            [ -L "$repodir/$reponame.git" ] || (ln -s "$repopath/.git" "$repodir/$reponame.git") ;;
+        d) # delete if a repo exist
+            [ ! -d "$repodir/$reponame.git" ] || rm -rf "$repodir/$reponame.git" ;;
+        *) # print help
+            usage "$0";;
+    esac
+else
+    # print help
+    usage "$0"
+fi
+

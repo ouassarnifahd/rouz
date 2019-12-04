@@ -1,0 +1,4 @@
+#!/bin/sh
+repodir="$HOME/Media/bigHDD/system/git"
+cd $repodir
+git daemon --detach --basepath=. --export-all --reuseaddr --enable=receive-pack

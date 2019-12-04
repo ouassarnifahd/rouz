@@ -23,12 +23,12 @@ zplug "plugins/git", from:oh-my-zsh
 zplug "plugins/tmux", from:oh-my-zsh
 zplug "plugins/colored-man-pages", from:oh-my-zsh
 zplug "themes/agnoster", from:oh-my-zsh, as:theme
-zplug "chriskempson/base16-shell"
+zplug "chriskempson/base16-shell", if:"[[ $TERM != *linux* ]]"
 zplug "zsh-users/zsh-autosuggestions"
 zplug "zsh-users/zsh-syntax-highlighting"
 zplug "zsh-users/zsh-history-substring-search"
-zplug "lib/clipboard", from:oh-my-zsh, if:"[[ $OSTYPE == *darwin* ]]"
-zplug "lib/directories", from:oh-my-zsh, if:"[[ $OSTYPE == *darwin* ]]"
+zplug "lib/clipboard", from:oh-my-zsh
+zplug "lib/directories", from:oh-my-zsh
 
 if ! zplug check --verbose; then
     printf "Install? [y/N]: "
@@ -38,5 +38,5 @@ if ! zplug check --verbose; then
     echo
 fi
 
-zplug load
+zplug load 2&> /dev/null
 

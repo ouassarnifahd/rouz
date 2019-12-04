@@ -1,0 +1,20 @@
+#!/bin/bash
+
+wallpaperdir=$HOME/Pictures/Wallpapers
+
+#temp_dir=/tmp/wall
+#mkdir -p $temp_dir
+#cd $temp_dir
+
+# read ln paths ...
+#old_bg=$([ -a "$temp_dir/old.bg" ] || "$temp_dir/old.bg")
+#new_bg=
+
+#imagemagick convert old.bg -fill black -colorize 50% transition.bg
+#feh --bg-scale transition.bg
+#imagemagick convert new.bg -fill black -colorize 50% transition.bg
+#feh --bg-scale transition.bg
+#feh --bg-scale new.bg
+#mv new.bg current.bg
+
+feh --bg-fill --randomize $wallpaperdir/*

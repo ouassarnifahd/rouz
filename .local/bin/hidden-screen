@@ -1,0 +1,2 @@
+#!/bin/sh
+exec st -f mono:pixelsize=14 -n hidden_term -e screen -S hidden_screen -R &

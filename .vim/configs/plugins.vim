@@ -23,7 +23,7 @@ Plug 'junegunn/limelight.vim'
 "Plug 'amix/vim-zenroom2'
 
 " completion and snippets
-Plug 'ycm-core/YouCompleteMe', { 'do': './install.py --clang-completer --system-libclang' }
+"Plug 'ycm-core/YouCompleteMe', { 'do': './install.py --clang-completer --system-libclang' }
 Plug 'MarcWeber/vim-addon-mw-utils'
 Plug 'tomtom/tlib_vim'
 Plug 'tomtom/tcomment_vim'
@@ -50,7 +50,7 @@ Plug 'tmux-plugins/vim-tmux'
 Plug 'edkolev/tmuxline.vim'
 
 " workflow
-Plug 'wakatime/vim-wakatime' 
+"Plug 'wakatime/vim-wakatime' 
 
 call plug#end()
 

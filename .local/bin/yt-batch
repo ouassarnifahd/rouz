@@ -1,0 +1,17 @@
+#!/bin/sh
+
+ytdir="$HOME/Media/bigHDD/personal/downloads/youtube/music"
+ytdlmusic='youtube-dl -i -f m4a --embed-thumbnail --add-metadata'
+
+if [ $# != '2' ]; then
+    echo "usage: `basename $0` <single|playlist|channel> [URL]"
+else
+    if [ $1 == 'playlist' ]; then
+        $ytdlmusic -o "$ytdir/playlists/%(playlist)s/%(playlist_index)s - %(title)s.%(ext)s" $2
+    elif [ $1 == 'channel' ]; then
+        $ytdlmusic -o "$ytdir/users/%(uploader)s/%(playlist)s/%(playlist_index)s - %(title)s.%(ext)s" $2
+    elif [ $1 == 'single' ]; then
+        $ytdlmusic -o "$ytdir/singles/%(title)s.%(ext)s" $2
+    fi
+fi
+

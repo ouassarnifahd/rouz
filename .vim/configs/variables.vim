@@ -18,12 +18,12 @@ set tabstop=4 shiftwidth=4 softtabstop=4 expandtab
 set ignorecase
 set smartcase
 set hlsearch
-set incsearch 
-set lazyredraw 
+set incsearch
+set lazyredraw
 set magic
 
-" brackets matching 
-set showmatch 
+" brackets matching
+set showmatch
 set mat=2
 
 " No annoying sound on errors

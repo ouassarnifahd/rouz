@@ -1,0 +1,2 @@
+#!/bin/sh
+exec /usr/bin/X vt$XDG_VTNR "$@" -keeptty &> /dev/null
