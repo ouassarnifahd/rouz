@@ -1,4 +1,4 @@
-" Plugins 
+" Plugins
 
 " loaded at startup
 call plug#begin('~/.vim/plugged')
@@ -12,7 +12,7 @@ Plug 'tpope/vim-unimpaired'
 Plug 'jlanzarotta/bufexplorer'
 
 " theming and feel
-Plug 'vim-airline/vim-airline' 
+Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'chriskempson/base16-vim'
 Plug 'ryanoasis/vim-devicons'
@@ -50,7 +50,7 @@ Plug 'tmux-plugins/vim-tmux'
 Plug 'edkolev/tmuxline.vim'
 
 " workflow
-"Plug 'wakatime/vim-wakatime' 
+"Plug 'wakatime/vim-wakatime'
 
 call plug#end()
 

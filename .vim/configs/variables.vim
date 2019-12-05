@@ -47,14 +47,7 @@ let base16colorspace=256
 colorscheme base16-monokai
 
 " cache (backup, swap, undo, ...)
-let $XDG_CACHE_HOME = '.vim/cache'
-try
-    "set backupdir=~/.vim/cache/backup
-    set nobackup
-    "set directory=~/.vim/cache/swap
-    set noswapfile
-    set undodir=~/.vim/cache/undo
-    set undofile
-catch
-endtry
+set nobackup
+set noswapfile
+set undofile
 

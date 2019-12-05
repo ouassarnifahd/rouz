@@ -30,7 +30,7 @@ zplug "zsh-users/zsh-history-substring-search"
 zplug "lib/clipboard", from:oh-my-zsh
 zplug "lib/directories", from:oh-my-zsh
 
-if ! zplug check --verbose; then
+if ! zplug check; then
     printf "Install? [y/N]: "
     if read -q; then
         echo; zplug install
@@ -38,5 +38,5 @@ if ! zplug check --verbose; then
     echo
 fi
 
-zplug load 2&> /dev/null
+zplug load
 
