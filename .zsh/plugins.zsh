@@ -15,8 +15,9 @@ source "$ZPLUG_HOME/init.zsh"
 zplug "zplug/zplug", hook-build:'zplug --self-manage'
 
 zplug "lib/clipboard", from:oh-my-zsh, if:"[[ $OSTYPE == *darwin* ]]"
-zplug "lib/directories", from:oh-my-zsh, if:"[[ $OSTYPE == *darwin* ]]"
+zplug "lib/directories", from:oh-my-zsh
 zplug "lib/history", from:oh-my-zsh
+#zplug "plugins/sudo", from:oh-my-zsh
 
 zplug "zsh-users/zsh-autosuggestions"
 zplug "zsh-users/zsh-syntax-highlighting"

@@ -11,6 +11,10 @@ set relativenumber
 set exrc
 set secure
 
+" you can't see me
+"set list
+set listchars=tab:→\ ,space:·,nbsp:␣,trail:•,eol:¶,precedes:«,extends:»
+
 " tabulation
 set tabstop=4 shiftwidth=4 softtabstop=4 expandtab
 
@@ -45,6 +49,7 @@ set mouse=a
 set background=dark
 let base16colorspace=256
 colorscheme base16-monokai
+let g:airline_theme = 'base16_monokai'
 
 " cache (backup, swap, undo, ...)
 let $XDG_CACHE_HOME = '.vim/cache'

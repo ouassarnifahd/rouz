@@ -2,7 +2,7 @@
 " personalized langs checkers :help syntastic-checkers
 " let g:syntastic_<filetype>_checkers = ['<checker-name>']
 
-"let g:syntastic_tex_checkers = ['lacheck', 'text/language_check']
+let g:syntastic_tex_checkers = ['lacheck', 'text/language_check']
 
 " visuals
 set statusline+=%#warningmsg#

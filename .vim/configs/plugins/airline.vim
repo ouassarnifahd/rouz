@@ -5,9 +5,6 @@ let g:airline#extensions#tabline#formatter = 'unique_tail_improved'
 let g:airline#extensions#tabline#current_first = 1
 let g:airline#extensions#tagbar#enabled = 1
 
-" airline-theme
-let g:airline_theme = 'base16_monokai'
-
 " airline
 let g:airline_mode_map = {
     \ '__'     : '-',

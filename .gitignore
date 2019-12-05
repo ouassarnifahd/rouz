@@ -12,6 +12,7 @@
 
 # tmux plugs
 .tmux/plugins/*
+.tmux/resurrect/*
 !.tmux/plugins/tpm
 
 # iterm2 colors
