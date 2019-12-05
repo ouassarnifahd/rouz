@@ -17,3 +17,6 @@
 
 # useless
 .config/discord
+.config/pulse
+.config/mps-youtube/*
+!.config/mps-youtube/config
