@@ -35,6 +35,9 @@ noremap <c-space> ?
 " Disable highlight when <leader><cr> is pressed
 noremap <silent> <leader><cr> :noh<cr>
 
+" Toggle invisible characters
+noremap <leader>i :set list!<cr>
+
 " Smart way to move between windows (splits)
 noremap <C-j> <C-W>j
 noremap <C-k> <C-W>k

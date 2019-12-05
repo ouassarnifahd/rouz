@@ -13,6 +13,7 @@
 
 # tmux plugs
 .tmux/plugins/*
+.tmux/resurrect/*
 !.tmux/plugins/tpm
 
 # useless
