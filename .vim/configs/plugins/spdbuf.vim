@@ -2,6 +2,6 @@
 let g:bufExplorerDefaultHelp=0
 
 " Netrw
-let g:netrw_home=$VIM.'cache/netrw'
+let g:netrw_home = expand("~/.cache/vim/netrw")
 
 

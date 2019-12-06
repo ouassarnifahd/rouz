@@ -40,7 +40,7 @@ signal=9
 # Supported players are: spotify, vlc, audacious, xmms2, mplayer, and others.
 [mediaplayer]
 #label=LOL
-instance=mpv
+#instance=mpv
 interval=1
 signal=10
 separator=false
@@ -50,13 +50,13 @@ separator=false
 # The first parameter sets the step (and units to display)
 # The second parameter overrides the mixer selection
 # See the script for details.
-[volume]
+#[volume]
 #label=VOL
-label=♪ 
-instance=Master
+#label=♪ 
+#instance=Master
 #instance=PCM
-interval=once
-signal=10
+#interval=once
+#signal=10
 
 # Memory usage
 #
@@ -99,7 +99,7 @@ interval=10
 
 [wifi]
 label= 
-instance=wlo1
+instance=wl*
 interval=10
 #separator=false
 

@@ -9,7 +9,7 @@
 # Auto import env vars from shell 
 set $VTERM st -f mono:pixelsize=14
 set $FILEMANAGER $VTERM -e ranger
-set $BROWSER icecat
+set $BROWSER firefox
 # </SED>
 
 # i3 config file (v4)
@@ -318,8 +318,8 @@ bindsym $mod+Shift+b exec $BROWSER
 
 # Gaps
 for_window [class="^.*"] border pixel 4
-gaps inner 4
-gaps outer 1
+gaps inner 8
+gaps outer 5
 
 # Floating windows
 for_window [class="vlc"] floating enable
@@ -368,6 +368,10 @@ for_window [title="mpvfloat"] sticky enable
 for_window [title="mpvfloat"] border pixel 0
 no_focus [title="mpvfloat"]
 bindsym $mod+c exec ~/.local/bin/camtoggle
+
+# hidden terminals
+exec --no-startup-id $VTERM -n hidden_term -e tmux new-session -s hidden_terminal
+exec --no-startup-id $VTERM -n hidden_mon -e tmux new-session -s hidden_monitor
 
 # tools
 exec --no-startup-id syncthing --no-browser

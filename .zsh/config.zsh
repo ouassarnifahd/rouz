@@ -5,17 +5,6 @@ setopt monitor
 # fzf
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
-# history
-#export HISTFILE=~/.zsh-history
-#export HISTSIZE=100000
-#export SAVEHIST=100000
-#setopt extended_history
-#setopt hist_ignore_dups
-#setopt hist_ignorespace
-#setopt hist_reduce_blanks
-#setopt hist_verify
-#setopt share_history
-
 # autocompletion
 autoload -Uz compinit && compinit -C
 setopt auto_list

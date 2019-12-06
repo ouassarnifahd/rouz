@@ -6,9 +6,6 @@
 .zsh/plugins/
 
 # vim plugs
-!.vim/cache/undo/.gitkeep
-.vim/cache/undo/*
-.vim/cache/mru_files
 .vim/plugged
 
 # tmux plugs

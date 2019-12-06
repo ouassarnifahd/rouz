@@ -1,3 +1,45 @@
 [submodule ".tmux/plugins/tpm"]
 	path = .tmux/plugins/tpm
-	url = https://github.com/tmux-plugins/tmux-test.git
+	url = https://github.com/tmux-plugins/tpm
+[submodule ".config/mutt"]
+    path = .config/mutt
+    url = https://github.com/LukeSmithxyz/mutt-wizard.git
+[submodule ".vim_runtime"]
+    path = .vim_runtime
+    url = https://github.com/amix/vimrc.git
+[submodule ".vim/bundle/vim-airline"]
+    path = .vim/bundle/vim-airline
+    url = https://github.com/vim-airline/vim-airline
+[submodule ".vim/bundle/vimtex"]
+    path = .vim/bundle/vimtex
+    url = https://github.com/lervag/vimtex.git
+[submodule ".local/src/st"]
+    path = .local/src/st
+    url = https://git.suckless.org/st
+[submodule ".local/src/stagit"]
+    path = .local/src/stagit
+    url = git://git.codemadness.org/stagit
+[submodule ".local/src/tabbed"]
+    path = .local/src/tabbed
+    url = https://git.suckless.org/tabbed
+[submodule ".local/src/surf"]
+    path = .local/src/surf
+    url = https://git.suckless.org/surf
+[submodule ".local/src/voidrice"]
+    path = .local/src/voidrice
+    url = https://github.com/LukeSmithxyz/voidrice.git
+[submodule ".local/src/nnn"]
+    path = .local/src/nnn
+    url = https://github.com/jarun/nnn.git
+[submodule ".local/src/sxiv"]
+    path = .local/src/sxiv
+    url = https://github.com/muennich/sxiv.git
+[submodule ".local/src/9base"]
+    path = .local/src/9base
+    url = https://git.suckless.org/9base
+[submodule ".local/src/i3blocks-contrib"]
+    path = .local/src/i3blocks-contrib
+    url = https://github.com/vivien/i3blocks-contrib.git
+[submodule ".config/zsh/oh-my-zsh"]
+    path = .config/zsh/oh-my-zsh
+    url = https://github.com/robbyrussell/oh-my-zsh.git
