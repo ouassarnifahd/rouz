@@ -5,8 +5,8 @@
 # this file and re-run i3-config-wizard(1).
 #
 
-# <SED> 
-# Auto import env vars from shell 
+# <SED>
+# Auto import env vars from shell
 set $VTERM st -f mono:pixelsize=14
 set $FILEMANAGER $VTERM -e ranger
 set $BROWSER firefox
@@ -39,6 +39,7 @@ floating_modifier $mod
 
 # start a terminal
 bindsym $mod+Return exec $VTERM
+bindsym $mod+Shift+Return exec $VTERM -e tmux new-session
 
 # kill focused window
 bindsym $mod+Shift+a kill
@@ -118,7 +119,7 @@ set $wsf11  "23:F11"
 set $wsf12  "24:F12"
 
 # Fast workspace switch
-bindsym $mod+Tab workspace next 
+bindsym $mod+Tab workspace next
 bindsym $mod+Shift+Tab workspace prev
 
 # workspace default monitors
@@ -261,16 +262,16 @@ bar {
 
     # show state
     #mode hide
-    #hidden_state hide 
+    #hidden_state hide
     modifier none
     #binding_mode_indicator yes
-    
+
     # output and position
     position bottom
     #output primary
     tray_output primary
-    
-    # content 
+
+    # content
     strip_workspace_numbers yes
     i3bar_command i3bar
     status_command i3blocks -c ~/.config/i3/blocks_primary
@@ -305,7 +306,7 @@ mode $PLAYER_MENU {
 }
 
 # Useful
-bindsym $mod+x exec ~/.lock
+bindsym $mod+x exec ~/.config/i3/lock
 bindsym $mod+i exec ~/.bg_switcher
 
 # Extra Fonts
@@ -314,15 +315,28 @@ bindsym $mod+Shift+asterisk exec ~/.local/lib/i3cmds/dmenufontawesome
 
 # Apps shortcuts
 bindsym $mod+Shift+r exec $FILEMANAGER
-bindsym $mod+Shift+b exec $BROWSER
+
+# Browser
+for_window [class="Devtools"] floating enable
+for_window [class="Devtools"] resize set 1500 800
+for_window [class="Devtools"] move position center
+set $BROWSER_MENU "Browse profiles: [D|P|S|V]"
+bindsym $mod+Shift+b mode $BROWSER_MENU
+mode $BROWSER_MENU {
+    bindsym d exec $BROWSER -P "ARCH"; mode "default"
+    bindsym p exec $BROWSER -P "PRO"; mode "default"
+    bindsym s exec $BROWSER -P "SM"; mode "default"
+    bindsym v exec $BROWSER -P "PRIV"; mode "default"
+    bindsym Return mode "default"
+    bindsym Escape mode "default"
+}
 
 # Gaps
 for_window [class="^.*"] border pixel 4
 gaps inner 8
-gaps outer 5
+gaps outer 4
 
 # Floating windows
-for_window [class="vlc"] floating enable
 for_window [class="mpv"] floating enable
 for_window [class="Pavucontrol"] floating enable
 
@@ -346,7 +360,7 @@ for_window [instance="hidden_term"] resize set 1200 700
 for_window [instance="hidden_term"] move scratchpad
 for_window [instance="hidden_term"] border pixel 5
 for_window [instance="hidden_term"] sticky enable
-bindsym $mod+t [instance="hidden_term"] scratchpad show; [instance="hidden_term"] move position center 
+bindsym $mod+t [instance="hidden_term"] scratchpad show; [instance="hidden_term"] move position center
 
 # Hidden Monitor
 for_window [instance="hidden_mon"] floating enable
@@ -354,7 +368,7 @@ for_window [instance="hidden_mon"] resize set 1500 800
 for_window [instance="hidden_mon"] move scratchpad
 for_window [instance="hidden_mon"] border pixel 5
 for_window [instance="hidden_mon"] sticky enable
-bindsym $mod+m [instance="hidden_mon"] scratchpad show; [instance="hidden_mon"] move position center 
+bindsym $mod+m [instance="hidden_mon"] scratchpad show; [instance="hidden_mon"] move position center
 
 # Screenshot:
 bindsym $mod+Shift+exclam exec scrot ~/Pictures/Screenshots/%Y-%m-%d-%T-screenshot.png
@@ -385,9 +399,9 @@ exec --no-startup-id xbanish
 #bindsym $mod+z exec true
 #bindsym $mod+e exec true
 #bindsym $mod+r exec true
-#bindsym $mod+t exec true 
+#bindsym $mod+t exec truu
 bindsym $mod+y exec true
-bindsym $mod+u exec true 
+bindsym $mod+u exec true
 #bindsym $mod+i exec true
 bindsym $mod+o exec true
 #bindsym $mod+p exec true
