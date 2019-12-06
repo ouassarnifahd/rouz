@@ -1,0 +1,17 @@
+grub-silent
+icecat-bin
+linux-ck
+linux-ck-headers
+nerd-fonts-complete
+osu
+plymouth
+plymouth-theme-dark-arch
+powerline-fonts-git
+st-spcz-git
+tpm-tools
+trousers
+uvesafb-dkms
+wacom-utility
+wine-osu
+yay-bin
+zfs-dkms
