@@ -39,11 +39,11 @@ signal=9
 # This displays "ARTIST - SONG" if a music is playing.
 # Supported players are: spotify, vlc, audacious, xmms2, mplayer, and others.
 [mediaplayer]
-#label=LOL
-#instance=mpv
+label=♪ 
+instance=mpv
 interval=1
 signal=10
-separator=false
+#separator=false
 
 # Volume indicator
 #
@@ -52,7 +52,6 @@ separator=false
 # See the script for details.
 #[volume]
 #label=VOL
-#label=♪
 #instance=Master
 #instance=PCM
 #interval=once
@@ -62,12 +61,12 @@ separator=false
 #
 # The type defaults to "mem" if the instance is not specified.
 [memory]
-label=
+label= 
 interval=30
 separator=false
 
 [memory]
-label=
+label= 
 instance=swap
 interval=30
 
@@ -77,13 +76,13 @@ interval=30
 # The script may be called with a optional argument to set the alert
 # (defaults to 10 for 10%).
 [disk]
-label=
+label= 
 instance=/run/media/kalinka/bigHDD
 separator=false
 interval=30
 
 [disk]
-label=
+label= 
 #instance=/mnt/data
 interval=30
 
@@ -98,7 +97,7 @@ interval=10
 #separator=false
 
 [wifi]
-label=
+label= 
 instance=wl*
 interval=10
 #separator=false
@@ -123,7 +122,7 @@ interval=10
 # The script may be called with -w and -c switches to specify thresholds,
 # see the script for details.
 [temperature]
-label=
+label= 
 interval=10
 separator=false
 

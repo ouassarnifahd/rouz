@@ -122,6 +122,9 @@ set $wsf12  "24:F12"
 bindsym $mod+Tab workspace next
 bindsym $mod+Shift+Tab workspace prev
 
+# Jump to urgent
+bindsym $mod+twosuperior [urgent=latest] focus
+
 # workspace default monitors
 workspace $ws1 output LVDS
 workspace $ws2 output LVDS
@@ -211,7 +214,6 @@ bindsym $mod+Shift+c reload
 # restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
 bindsym $mod+Shift+x restart
 # exit i3 (logs you out of your X session)
-bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -B 'Yes, exit i3' 'i3-msg exit'"
 
 # resize window (you can also use the mouse for that)
 bindsym $mod+r mode "resize"
@@ -305,8 +307,28 @@ mode $PLAYER_MENU {
     bindsym Escape mode "default"
 }
 
+# Power management
+set $Locker ~/.config/i3/lock && sleep 1
+
+set $mode_system System (l) lock, (e) logout, (s) suspend, (h) hibernate, (r) reboot, (Shift+s) shutdown
+mode "$mode_system" {
+    bindsym l exec --no-startup-id $Locker, mode "default"
+    bindsym e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -B 'Yes, exit i3' 'i3-msg exit'"
+    bindsym s exec --no-startup-id $Locker && systemctl suspend, mode "default"
+    bindsym h exec --no-startup-id $Locker && systemctl hibernate, mode "default"
+    #bindsym r exec --no-startup-id systemctl reboot, mode "default"
+    bindsym r exec "i3-nagbar -t warning -m 'You pressed the reboot shortcut. Do you really want to reboot the system?' -B 'Yes, reboot' 'systemctl reboot'"
+    #bindsym Shift+s exec --no-startup-id systemctl poweroff -i, mode "default"
+    bindsym Shift+s exec "i3-nagbar -t warning -m 'You pressed the poweroff shortcut. Do you really want to poweroff the system?' -B 'Yes, poweroff' 'systemctl poweroff -i'"
+
+    # back to normal: Enter or Escape
+    bindsym Return mode "default"
+    bindsym Escape mode "default"
+}
+
+bindsym $mod+x mode "$mode_system"
+
 # Useful
-bindsym $mod+x exec ~/.config/i3/lock
 bindsym $mod+i exec ~/.bg_switcher
 
 # Extra Fonts
@@ -320,7 +342,7 @@ bindsym $mod+Shift+r exec $FILEMANAGER
 for_window [class="Devtools"] floating enable
 for_window [class="Devtools"] resize set 1500 800
 for_window [class="Devtools"] move position center
-set $BROWSER_MENU "Browse profiles: [D|P|S|V]"
+set $BROWSER_MENU "Select a profile to start browsing [D|P|S|V]"
 bindsym $mod+Shift+b mode $BROWSER_MENU
 mode $BROWSER_MENU {
     bindsym d exec $BROWSER -P "ARCH"; mode "default"
@@ -337,6 +359,9 @@ gaps inner 8
 gaps outer 4
 
 # Floating windows
+for_window [window_role="pop-up"] floating enable
+for_window [window_role="task_dialog"] floating enable
+for_window [window_role="toolbox"] floating enable
 for_window [class="mpv"] floating enable
 for_window [class="Pavucontrol"] floating enable
 
@@ -390,6 +415,7 @@ exec --no-startup-id $VTERM -n hidden_mon -e tmux new-session -s hidden_monitor
 # tools
 exec --no-startup-id syncthing --no-browser
 exec --no-startup-id compton -f
+exec --no-startup-id pasystray
 exec --no-startup-id dunst -conf ~/.config/dunst/dunstrc
 exec --no-startup-id xbanish
 

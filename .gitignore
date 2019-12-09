@@ -11,10 +11,12 @@
 # tmux plugs
 .tmux/plugins/*
 .tmux/resurrect/*
-!.tmux/plugins/tpm
 
 # useless
+.config/gwenviewrc
 .config/discord
+.config/Caprine
 .config/pulse
-.config/mps-youtube/*
-!.config/mps-youtube/config
+.config/dconf
+.config/mpv
+.config/mps-youtube

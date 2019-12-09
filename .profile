@@ -7,6 +7,3 @@ export PAGER='less'
 export EDITOR='vim'
 export VISUAL=$EDITOR
 
-#i3export() {
-#   echo 'Do nothing for now'
-#}
