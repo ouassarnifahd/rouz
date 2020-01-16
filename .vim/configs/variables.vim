@@ -43,6 +43,7 @@ endif
 set foldcolumn=1
 
 " mouse
+set ttymouse=xterm2
 set mouse=a
 
 " graphics
@@ -55,4 +56,6 @@ let g:airline_theme = 'base16_monokai'
 set nobackup
 set noswapfile
 set undofile
+
+set undodir='~/.cache/vim/undo//'
 
