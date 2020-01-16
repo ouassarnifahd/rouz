@@ -43,6 +43,7 @@ endif
 set foldcolumn=1
 
 " mouse
+set ttymouse=xterm2
 set mouse=a
 
 " graphics
