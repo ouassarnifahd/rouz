@@ -10,7 +10,6 @@ nnoremap <leader>w :w!<cr>
 
 " Edit $MYVIMRC
 noremap <leader>e :e $MYVIMRC<cr>
-au! bufwritepost *.vim so %
 
 " Goyo text editor mode
 nnoremap <silent> <leader>z :Goyo<cr>
@@ -18,6 +17,7 @@ nnoremap <silent> <leader>z :Goyo<cr>
 " Useful fast spliting
 noremap <leader>s :split<cr>
 noremap <leader>v :vsplit<cr>
+noremap <leader>o :only<cr>
 
 " fast BufExplorer access
 "noremap - :Explore<cr> " Plugin vinegar
@@ -37,6 +37,9 @@ noremap <silent> <leader><cr> :noh<cr>
 
 " Toggle invisible characters
 noremap <leader>i :set list!<cr>
+
+" Toggle local paste mode
+noremap <leader>p :setlocal paste!<cr>
 
 " Smart way to move between windows (splits)
 noremap <C-j> <C-W>j
@@ -64,13 +67,9 @@ noremap <leader>t<leader> :tabnext<cr>
 " Let 'sl' toggle between this and the last accessed screen
 let g:lastwin = 1
 nnoremap <Leader>tl :exe "tabn ".g:lasttab<CR>
-au TabLeave * let g:lastwin = tabpagenr()
 
 " Switch CWD to the directory of the open buffer
 noremap <leader>cd :cd %:p:h<cr>:pwd<cr>
-
-" Return to last edit position when opening files (You want this!)
-au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
 
 " diff related mappings
 " https://gist.github.com/mattratleph/4026987

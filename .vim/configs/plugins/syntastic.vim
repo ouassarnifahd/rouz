@@ -6,7 +6,7 @@ let g:syntastic_tex_checkers = ['lacheck', 'text/language_check']
 
 " visuals
 set statusline+=%#warningmsg#
-set statusline+=%{SyntasticStatuslineFlag()}
+"set statusline+=%{SyntasticStatuslineFlag()}
 set statusline+=%*
 
 let g:syntastic_always_populate_loc_list = 1

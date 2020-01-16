@@ -1,4 +1,4 @@
-" Plugins 
+" Plugins
 
 " loaded at startup
 call plug#begin('~/.vim/plugged')
@@ -12,7 +12,7 @@ Plug 'tpope/vim-unimpaired'
 Plug 'jlanzarotta/bufexplorer', { 'on': 'BufExplorer' }
 
 " theming and feel
-Plug 'vim-airline/vim-airline' 
+Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'chriskempson/base16-vim'
 Plug 'ryanoasis/vim-devicons'
@@ -27,6 +27,7 @@ Plug 'amix/vim-zenroom2'
 Plug 'MarcWeber/vim-addon-mw-utils'
 Plug 'tomtom/tlib_vim'
 Plug 'tomtom/tcomment_vim'
+"Plug 'SirVer/ultisnips'
 Plug 'garbas/vim-snipmate'
 Plug 'honza/vim-snippets'
 
@@ -45,12 +46,15 @@ Plug 'mhinz/vim-signify' | set updatetime=400
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'yegappan/mru'
 
+" shell integration
+Plug 'Shougo/vimshell.vim'
+
 " tmux integration
 Plug 'tmux-plugins/vim-tmux'
 Plug 'edkolev/tmuxline.vim'
 
 " workflow
-Plug 'wakatime/vim-wakatime' 
+Plug 'wakatime/vim-wakatime'
 
 call plug#end()
 

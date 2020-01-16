@@ -9,7 +9,7 @@ man-find() {
 
 # music
 export MUSIC_EXT='{mp3,flac,m4a,wav,opus}'
-alias splay='mpv --audio-display=no --volume=60 --script=~/Desktop/Hobbies/Scripts/lua/mpv-notify.lua' 
+alias splay='mpv --audio-display=no --volume=60 --script=~/Desktop/Hobbies/@old/Scripts/lua/mpv-notify.lua' 
 alias qsplay='splay --really-quiet'
 alias hereplay="splay **/*.$MUSIC_EXT"
 alias qhereplay="qsplay **/*.$MUSIC_EXT"

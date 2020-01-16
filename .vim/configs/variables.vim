@@ -22,12 +22,12 @@ set tabstop=4 shiftwidth=4 softtabstop=4 expandtab
 set ignorecase
 set smartcase
 set hlsearch
-set incsearch 
-set lazyredraw 
+set incsearch
+set lazyredraw
 set magic
 
-" brackets matching 
-set showmatch 
+" brackets matching
+set showmatch
 set mat=2
 
 " No annoying sound on errors
@@ -52,14 +52,9 @@ colorscheme base16-monokai
 let g:airline_theme = 'base16_monokai'
 
 " cache (backup, swap, undo, ...)
-let $XDG_CACHE_HOME = '.vim/cache'
-try
-    "set backupdir=~/.vim/cache/backup
-    set nobackup
-    "set directory=~/.vim/cache/swap
-    set noswapfile
-    set undodir=~/.vim/cache/undo
-    set undofile
-catch
-endtry
+set nobackup
+set noswapfile
+set undofile
+
+set undodir='~/.cache/vim/undo//'
 
