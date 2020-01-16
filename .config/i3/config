@@ -355,8 +355,8 @@ mode $BROWSER_MENU {
 
 # Gaps
 for_window [class="^.*"] border pixel 4
-gaps inner 8
-gaps outer 4
+gaps inner 4
+gaps outer 2
 
 # Floating windows
 for_window [window_role="pop-up"] floating enable
@@ -366,7 +366,7 @@ for_window [class="mpv"] floating enable
 for_window [class="Pavucontrol"] floating enable
 
 # Caprine
-exec --no-startup-id caprine
+#exec --no-startup-id caprine
 for_window [class="Caprine"] floating enable
 for_window [class="Caprine"] resize set 1500 800
 for_window [class="Caprine"] move workspace $ws11

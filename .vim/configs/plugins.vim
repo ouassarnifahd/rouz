@@ -8,8 +8,12 @@ Plug 'tpope/vim-sensible'
 Plug 'tpope/vim-scriptease'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-vinegar'
+Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-unimpaired'
+Plug 'tpope/vim-speeddating'
 Plug 'jlanzarotta/bufexplorer', { 'on': 'BufExplorer' }
+Plug 'vim-scripts/utl.vim'
+Plug 'mbbill/undotree'
 
 " theming and feel
 Plug 'vim-airline/vim-airline'
@@ -34,7 +38,7 @@ Plug 'honza/vim-snippets'
 Plug 'majutsushi/tagbar'
 
 " linter
-"Plug 'scrooloose/syntastic'
+Plug 'scrooloose/syntastic'
 
 " git
 Plug 'tpope/vim-fugitive'
@@ -50,7 +54,9 @@ Plug 'tmux-plugins/vim-tmux'
 Plug 'edkolev/tmuxline.vim'
 
 " workflow
-"Plug 'wakatime/vim-wakatime'
+Plug 'mattn/calendar-vim'
+Plug 'jceb/vim-orgmode'
+Plug 'wakatime/vim-wakatime'
 
 call plug#end()
 

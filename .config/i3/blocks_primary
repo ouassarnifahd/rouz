@@ -82,6 +82,12 @@ separator=false
 interval=30
 
 [disk]
+label= 
+instance=/archive
+separator=false
+interval=30
+
+[disk]
 label= 
 #instance=/mnt/data
 interval=30
