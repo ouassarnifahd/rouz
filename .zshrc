@@ -11,3 +11,10 @@ source $ZSH/aliases.zsh
 source $ZSH/bindings.zsh
 source $ZSH/plugins.zsh
 
+# pywal
+#wal -R
+. $HOME/.cache/wal/colors.sh
+(cat $HOME/.cache/wal/sequences &)
+
+
+source /home/kalinka/.config/broot/launcher/bash/br

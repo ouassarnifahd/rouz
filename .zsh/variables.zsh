@@ -10,3 +10,4 @@ export LS_COLORS='di=36:ln=35:so=32:pi=33:ex=31:bd=46;34:cd=43;34:su=41;30:sg=46
 export FZF_DEFAULT_OPTS='--height 40% --layout=reverse --border'
 export MUSIC_EXT='{mp3,flac,m4a,wav,opus}'
 export PATH="$HOME/.local/bin:$PATH"
+export PYTHONPATH="/usr/lib/python3.8/site-packages/bb:$PYTHONPATH"

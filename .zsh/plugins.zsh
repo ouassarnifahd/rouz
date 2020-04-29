@@ -16,14 +16,12 @@ source "$ZPLUG_HOME/init.zsh"
 # zplugseption
 zplug "zplug/zplug", hook-build:'zplug --self-manage'
 
-zplug "chriskempson/base16-shell"
+#zplug "chriskempson/base16-shell"
 zplug "plugins/colored-man-pages", from:oh-my-zsh
 zplug "powerlevel9k/powerlevel9k", as:theme
 
+zplug "robbyrussell/oh-my-zsh", as:plugin, use:"lib/*.zsh"
 zplug "plugins/alias", from:oh-my-zsh
-zplug "lib/clipboard", from:oh-my-zsh
-zplug "lib/directories", from:oh-my-zsh
-zplug "lib/history", from:oh-my-zsh
 
 zplug "zsh-users/zsh-autosuggestions"
 zplug "zsh-users/zsh-syntax-highlighting"
@@ -31,7 +29,9 @@ zplug "zsh-users/zsh-history-substring-search"
 
 zplug "plugins/taskwarrior", from:oh-my-zsh
 zplug "plugins/git", from:oh-my-zsh
+
 zplug "wfxr/forgit"
+zplug "changyuheng/zsh-interactive-cd"
 
 zplug "plugins/tmux", from:oh-my-zsh
 

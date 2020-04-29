@@ -47,15 +47,17 @@ set ttymouse=xterm2
 set mouse=a
 
 " graphics
+set fillchars=vert:\│
 set background=dark
 let base16colorspace=256
-colorscheme base16-monokai
-let g:airline_theme = 'base16_monokai'
+colorscheme wal
+let g:airline_theme = 'base16color'
 
 " cache (backup, swap, undo, ...)
+"let &undodir='~/.cache/vim/undo//'
+let undodir = expand('~/.cache/vim/undo/')
+
 set nobackup
 set noswapfile
 set undofile
-
-set undodir='~/.cache/vim/undo//'
 

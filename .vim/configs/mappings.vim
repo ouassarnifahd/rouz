@@ -15,9 +15,15 @@ noremap <leader>e :e $MYVIMRC<cr>
 nnoremap <silent> <leader>z :Goyo<cr>
 
 " Useful fast spliting
-noremap <leader>s :split<cr>
+noremap <leader>s :bel split<cr>
 noremap <leader>v :vsplit<cr>
 noremap <leader>o :only<cr>
+
+" let's get it done
+nnoremap <Left> :echoe "Use h"<CR>
+nnoremap <Right> :echoe "Use l"<CR>
+nnoremap <Up> :echoe "Use k"<CR>
+nnoremap <Down> :echoe "Use j"<CR>
 
 " fast BufExplorer access
 "noremap - :Explore<cr> " Plugin vinegar
@@ -81,3 +87,14 @@ if &diff
     hi DiffChange ctermbg=white  guibg=#ececec gui=none   cterm=none
     hi DiffText   ctermfg=233  ctermbg=yellow  guifg=#000033 guibg=#DDDDFF gui=none cterm=none
 endif
+
+" goto definition
+map <C-\> :tab split<CR>:exec("tag ".expand("<cword>"))<CR>
+map <A-]> :vsp <CR>:exec("tag ".expand("<cword>"))<CR>
+
+" ctags
+noremap <leader>t :TagbarToggle<cr>
+
+" undo
+noremap <leader>u :UndotreeToggle<cr>
+

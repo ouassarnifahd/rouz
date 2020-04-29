@@ -12,6 +12,7 @@ Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-unimpaired'
 Plug 'tpope/vim-speeddating'
 Plug 'jlanzarotta/bufexplorer', { 'on': 'BufExplorer' }
+Plug 'osyo-manga/vim-over'
 Plug 'vim-scripts/utl.vim'
 Plug 'mbbill/undotree'
 
@@ -19,6 +20,7 @@ Plug 'mbbill/undotree'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'chriskempson/base16-vim'
+Plug 'dylanaraps/wal.vim'
 Plug 'ryanoasis/vim-devicons'
 
 " writing made beautiful!
@@ -27,12 +29,13 @@ Plug 'junegunn/limelight.vim', { 'on': 'Limelight' }
 Plug 'amix/vim-zenroom2'
 
 " completion and snippets
-"Plug 'ycm-core/YouCompleteMe', { 'do': './install.py --clang-completer --system-libclang' , 'for': ['c', 'cpp'] }
 Plug 'MarcWeber/vim-addon-mw-utils'
 Plug 'tomtom/tlib_vim'
 Plug 'tomtom/tcomment_vim'
 Plug 'garbas/vim-snipmate'
 Plug 'honza/vim-snippets'
+
+" syntax
 
 " ctags
 Plug 'majutsushi/tagbar'
@@ -46,7 +49,6 @@ Plug 'tpope/vim-fugitive'
 Plug 'mhinz/vim-signify' | set updatetime=400
 
 " files
-Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'yegappan/mru'
 
 " tmux integration

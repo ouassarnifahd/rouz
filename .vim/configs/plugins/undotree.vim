@@ -5,7 +5,7 @@ endif
 
 " e.g. using 'd' instead of 'days' to save some space.
 if !exists('g:undotree_ShortIndicators')
-    let g:undotree_ShortIndicators = 0
+    let g:undotree_ShortIndicators = 1
 endif
 
 " undotree window width
