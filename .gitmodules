@@ -43,3 +43,6 @@
 [submodule ".config/zsh/oh-my-zsh"]
     path = .config/zsh/oh-my-zsh
     url = https://github.com/robbyrussell/oh-my-zsh.git
+[submodule ".local/src/bmpanel2"]
+	path = .local/src/bmpanel2
+	url = https://github.com/nsf/bmpanel2
