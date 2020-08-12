@@ -9,9 +9,9 @@ super + Return
 # program launcher
 super + d
     source $HOME/.cache/wal/colors.sh; \
-    dmenu_run -nb $color0 -nf $color15 -sb $color1 -sf $color15 -l 10
+    dmenu_run -nb $color0 -nf $color15 -sb $color1 -sf $color15 -fn mono:size=10 #-l 10
 
-# make {bmpanel2,sxhkd} reload its configuration files:
+# make sxhkd reload its configuration files:
 super + Escape
     pkill -USR1 -x sxhkd
 
@@ -68,11 +68,11 @@ super + {_,shift + }c
     bspc node -f {next,prev}.local
 
 # focus the next/previous desktop in the current monitor
-super + bracket{left,right}
-    bspc desktop -f {prev,next}.local
+super + {shift + ,_}Tab
+    bspc desktop -f {prev,next}.occupied
 
 # focus the last node/desktop
-super + {grave,Tab}
+super + {shift + ,_}twosuperior
     bspc {node,desktop} -f last
 
 # focus the older or newer node in the focus history
@@ -121,13 +121,76 @@ super + alt + shift + {h,j,k,l}
 super + {Left,Down,Up,Right}
     bspc node -v {-20 0,0 20,0 -20,20 0}
 
+super + alt + space
+	id=$(bspc query -N -n "focused");\
+	if [ -n "$id" ];then \
+		xprop -id $id -f _SCRATCH 32ii -set _SCRATCH $(date +%s,%N);\
+		bspc node -t "floating";\
+		xdotool windowunmap $id;\
+	fi
+
+super + space
+	i=$(bspc query -N -n "focused.floating");\
+	if [ -n "$i" ];then \
+		xprop -id $i -f _SCRATCH 32ii -set _SCRATCH $(date +%s,%N);\
+		xdotool windowunmap $i;\
+	else;\
+		i=$(for w in $(xwininfo -root -children | grep -e "^\s*0x[0-9a-f]\+" -o);do \
+			t=$(xprop -id $w _SCRATCH | grep ' = \(.*\)');\
+			if [ -n "$t" ];then \
+				echo $t $w;\
+			fi;\
+		done|sort -n|head -n1|cut -d" " -f 5);\
+		if [ -n "$i" ];then \
+			xprop -id $i -remove _SCRATCH;\
+			bspc rule -a \* state=floating sticky=on center=on --one-shot;\
+			xdotool windowmap $i;\
+			bspc node -f $i;\
+		fi;\
+	fi
+
+#
+# Multimedia keys
+#
+
+# audio
+XF86AudioMute
+    pactl set-sink-mute 0 toggle
+XF86AudioLowerVolume
+    sh -c "pactl set-sink-mute 0 false ; pactl set-sink-volume 0 -5%"
+XF86AudioRaiseVolume
+    sh -c "pactl set-sink-mute 0 false ; pactl set-sink-volume 0 +5%"
+XF86AudioMicMute
+    pactl set-source-mute 1 toggle
+
+# music
+XF86AudioPlay
+    playerctl -a play-pause
+XF86AudioStop
+    playerctl -a stop
+XF86AudioNext
+    playerctl -a next
+XF86AudioPrev
+    playerctl -a previous
+
+# backlight
+XF86MonBrightnessUp
+    true
+XF86MonBrightnessDown
+    true
+
+# webcam
+XF86WebCam
+    ~/.local/bin/camtoggle
+
 #
 # custom
 #
 super + colon
-    wal -i $HOME/Pictures/Wallpapers && pkill panel && bspc wm -r
+    wal -qi $HOME/Pictures/Wallpapers && killall sh && bspc wm -r
 
-super + {_,Shift +} asterisk
+super + {asterisk,mu}
     ~/.local/lib/i3cmds/dmenu{unicode,fontawesome}
 
-
+{_,Shift +} Print
+    scrot {_,-l style=dash,width=2 -sf} ~/Pictures/Screenshots/%Y-%m-%d-%T-{_,croped-}Screenshot.png

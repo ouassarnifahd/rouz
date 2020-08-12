@@ -2,18 +2,19 @@
 
 source ~/.profile
 
+export CLUTTER_PAINT=disable-clipped-redraws:disable-culling
+export CLUTTER_VBLANK=True
+# export DBUS_SESSION_BUS_ADDRESS="unix:path=/run/user/1000/bus"
+
 [ -f ~/.Xresources ] && xrdb -merge ~/.Xresources
+wal -qi $HOME/Pictures/Wallpapers
+
 dunst -conf ~/.config/dunst/dunstrc &
 picom -f &
+xbanish &
 numlockx &
 
-wal -qi $HOME/Pictures/Wallpapers &
-xbanish &
-
 case $XDG_VTNR in
-#   1)
-        #exec xss-lock -- ~/.config/i3/lock &
-#        exec $WM;;
     *)
         exec bspwm;;
 esac

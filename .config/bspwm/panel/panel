@@ -13,18 +13,14 @@ trap 'trap - TERM; kill 0' INT TERM QUIT EXIT
 [ -e "$PANEL_FIFO" ] && rm "$PANEL_FIFO"
 mkfifo "$PANEL_FIFO"
 
-#bspc control --subscribe > "$PANEL_FIFO" &
-#echo "S" > "$PANEL_FIFO" &
-echo "T" > "$PANEL_FIFO" &
-echo "W" > "$PANEL_FIFO" &
-bspc subscribe report > "$PANEL_FIFO" &
-conky -c ./panel_conky > "$PANEL_FIFO" &
-#./notify_mpd -d &
+exec bspc subscribe report > "$PANEL_FIFO" &
+exec conky -c ./panel_conky > "$PANEL_FIFO" &
 
 cat "$PANEL_FIFO" \
     | ./panel_bar \
     | lemonbar \
-        -f "$FONT_MONO" -f "$FONT_AWESOME" -f "$FONT_ICON"\
+        -f "$FONT_MONO" -f "$FONT_AWESOME"\
+        -f "$FONT_CJK" -f "$FONT_ICON"\
         -F "$COLOR_FOREGROUND"\
         -B "$COLOR_BACKGROUND"\
         -g "$PANEL_GEOMETRY"\

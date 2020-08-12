@@ -5,16 +5,18 @@ source $(dirname $0)/config
 # 
 
 #wiface=`iw dev wl* | grep Interface | cut -d ' ' -f2`
-wiface=wlp0s20f3
+wiface=wlan0
 
-QUAL=`iwconfig $wiface | grep 'Link Quality=' | awk '{gsub(/[=/]/," "); print $3}'`
-MAX=`iwconfig $wiface | grep 'Link Quality=' | awk '{gsub(/[=/]/," "); print $4}'`
-PERC=`echo $QUAL*100/$MAX | bc`
+# QUAL=`iwconfig $wiface | grep 'Link Quality=' | awk '{gsub(/[=/]/," "); print $3}'`
+# MAX=`iwconfig $wiface | grep 'Link Quality=' | awk '{gsub(/[=/]/," "); print $4}'`
+# PERC=`echo $QUAL*100/$MAX | bc`
+PERC_1L=$(iwconfig wlan0 | grep "Link Quality" | awk '{gsub(/[=/]/, " "); print $3; print "*100/" ; print $4}' | paste -sd '' | bc)
 
 icon=""
-case $PERC in
+case $PERC_1L in
     [0-4])
-        icon=""
+        # icon=""
+        icon=""
     ;;
     [4-9])
         icon=""
@@ -29,7 +31,8 @@ case $PERC in
         icon=""
     ;;
     *)
-        icon=""
+        # icon=""
+        icon=""
     ;;
 esac
 

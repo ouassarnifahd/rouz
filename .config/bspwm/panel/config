@@ -3,7 +3,8 @@
 #FONT2="-lokaltog-fixed-medium-r-normal--10-100-75-75-c-60-iso8859-1"
 #FONT2="-*-dweep-medium-r-semicondensed-*-11-*-*-*-*-*-*-*"
 FONT_MONO="Hack Nerd Font Mono:size=9"
-FONT_ICON="Siji:size=9"
+FONT_CJK="Noto Sans Mono CJK JP:size=9"
+FONT_ICON="Noto Color Emoji:size=9"
 FONT_AWESOME="FontAwesome:size=9"
 
 # source the colors.
@@ -26,14 +27,14 @@ PANEL_GEOMETRY="${PANEL_WIDTH}x${PANEL_HEIGHT}+0+0"
 
 # Notification geometry
 NOTIFY_HEIGHT=$PANEL_HEIGHT
-NOTIFY_WIDTH=135
-NOTIFY_GEOMETRY="${NOTIFY_WIDTH}x${NOTIFY_HEIGHT}+0+0"
+NOTIFY_WIDTH=100
+NOTIFY_GEOMETRY="${NOTIFY_WIDTH}x${NOTIFY_HEIGHT}+70+0"
 
 # Duration of notifications
 DURATION=2
 
 # FIFO
-PANEL_FIFO="$(mktemp -u /tmp/panel.XXXXXXXXXX)"
+PANEL_FIFO="/tmp/panel"
 
 # Monitor to display panel on
 MONITOR="$(bspc query -M | tail -n1)"

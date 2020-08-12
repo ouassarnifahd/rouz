@@ -2,17 +2,19 @@
 
 source $(dirname $0)/config
 
+echo $(date) > ~/.panel_bar.log
+
 while read -r line ; do
-    #echo $line | tee ~/.panel_bar.log
+    echo $line >> ~/.panel_bar.log
     case $line in
         S*)
             sys_infos="%{r}${line#?}"
             ;;
-        T*)
-            title=" %{F$COLOR_ICON}%{F-} bspwm"
+        N*)
+            notifs=""
             ;;
         W*)
-            wm_infos="%{c}"
+            wm_infos="%{l} %{F$COLOR_ICON}%{F-} bspwm "
             IFS=':'
             set -- ${line#?}
             while [ $# -gt 0 ] ; do
@@ -21,24 +23,24 @@ while read -r line ; do
                 case $item in
                     [OFU]*)
                         # active desktop
-                        wm_infos="$wm_infos %{U$COLOR_ACTIVE}%{+u}   %{-u}"
+                        wm_infos="$wm_infos %{U$COLOR_ACTIVE}%{+u} $item %{-u}"
                         ;;
                     o*)
                         # inactive but occupied desktop
-                        wm_infos="$wm_infos %{U$COLOR_OCCUPIED}%{+u}   %{-u}"
+                        wm_infos="$wm_infos %{U$COLOR_OCCUPIED}%{+u} $item  %{-u}"
                         ;;
                     f*)
                         # inactive desktop
-                        wm_infos="$wm_infos    "
+                        wm_infos="$wm_infos $name "
                         ;;
                     u*)
                         # urgent desktop
-                        wm_infos="$wm_infos %{U$COLOR_URGENT}%{+u}   %{-u}"
+                        wm_infos="$wm_infos %{U$COLOR_URGENT}%{+u} $item %{-u}"
                         ;;
                     L*)
                         # layout
-#                        layout=$(printf "%s" "${name}" | sed 's/\(.\).*/\U\1/')
-                        wm_infos="$wm_infos $layout"
+                        #layout=$(printf "%s" "${name}" | sed 's/\(.\).*/\U\1/')
+                        wm_infos="%{A1:notify-send 0:}%{A:true:}$wm_infos $layout%{A}%{A}"
                         ;;
                 esac
                 shift

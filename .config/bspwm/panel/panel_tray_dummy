@@ -1,0 +1,8 @@
+#!/usr/bin/env sh
+
+block="  "
+for (( i = 0; i <= $(xwininfo -name stalonetray | egrep 'Width|Height' | awk '{print $2}' | paste -sd '/' | bc); i++ )); do
+    str="$block$str"
+done
+
+echo "$str"

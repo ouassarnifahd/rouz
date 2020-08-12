@@ -1,0 +1,25 @@
+#!/bin/bash
+
+# source $(dirname $0)/config
+
+# Only run if mpris player is running
+if [ "$(playerctl -l)" == "No players were found" ] ; then
+    exit 1
+fi
+
+if [ $(playerctl status) == 'Paused' ]; then
+    # icon="%{F$COLOR_ICON}%{F-}"
+    icon="%{F$COLOR_ICON}%{F-}"
+elif [ $(playerctl status) == 'Playing' ]; then
+    # icon="%{F$COLOR_ICON}%{F-}"
+    icon="%{F$COLOR_ICON}%{F-}"
+fi
+
+player_status=$(playerctl metadata -f '{{default(xesam:albumArtist,artist)}} - {{xesam:title}}')
+
+player_pct=$(playerctl metadata -f 'scale=2; {{position}}/{{mpris:length}}*100' | bc | cut -d. -f1)
+if [ -n "$player_pct" ]; then
+    player_status="$player_status ($player_pct%)"
+fi
+
+echo "$icon $player_status"

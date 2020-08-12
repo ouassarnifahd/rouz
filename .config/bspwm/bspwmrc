@@ -2,11 +2,11 @@
 
 xsetroot -cursor_name left_ptr
 
+# source the colors.
+. "${HOME}/.cache/wal/colors.sh"
+
+. ${HOME}/.config/lemonbar/lemonrc > ~/.panel_bar.log &
 pgrep sxhkd || sxhkd -m 1 &
-(pgrep lemonbar && pgrep conky) || $(dirname $0)/panel/panel &
-#pgrep bmpanel2 || bmpanel2 &
-#pgrep tint2 || tint2 &
-# https://github.com/nsf/bmpanel2/blob/master/docs/themeref/index.txt
 
 i=1
 for monitor in $(bspc query -M); do
@@ -18,17 +18,20 @@ done
 NMON=$i
 unset i
 
-bspc config border_width 2
+bspc config border_width 1
 bspc config window_gap 4
 bspc config top_padding 18
 
 bspc config split_ratio 0.50
-bspc config borderless_monocle true
-bspc config gapless_monocle true
-bspc config focus_follows_pointer true
 
-# source the colors.
-. "${HOME}/.cache/wal/colors.sh"
+bspc config borderless_monocle true
+bspc config left_monocle_padding 2
+bspc config right_monocle_padding 2
+bspc config top_monocle_padding 2
+bspc config bottom_monocle_padding 2
+#bspc config gapless_monocle true
+
+bspc config focus_follows_pointer true
 
 # Set the border colors.
 bspc config normal_border_color "$color1"
@@ -40,7 +43,13 @@ bspc config presel_feedback_color "$color1"
 #bspc config presel_border_color "$color1"
 
 # Set the rules
-bspc rule -a mpvfloat state=floating follow=on
-bspc rule -a discord desktop='^12'
-bspc rule -a Conky sticky=on manage=off lower=on
+bspc rule -a mpvfloat sticky=on state=floating follow=on
+bspc rule -a Pavucontrol state=floating
+bspc rule -a Conky sticky=on lower=on
+bspc rule -a firefox:Toolkit sticky=on follow=on state=floating
 
+bspc rule -a Steam:Steam state=floating desktop='^11'
+bspc rule -a Ferdi desktop='^12'
+
+bspc rule -a taskmgr.exe state=floating
+bspc rule -a explorer.exe state=floating
