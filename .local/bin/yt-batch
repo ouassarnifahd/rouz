@@ -1,6 +1,6 @@
 #!/bin/sh
 
-ytdir="$HOME/Media/bigHDD/personal/downloads/youtube/music"
+ytdir="$HOME/bigHDD/downloads/youtube/music"
 ytdlmusic='youtube-dl -i -f m4a --embed-thumbnail --add-metadata'
 
 if [ $# != '2' ]; then
@@ -14,4 +14,3 @@ else
         $ytdlmusic -o "$ytdir/singles/%(title)s.%(ext)s" $2
     fi
 fi
-

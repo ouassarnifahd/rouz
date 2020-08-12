@@ -10,6 +10,7 @@
 
 # tmux plugs
 .tmux/plugins/*
+!.tmux/plugins/tpm
 .tmux/resurrect/*
 
 # useless
@@ -20,3 +21,8 @@
 .config/dconf
 .config/mpv
 .config/mps-youtube
+.config/*
+!.config/lemonbar
+!.config/bspwm
+!.config/fontconfig
+!.config/sxhkd
