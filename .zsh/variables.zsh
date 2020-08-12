@@ -11,3 +11,5 @@ export FZF_DEFAULT_OPTS='--height 40% --layout=reverse --border'
 export MUSIC_EXT='{mp3,flac,m4a,wav,opus}'
 export PATH="$HOME/.local/bin:$PATH"
 export PYTHONPATH="/usr/lib/python3.8/site-packages/bb:$PYTHONPATH"
+export CONTPATH=fedora:alpine:ubuntu:archlinux
+export WINEPREFIX=/home/archer/.local/share/wineprefixes/default

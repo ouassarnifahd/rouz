@@ -10,7 +10,7 @@ fi
 #alias tmux=tmate
 
 # dmenu colors
-alias dmenu="dmenu -nb $color0 -nf $color15 -sb $color1 -sf $color15"
+alias dmenu="dmenu -nb '$color0' -nf '$color15' -sb '$color1' -sf '$color15'"
 
 # rsync
 alias cpr='rsync --archive -hh --partial --info=stats1 --info=progress2 --modify-window=1'

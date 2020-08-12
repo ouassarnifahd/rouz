@@ -48,7 +48,7 @@ set mouse=a
 
 " graphics
 set fillchars=vert:\│
-set background=dark
+"set background=dark
 let base16colorspace=256
 colorscheme wal
 let g:airline_theme = 'base16color'

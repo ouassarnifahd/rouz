@@ -6,4 +6,5 @@ export MAIL='neomutt'
 export PAGER='less'
 export EDITOR='vim'
 export VISUAL=$EDITOR
-
+export GAMEMODERUNEXEC='prime-run ionice -c2'
+export _JAVA_AWT_WM_NONREPARENTING=1

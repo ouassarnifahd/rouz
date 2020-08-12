@@ -2,15 +2,16 @@
 #FONT1="-misc-stlarch-medium-r-normal--10-100-75-75-c-80-iso10646-1"
 #FONT2="-lokaltog-fixed-medium-r-normal--10-100-75-75-c-60-iso8859-1"
 #FONT2="-*-dweep-medium-r-semicondensed-*-11-*-*-*-*-*-*-*"
-FONT1="Hack Nerd Font Mono:size=9"
-FONT2="FontAwesome:size=9"
+FONT_MONO="Hack Nerd Font Mono:size=9"
+FONT_ICON="Siji:size=9"
+FONT_AWESOME="FontAwesome:size=9"
 
 # source the colors.
-. "${HOME}/.cache/wal/colors.sh"
+. "$HOME/.cache/wal/colors.sh"
 
 COLOR_BACKGROUND="$background"
 COLOR_FOREGROUND="$foreground"
-COLOR_ICON="#$color2"
+COLOR_ICON="$color1"
 COLOR_ACTIVE="$cursor"
 COLOR_OCCUPIED="$color1"
 COLOR_URGENT="$color15"

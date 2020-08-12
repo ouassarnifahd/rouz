@@ -22,6 +22,7 @@ Plug 'vim-airline/vim-airline-themes'
 Plug 'chriskempson/base16-vim'
 Plug 'dylanaraps/wal.vim'
 Plug 'ryanoasis/vim-devicons'
+" Plug 'gko/vim-coloresque'
 
 " writing made beautiful!
 Plug 'junegunn/goyo.vim', { 'on': 'Goyo' }
@@ -36,12 +37,14 @@ Plug 'garbas/vim-snipmate'
 Plug 'honza/vim-snippets'
 
 " syntax
+Plug 'dense-analysis/ale'
+Plug 'scrooloose/nerdcommenter'
+
+" debugging
+"Plug 'puremourning/vimspector'
 
 " ctags
 Plug 'majutsushi/tagbar'
-
-" linter
-Plug 'scrooloose/syntastic'
 
 " git
 Plug 'tpope/vim-fugitive'
@@ -58,7 +61,7 @@ Plug 'edkolev/tmuxline.vim'
 " workflow
 Plug 'mattn/calendar-vim'
 Plug 'jceb/vim-orgmode'
-Plug 'wakatime/vim-wakatime'
+"Plug 'wakatime/vim-wakatime'
 
 call plug#end()
 
@@ -66,4 +69,3 @@ call plug#end()
 for conf in split(glob('~/.vim/configs/plugins/*.vim'), '\n')
   exe 'source' conf
 endfor
-

@@ -4,8 +4,11 @@ source $(dirname $0)/config
 # WIFI ICONS
 # 
 
-QUAL=`iwconfig wlo1 | grep 'Link Quality=' | awk '{gsub(/[=/]/," "); print $3}'`
-MAX=`iwconfig wlo1 | grep 'Link Quality=' | awk '{gsub(/[=/]/," "); print $4}'`
+#wiface=`iw dev wl* | grep Interface | cut -d ' ' -f2`
+wiface=wlp0s20f3
+
+QUAL=`iwconfig $wiface | grep 'Link Quality=' | awk '{gsub(/[=/]/," "); print $3}'`
+MAX=`iwconfig $wiface | grep 'Link Quality=' | awk '{gsub(/[=/]/," "); print $4}'`
 PERC=`echo $QUAL*100/$MAX | bc`
 
 icon=""

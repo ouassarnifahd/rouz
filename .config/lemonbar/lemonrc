@@ -1,0 +1,27 @@
+#! /bin/sh
+
+LEMON_DIR=$HOME/.config/lemonbar
+cd $LEMON_DIR
+source ./fridge
+
+function trapcard {
+    trap - TERM
+    killall iceblocks
+}
+trap trapcard INT TERM QUIT EXIT
+
+# killall iceblocks
+[ -e "$PANEL_FIFO" ] && rm "$PANEL_FIFO"
+mkfifo "$PANEL_FIFO"
+
+cat "$PANEL_FIFO" | ./iceblocks | lemonbar -n "$PANEL_NAME"\
+        -f "$FONT_MONO" -f "$FONT_CJK" -f "$FONT_ICON"\
+        -F "$COLOR_FOREGROUND" -B "$COLOR_BACKGROUND"\
+        -g "$PANEL_GEOMETRY" -u "$LINE_HEIGHT" -o -1 -a "$MOUSE_AREAS" | sh &
+
+# Make sure lemonbar is hidden below a fullscreen window
+sleep 1
+wid=$(xdo id -a "$PANEL_NAME")
+xdo above -t "$(xdo id -N Bspwm -n root | sort | head -n 1)" "$wid"
+
+wait

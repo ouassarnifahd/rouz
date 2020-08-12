@@ -1,0 +1,39 @@
+#! /bin/sh
+
+source ./fridge
+
+[ -n "$BLOCKS_DIR" ] || BLOCKS_DIR="blocks"
+for block in $BLOCKS_DIR/*.sh; do
+    . $block > $PANEL_FIFO &
+done
+
+delim_left="$(setfg "$COLOR_ICON")$nofg"
+delim_right="$(setfg "$COLOR_ICON")$nofg"
+
+left[0]="%{l}"
+center[0]="%{c}"
+right[0]="%{r}"
+
+while read -r line ; do
+    echo $line >> ~/.panel_bar.log
+    index=${line:1:2}
+    status=${line#??}
+    case $line in
+        L*)
+            left[$index]="$status $delim_left"
+            ;;
+        C*)
+            center[$index]="$status"
+            ;;
+        R*)
+            right[$index]="$delim_right$status"
+            ;;
+    esac
+    # echo "${left[@]}" >> ~/.panel_bar.log
+    # echo "${center[@]}" >> ~/.panel_bar.log
+    # echo "${right[@]}" >> ~/.panel_bar.log
+    # echo -e "${left[@]} ${center[@]} ${right[@]/\} /\}} " # | tee -a ~/.panel_bar.log
+    echo -e "${left[@]} ${center[@]} ${right[@]} " # | tee -a ~/.panel_bar.log
+done
+
+wait

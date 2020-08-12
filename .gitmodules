@@ -46,3 +46,12 @@
 [submodule ".local/src/bmpanel2"]
 	path = .local/src/bmpanel2
 	url = https://github.com/nsf/bmpanel2
+[submodule "/home/archer/.dotfiles/.tmux/plugins/tpm"]
+	path = /home/archer/.dotfiles/.tmux/plugins/tpm
+	url = https://github.com/tmux-plugins/tpm
+[submodule ".local/src/lemonblocks"]
+	path = .local/src/lemonblocks
+	url = https://github.com/b3nj5m1n/lemonblocks
+[submodule ".local/src/mocp-mpris"]
+	path = .local/src/mocp-mpris
+	url = https://github.com/ouassarnifahd/mocp-mpris

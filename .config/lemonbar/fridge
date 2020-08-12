@@ -1,0 +1,101 @@
+#! /bin/sh
+
+# fonts
+FONT_SIZE=10
+FONT_MONO="Hack Nerd Font Mono:size=$FONT_SIZE"
+FONT_ICON="Noto Color Emoji:size=$FONT_SIZE"
+FONT_CJK="Noto Sans Mono CJK JP:size=$FONT_SIZE"
+
+# source colors
+source $HOME/.cache/wal/colors.sh
+
+COLOR_BACKGROUND="$background"
+COLOR_FOREGROUND="$foreground"
+COLOR_ICON="$color1"
+COLOR_ACTIVE="$cursor"
+COLOR_OCCUPIED="$color1"
+COLOR_URGENT="$color15"
+
+# Height of underlines / overlines
+LINE_PLACEMENT="u"
+LINE_HEIGHT="3"
+
+# Panel clickable areas
+MOUSE_AREAS="30"
+
+# Panel wmname
+PANEL_NAME="lemonblocks"
+
+# Panel geometry
+PANEL_HEIGHT=18
+PANEL_WIDTH=''
+PANEL_GEOMETRY="${PANEL_WIDTH}x${PANEL_HEIGHT}+0+0"
+
+# FIFO
+PANEL_FIFO="/tmp/lemonpanel"
+
+bPOS=0; bSIG=1; bHANDLE=2; bUPDATE=3; bICON=4; bMSG=5;
+mLC=1; mMC=2; mRC=3; mSU=4; mSD=5
+
+setcolor() {
+    echo "%{$1}"
+}
+
+setfg() {
+    setcolor "F$1"
+}
+nofg="$(setfg -)"
+
+setbg() {
+    setcolor "B$1"
+}
+nobg="$(setbg -)"
+
+setuo() {
+    setcolor "U$1"
+}
+nouo="$(setuo -)"
+
+mouse_start() {
+    echo "%{A$1:${mouse[$1]}:}"
+}
+
+mouse_end() {
+    echo "%{A$1}"
+}
+
+setmouse() {
+    mouse_l=""
+    mouse_r=""
+    for i in {1..5}; do
+        if [ -n "${mouse[$i]}" ]; then
+            mouse_l+="$(mouse_start $i)"
+            mouse_r+="$(mouse_end $i)"
+        fi
+        # echo "A$i ${mouse[$i]}" >> ~/.panel_bar.log
+    done
+}
+
+lnprint() {
+    echo -e "\n$1" | head -c -1
+}
+
+serve() {
+    status="$(handle 2>/dev/null)"
+    [ -n "$status" ] || status="${block[$bMSG]} "
+    # icon="\b"
+    if [ -n "${block[$bICON]}" ]; then icon="$(setfg "$COLOR_ICON")${block[$bICON]}$nofg "; fi
+    echo -e "\n${block[$bPOS]} $icon$mouse_l$status$mouse_r" | head -c -1
+}
+
+printblock() {
+    serve
+    if [ -z "${block[$bUPDATE]}" ]; then
+        serve
+    else
+        while true; do
+            serve
+            sleep ${block[$bUPDATE]}
+        done
+    fi
+}
