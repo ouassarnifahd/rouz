@@ -1,0 +1,4 @@
+#!/usr/bin/python
+# EASY-INSTALL-SCRIPT: 'CherryPy==3.2.4','cherryd'
+__requires__ = 'CherryPy==3.2.4'
+__import__('pkg_resources').run_script('CherryPy==3.2.4', 'cherryd')

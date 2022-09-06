@@ -55,3 +55,21 @@
 [submodule ".local/src/mocp-mpris"]
 	path = .local/src/mocp-mpris
 	url = https://github.com/ouassarnifahd/mocp-mpris
+[submodule ".config/mpv/scripts/subs2srs"]
+	path = .config/mpv/scripts/subs2srs
+	url = https://github.com/Ajatt-Tools/mpvacious.git
+[submodule ".local/src/Zathura-Pywal"]
+	path = .local/src/Zathura-Pywal
+	url = https://github.com/GideonWolfe/Zathura-Pywal
+[submodule ".local/src/discord-hotkey-forwarder"]
+	path = .local/src/discord-hotkey-forwarder
+	url = https://github.com/vith/discord-hotkey-forwarder
+[submodule ".local/src/lacc"]
+	path = .local/src/lacc
+	url = https://github.com/larmel/lacc.git
+[submodule ".local/src/scc"]
+	path = .local/src/scc
+	url = git://git.simple-cc.org/scc
+[submodule ".local/src/cproc"]
+	path = .local/src/cproc
+	url = https://git.sr.ht/~mcf/cproc

@@ -1,0 +1,2 @@
+#!/bin/sh
+echo "SELECT pubDate,title FROM rss_item WHERE pubdate>$(date +%s -d $(date +%x));" | sqlite3 --readonly ~/.local/share/newsboat/cache.db | sort | uniq | awk -F '|' '{print strftime("%X",$1) " - " $2}' | ./juice

@@ -1,0 +1,5 @@
+#! /bin/sh
+
+bspc rule -a Pavucontrol state=floating
+bspc rule -a anbox state=floating
+bspc rule -a Conky sticky=on lower=on

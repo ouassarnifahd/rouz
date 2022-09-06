@@ -1,9 +1,6 @@
 setopt nullglob
-setopt vi
+# setopt vi
 setopt monitor
-
-# fzf
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 # autocompletion
 autoload -Uz compinit && compinit -C

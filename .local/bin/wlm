@@ -1,0 +1,41 @@
+#!/usr/bin/env sh
+
+#export WINE=/usr/bin/wine
+export WINE="/usr/share/steam/compatibilitytools.d/proton-ge-custom/files/bin/wine"
+# get the right wine libs
+winebindir=$(dirname $WINE)
+
+if [ -z "$PATH" ]; then
+  PATH="$winebindir"
+else
+  PATH="$winebindir:$PATH"
+fi
+
+if [ -z "$LD_LIBRARY_PATH" ]; then
+  LD_LIBRARY_PATH="$winebindir/../lib64:$winebindir/../lib:$winebindir/../lib32"
+else
+  LD_LIBRARY_PATH="$winebindir/../lib64:$winebindir/../lib:$winebindir/../lib32:$LD_LIBRARY_PATH"
+fi
+
+export ENABLE_VKBASALT=0
+# export WINEARCH=win32
+export WINEDEBUG=fixme-all,err-all
+export WINEPREFIX="/home/archer/.local/share/wineprefixes/wlm"
+
+"$WINE" wineboot -u
+#sh winetricks corefonts gdiplus msls31 riched20 riched30 tahoma
+
+WLM="$WINEPREFIX/drive_c/Program Files (x86)/Windows Live/Messenger/msnmsgr.exe"
+
+case $1 in
+    install)
+        "$WINE" $2
+        ;;
+    taskmgr)
+        "$WINE" taskmgr
+        ;;
+    *)
+        "$WINE" explorer "/desktop=wlm,$RESOLUTION"
+        "$WINE" "$WLM"
+        ;;
+esac

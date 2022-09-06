@@ -1,12 +1,13 @@
 #! /bin/echo this file should be called by iceblocks
 
-source ./fridge
+source ./fridge $@
 
 # params
-block=([$bPOS]="L2")
+block=([$bPOS]="SAL2")
 #ws=([1]="" [2]="" [4]="" [6]="" [9]="" [10]="" [11]="" [12]="ﭮ")
 
 # setup
+trap "trap - TERM; kill 0" INT TERM QUIT EXIT
 bspc subscribe report | while read -r line; do
     status=""
     IFS=':'
@@ -50,6 +51,6 @@ bspc subscribe report | while read -r line; do
     done
     mouse=([$mSU]="bspc desktop -f prev.occupied" [$mSD]="bspc desktop -f next.occupied")
     setmouse
-    block[$bMSG]="$status"
+    block[$bMSG]="${status/ /}"
     printblock
 done

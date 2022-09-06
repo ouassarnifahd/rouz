@@ -1,39 +1,51 @@
-#! /bin/sh
+#!/bin/sh
 
-source ./fridge
+source ./fridge $@
+
+PANEL_SCREEN=$1
 
 [ -n "$BLOCKS_DIR" ] || BLOCKS_DIR="blocks"
 for block in $BLOCKS_DIR/*.sh; do
-    . $block > $PANEL_FIFO &
+    . $block > "${PANEL_FIFO}-${PANEL_SCREEN}" &
 done
 
 delim_left="$(setfg "$COLOR_ICON")$nofg"
 delim_right="$(setfg "$COLOR_ICON")$nofg"
 
-left[0]="%{l}"
+left[0]="%{S${PANEL_SCREEN}}%{l}"
 center[0]="%{c}"
 right[0]="%{r}"
 
 while read -r line ; do
-    echo $line >> ~/.panel_bar.log
-    index=${line:1:2}
+    # echo $line >> ~/.panel_bar_${PANEL_SCREEN}.log
+    # S8R4 status...
+    screen=${line:1:1}
+    line=${line/S$screen/}
+    index=${line:1:1}
     status=${line#??}
+
+    # debug
+    echo "Debug: { screen: $screen, pos: ${line:0:1}, index: $index, status: $status }" >> ~/.panel_bar_${PANEL_SCREEN}.log
+
     case $line in
         L*)
-            left[$index]="$status $delim_left"
+            if [ "$screen" == 'A' ] || [ "$screen" == "$PANEL_SCREEN" ]; then
+                left[$index]="$status $delim_left"
+            fi
             ;;
         C*)
-            center[$index]="$status"
+            if [ "$screen" == 'A' ] || [ "$screen" == "$PANEL_SCREEN" ]; then
+                center[$index]="$status"
+            fi
             ;;
         R*)
-            right[$index]="$delim_right$status"
+            if [ "$screen" == 'A' ] || [ "$screen" == "$PANEL_SCREEN" ]; then
+                right[$index]="$delim_right$status"
+            fi
             ;;
     esac
-    # echo "${left[@]}" >> ~/.panel_bar.log
-    # echo "${center[@]}" >> ~/.panel_bar.log
-    # echo "${right[@]}" >> ~/.panel_bar.log
-    # echo -e "${left[@]} ${center[@]} ${right[@]/\} /\}} " # | tee -a ~/.panel_bar.log
-    echo -e "${left[@]} ${center[@]} ${right[@]} " # | tee -a ~/.panel_bar.log
+
+    echo -e "${left[@]} ${center[@]} ${right[@]} " # | tee -a ~/.panel_bar_${PANEL_SCREEN}.log
 done
 
 wait

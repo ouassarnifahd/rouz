@@ -1,0 +1,2 @@
+#!/bin/sh
+WINEPREFIX=/archive/games/SteamLibrary/steamapps/compatdata/1262540/pfx WINEDEBUG=-all gamemoderun wine 'C:\Program Files (x86)\Origin\Origin.exe'

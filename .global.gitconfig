@@ -1,6 +1,8 @@
 [user]
 	name = Fahd Ouassarni
 	email = ouassarnifahd@hotmail.com
+[alias]
+    gud = merge --abort
 [merge]
 	tool = vimdiff
 	conflictstyle = diff3
@@ -14,11 +16,15 @@
 	oldNormal = red bold
 	oldHighlight = red bold 52
 	newNormal = green bold
-	newHighlight = green bold 52
+	newHighlight = green bold 22
 [color "diff"]
-	meta = 11
+	meta = yellow
 	frag = magenta bold
 	commit = yellow bold
 	old = red bold
 	new = green bold
 	whitespace = red reverse
+[diff-so-fancy]
+	first-run = false
+[gui]
+	recentrepo = /home/archer/.dotfiles

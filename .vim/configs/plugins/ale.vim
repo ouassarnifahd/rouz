@@ -29,7 +29,7 @@ let g:ale_pattern_options_enabled = 1
 
 " dont-complete-me
 let g:ale_completion_enabled = 0
-let g:ale_completion_max_suggestions = 10
+let g:ale_completion_max_suggestions = 15
 set omnifunc=ale#completion#OmniFunc
 " let g:ale_completion_tsserver_autoimport = 1
 

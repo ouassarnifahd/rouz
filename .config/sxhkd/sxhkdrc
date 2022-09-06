@@ -6,13 +6,18 @@
 super + Return
     st -f mono:pixelsize=14
 
+# terminal emulator
+super + shift + Return
+    tabbed -c -n 'tabbed-st' -r 2 st -w '' -f mono:pixelsize=14
+
 # program launcher
 super + d
     source $HOME/.cache/wal/colors.sh; \
-    dmenu_run -nb $color0 -nf $color15 -sb $color1 -sf $color15 -fn mono:size=10 #-l 10
+    rm -rf $HOME/.cache/dmenu_run; \
+    PATH=$HOME/.local/bin:$PATH dmenu_run -nb $color0 -nf $color15 -sb $color1 -sf $color15 -fn mono:size=10 #-l 10
 
 # make sxhkd reload its configuration files:
-super + Escape
+super + Esca
     pkill -USR1 -x sxhkd
 
 #
@@ -21,7 +26,7 @@ super + Escape
 
 # quit/restart bspwm
 super + alt + {q,r}
-    bspc {quit,wm -r}
+    {bspc quit,killall iceblocks && bspc wm -r}
 
 # close and kill
 super + {_,shift + }w
@@ -121,33 +126,101 @@ super + alt + shift + {h,j,k,l}
 super + {Left,Down,Up,Right}
     bspc node -v {-20 0,0 20,0 -20,20 0}
 
-super + alt + space
-	id=$(bspc query -N -n "focused");\
-	if [ -n "$id" ];then \
-		xprop -id $id -f _SCRATCH 32ii -set _SCRATCH $(date +%s,%N);\
-		bspc node -t "floating";\
-		xdotool windowunmap $id;\
-	fi
+# power off
+# super + alt + p; {h,r,s,l}
+#     source $HOME/.cache/wal/colors.sh; \
+#     echo "Yes\nNo\n" | dmenu -nb $color0 -nf $color15 -sb $color1 -sf $color15 -fn mono:size=10 \
+#         -p "Please confirm this action: {halt,reboot,suspend,lock} this computer ?" | \
+#         grep Yes >/dev/null && notify-send "debug" "systemd {halt,reboot,suspend,lock}"
 
+# spawn a tabbed instance
+# super + alt + t; s
+#     source $HOME/.cache/wal/colors.sh; \
+#     xidfile="$HOME/.cache/tabbed/tabbed-surf.xid" \
+#     [ ! -r $xidfile ] \
+#         && tabbed -o $background -O $foreground -t $color1 -T $cursor -u $color1 -U $color15 -dn "tabbed-surf" -c \
+#             -r 2 surf -e '' -d `# no cache` -g `# no geodata` -s `# no js` -T `# strict TLS` "https://duckduckgo.com" > "$xidfile"
+super + alt + t; s
+     $HOME/.local/bin/surf-open.sh
+#    source $HOME/.cache/wal/colors.sh; \
+#    tabbed -o $background -O $foreground -t $color1 -T $cursor -u $color1 -U $color15 -n "tabbed-surf" -c \
+#            -r 2 surf -e '' -z 1.2 -dgsT -- "https://duckduckgo.com"
+# program launcher (tabbed-quickmedia)
+# super + alt + t; q
+#     source $HOME/.cache/wal/colors.sh; \
+#     xidfile="$HOME/.cache/tabbed/tabbed-quickmedia.xid" \
+#     [ ! -r $xidfile ] \
+#         && tabbed -o $background -O $foreground -t $color1 -T $cursor -u $color1 -U $color15 -dn "tabbed-quickmedia" -c \
+#             -r 3 quickmedia launcher -e '' > "$xidfile"
+super + alt + t; q
+    source $HOME/.cache/wal/colors.sh; \
+    tabbed -o $background -O $foreground -t $color1 -T $cursor -u $color1 -U $color15 -dn "tabbed-quickmedia" -c \
+        quickmedia launcher -e
+
+
+super + alt + s; c
+    pgrep conky || conky -c ~/.config/conky/osd.conf && pkill conky
+
+# super + alt + t; a
+#     source $HOME/.cache/wal/colors.sh; \
+#     nodes=$(bspc query -N -d focused); \
+#     tab=$(bspc query -N -n focused) && [ $(xprop -id $tab | sed '/WM_CLASS/s/.*, "\(.*\)"/\1/p') == "tabbed" ] || \
+#     tab=$(tabbed -c -d -n "tabbed-$(date +%s-%N)" -o $background -O $foreground -t $color1 -T $cursor -u $color1 -U $color15); \
+#     for wid in $nodes; do \
+#         xdotool windowreparent $wid $tab; \
+#     done
+
+# https://www.reddit.com/r/bspwm/comments/etfm3m/for_those_who_like_tabs/
+# Add focused window to a tabbed instance in given direction
+# super + alt + t; {h,j,k,l}
+#     selected=$(bspc query -N -n {west,south,north,east}); \
+#     if [ $(xprop -id $selected | sed '/WM_CLASS/s/.*, "\(.*\)"/\1/p') == "tabbed" ]; then \
+#         notify-send 'sxhkd' "Not a tabbed instance"; \
+#         tabbed=$(tabbed -c -d -n "tabbed-$(date +%s-%N)" -o $background -O $foreground -t $color1 -T $cursor -u $color1 -U $color15); \
+#     else; \
+#         tabbed=$selected; \
+#     fi; \
+#     wid=$(bspc query -N -n focused); \
+#     notify-send DEBUG "$wid > $tabbed"; \
+#     xdotool windowreparent $wid $tabbed
+
+# Remove one tab from tabbed
+# super + alt + t; r
+#     tabbed=$(bspc query -N -n focused); root=$(xwininfo -root | awk '/Window id:/{print $4}'); \
+#     child=$(xwininfo -id $tabbed -children | sed -n '/[0-9]\+ \(child\|children\):/,$s/ \+\(0x[0-9a-z]\+\).*/\1/p'| head -n1); \
+#     notify-send DEBUG "$tabbed > $child > $root"; \
+#     notify-send DEBUG "$(xwininfo -root | grep 'Window id:' | awk '{print $4}')"; \
+#     xdotool windowreparent $child $root
+
+# mode a window to scratchpad
+super + alt + space
+    id=$(bspc query -N -n "focused");\
+    if [ -n "$id" ];then \
+        xprop -id $id -f _SCRATCH 32ii -set _SCRATCH $(date +%s,%N);\
+        bspc node -t "floating";\
+        xdotool windowunmap $id;\
+    fi
+
+# cycle through the scratchpad
 super + space
-	i=$(bspc query -N -n "focused.floating");\
-	if [ -n "$i" ];then \
-		xprop -id $i -f _SCRATCH 32ii -set _SCRATCH $(date +%s,%N);\
-		xdotool windowunmap $i;\
-	else;\
-		i=$(for w in $(xwininfo -root -children | grep -e "^\s*0x[0-9a-f]\+" -o);do \
-			t=$(xprop -id $w _SCRATCH | grep ' = \(.*\)');\
-			if [ -n "$t" ];then \
-				echo $t $w;\
-			fi;\
-		done|sort -n|head -n1|cut -d" " -f 5);\
-		if [ -n "$i" ];then \
-			xprop -id $i -remove _SCRATCH;\
-			bspc rule -a \* state=floating sticky=on center=on --one-shot;\
-			xdotool windowmap $i;\
-			bspc node -f $i;\
-		fi;\
-	fi
+    i=$(bspc query -N -n "focused.floating");\
+    if [ -n "$i" ];then \
+        xprop -id $i -f _SCRATCH 32ii -set _SCRATCH $(date +%s,%N);\
+        xdotool windowunmap $i;\
+    else;\
+        i=$(for w in $(xwininfo -root -children | grep -e "^\s*0x[0-9a-f]\+" -o);do \
+            t=$(xprop -id $w _SCRATCH | grep ' = \(.*\)');\
+            if [ -n "$t" ];then \
+                echo $t $w;\
+            fi;\
+        done|sort -n|head -n1|cut -d" " -f 5);\
+        if [ -n "$i" ];then \
+            xprop -id $i -remove _SCRATCH;\
+            bspc rule -a \* state=floating sticky=on center=on --one-shot;\
+            xdotool windowmap $i;\
+            bspc node -f $i;\
+        fi;\
+    fi
 
 #
 # Multimedia keys
@@ -187,10 +260,10 @@ XF86WebCam
 # custom
 #
 super + colon
-    wal -qi $HOME/Pictures/Wallpapers && killall sh && bspc wm -r
+    wal -qi $HOME/Pictures/Wallpapers && killall iceblocks && bspc wm -r
 
 super + {asterisk,mu}
     ~/.local/lib/i3cmds/dmenu{unicode,fontawesome}
 
 {_,Shift +} Print
-    scrot {_,-l style=dash,width=2 -sf} ~/Pictures/Screenshots/%Y-%m-%d-%T-{_,croped-}Screenshot.png
+    scrot {-m,-l style=dash,width=2 -sf} ~/Pictures/Screenshots/%Y-%m-%d-%T-{_,croped-}Screenshot.png >> ~/.sxhkd.log

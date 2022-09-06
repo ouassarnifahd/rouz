@@ -19,9 +19,9 @@
 .config/Caprine
 .config/pulse
 .config/dconf
-.config/mpv
 .config/mps-youtube
 .config/*
+!.config/mpv
 !.config/lemonbar
 !.config/bspwm
 !.config/fontconfig

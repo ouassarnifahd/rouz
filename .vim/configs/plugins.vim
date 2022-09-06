@@ -12,6 +12,7 @@ Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-unimpaired'
 Plug 'tpope/vim-speeddating'
 Plug 'jlanzarotta/bufexplorer', { 'on': 'BufExplorer' }
+Plug 'MarcWeber/vim-addon-local-vimrc'
 Plug 'osyo-manga/vim-over'
 Plug 'vim-scripts/utl.vim'
 Plug 'mbbill/undotree'
@@ -41,7 +42,8 @@ Plug 'dense-analysis/ale'
 Plug 'scrooloose/nerdcommenter'
 
 " debugging
-"Plug 'puremourning/vimspector'
+" Plug 'python-mode/python-mode', { 'for': 'python', 'branch': 'develop' }
+Plug 'puremourning/vimspector'
 
 " ctags
 Plug 'majutsushi/tagbar'
@@ -58,10 +60,11 @@ Plug 'yegappan/mru'
 Plug 'tmux-plugins/vim-tmux'
 Plug 'edkolev/tmuxline.vim'
 
-" workflow
+" productivity
 Plug 'mattn/calendar-vim'
 Plug 'jceb/vim-orgmode'
-"Plug 'wakatime/vim-wakatime'
+Plug 'dhruvasagar/vim-dotoo'
+Plug 'wakatime/vim-wakatime'
 
 call plug#end()
 

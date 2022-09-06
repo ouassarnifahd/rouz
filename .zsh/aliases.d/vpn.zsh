@@ -1,0 +1,1 @@
+alias nvr='curl -L $(ffh --link "https://nordvpn.com/servers/tools/" | hxnormalize -x | hxselect -c -s "\n" "a.Link.small.Link--alt::attr(href)" | grep udp) 2>/dev/null | grep "remote " | tee -a ~/.nordvpn.remotes'

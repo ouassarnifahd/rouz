@@ -1,0 +1,3 @@
+#! /bin/sh
+
+bspc config external_rules_command "$(dirname $0)/external_rules"

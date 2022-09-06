@@ -1,0 +1,2 @@
+#!/bin/sh
+WINEPREFIX=/home/archer/.local/share/wineprefixes/epic WINEDEBUG=-all gamemoderun wine 'C:\Program Files (x86)\Epic Games\Launcher\Portal\Binaries\Win32\EpicGamesLauncher.exe' '-opengl -com.epicgames.launcher://apps/Tulip?action=launch&silent=true -SkipBuildPatchPrereq'

@@ -2,26 +2,24 @@
 
 LEMON_DIR=$HOME/.config/lemonbar
 cd $LEMON_DIR
-source ./fridge
 
-function trapcard {
-    trap - TERM
-    killall iceblocks
-}
-trap trapcard INT TERM QUIT EXIT
+PANEL_SCREEN=$1
 
-# killall iceblocks
-[ -e "$PANEL_FIFO" ] && rm "$PANEL_FIFO"
-mkfifo "$PANEL_FIFO"
+source ./fridge $@
 
-cat "$PANEL_FIFO" | ./iceblocks | lemonbar -n "$PANEL_NAME"\
+trap "trap - TERM; kill 0" INT TERM QUIT EXIT
+
+[ -e "${PANEL_FIFO}-${PANEL_SCREEN}" ] && rm "${PANEL_FIFO}-${PANEL_SCREEN}"
+mkfifo "${PANEL_FIFO}-${PANEL_SCREEN}"
+
+cat "${PANEL_FIFO}-${PANEL_SCREEN}" | ./iceblocks $@ | lemonbar -n "${PANEL_NAME}-${PANEL_SCREEN}"\
         -f "$FONT_MONO" -f "$FONT_CJK" -f "$FONT_ICON"\
         -F "$COLOR_FOREGROUND" -B "$COLOR_BACKGROUND"\
         -g "$PANEL_GEOMETRY" -u "$LINE_HEIGHT" -o -1 -a "$MOUSE_AREAS" | sh &
 
 # Make sure lemonbar is hidden below a fullscreen window
-sleep 1
-wid=$(xdo id -a "$PANEL_NAME")
+sleep 2
+wid=$(xdo id -a "${PANEL_NAME}-${PANEL_SCREEN}")
 xdo above -t "$(xdo id -N Bspwm -n root | sort | head -n 1)" "$wid"
 
 wait

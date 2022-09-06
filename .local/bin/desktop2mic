@@ -1,0 +1,29 @@
+#!/bin/bash
+
+#microphone="alsa_input.pci-0000_00_1b.0.analog-stereo"
+microphone="rnnoise_source"
+speakers="alsa_output.pci-0000_00_1b.0.analog-stereo"
+
+#          remaped to mic (source)
+# mic -> loopback (virual mic) <-----\
+# out -> loopback (desktop audio) ---/--> remaped to sink ?
+
+echo "Creating virtual output devices"
+pactl load-module module-null-sink media.class=Audio/Duplex sink_name="mic-desktop-audio" sink_properties=device.description="mic and desktop loopback"
+pactl load-module module-null-sink media.class=Audio/Duplex sink_name="desktop-audio" sink_properties=device.description="desktop loopback"
+pactl load-module module-null-sink media.class=Audio/Duplex sink_name="discord-audio" sink_properties=device.description="discord loopback"
+
+echo "Creating remaps"
+#pactl load-module module-remap-source master=sink_mix.monitor source_name=src_main source_properties="device.description=src_main"
+#pactl load-module module-remap-source master=combined.monitor source_name=combined_source source_properties="device.description=combined_source"
+
+echo "Setting default devices"
+#pactl set-default-source src_main
+#pactl set-default-sink   sink_main
+
+echo "Creating loopbacks"
+pactl load-module module-loopback sink="combined" source="combined_sink.monitor"
+pactl load-module module-loopback sink="combined" source="$microphone"
+#pactl load-module module-loopback source=src_ec          sink=sink_mix
+#pactl load-module module-loopback source=sink_fx.monitor sink=sink_mix
+#pactl load-module module-loopback source=sink_fx.monitor sink=sink_main

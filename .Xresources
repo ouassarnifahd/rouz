@@ -12,6 +12,7 @@ Xcursor*size:  16
 
 ! Genaral xterm
 *pixelsize: 16
-*font: xft:Hack\ Nerd\ Font\ Mono:Regular, xft:Noto\ Color\ Emoji:Regular, xft:Noto\ Sans\ Mono\ CJK\ JP:Regular
+! *font: xft:Hack\ Nerd\ Font\ Mono:Regular, xft:Noto\ Sans\ Mono\ CJK\ JP:Regular, xft:Noto\ Color\ Emoji:Regular
+*font: xft:Noto\ Sans\ Mono\ CJK\ JP:Regular
 ! st*alpha: 0.6
 ! st*alphaUnfocussed: 0.3

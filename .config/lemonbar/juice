@@ -1,0 +1,48 @@
+#!/bin/sh
+
+source ./fridge
+
+# a third of screen width
+PANEL_GEOMETRY="$((1920/3))x$PANEL_HEIGHT+$((1920/3))+0"
+# is roughly 78 spaces at a font size of 14
+PANEL_WIDTH_SPACE="                                                                               "
+# data string
+data="$PANEL_WIDTH_SPACE"
+
+# LOCK: for now just one instance at a time, if someone do call just drop an error
+[ ! -f juice.lock ] || exit 1
+touch juice.lock
+
+line_start=0
+line_width=78
+while read line; do
+    # set -x
+    # load new data at the end of the string
+    data+="$line${PANEL_WIDTH_SPACE:1:10}"
+
+    # cycle while enough data to display
+    while [ $((${#data}-$line_start)) -gt $line_width ]; do
+        # then print it
+        echo "${data:$line_start:$line_width}"
+        # TODO need smoothing! for now tweak the fps from 6 to 10
+        # taking into consideration your screen refreshing rate (here its 60Hz)
+        sleep $(echo '8/60'| bc -l)
+        # and iterate
+        line_start=$(($line_start+1))
+    done
+
+done | lemonbar -n "${PANEL_NAME/blocks/juice}"\
+    -f "$FONT_MONO" -f "$FONT_CJK" -f "$FONT_ICON"\
+    -F "$COLOR_FOREGROUND" -B "$COLOR_BACKGROUND"\
+    -g "$PANEL_GEOMETRY" -u "$LINE_HEIGHT" -o -1 &
+
+# Make sure lemonbar is hidden below a fullscreen window
+sleep 1
+wid=$(xdo id -a "${PANEL_NAME/blocks/juice}")
+xdo above -t "$(xdo id -N Bspwm -n root | sort | head -n 1)" "$wid"
+xdo above -t "$(xdo id -a "$PANEL_NAME")" "$wid"
+
+wait
+
+# UNLOCK
+rm juice.lock

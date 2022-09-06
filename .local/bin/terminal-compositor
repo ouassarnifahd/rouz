@@ -1,0 +1,34 @@
+#!/bin/sh
+
+# Runs compton with a shader that only applies the opacity property to black
+# backgrounds, with small soft shadows around non-black parts to inprove
+# readability.
+
+exec picom --experimental-backends --backend glx --glx-fshader-win '
+uniform float opacity;
+uniform sampler2D tex;
+void main() {
+	float max_a = 0;
+	vec4 pixel = texture2D(tex, gl_TexCoord[0]);
+	if (opacity < 1) {
+		vec2 ss = textureSize(tex, 0);
+		for (float x = -3; x <= 3; x += 1)
+		for (float y = -3; y <= 3; y += 1) {
+			vec2 offset = vec2(x, y);
+			vec4 c = texture2D(tex, gl_TexCoord[0] + offset / ss);
+			float b = dot(vec3(0.299, 0.587, 0.114), c.rgb);
+			float a = pow(b, 0.4);
+			if (offset != vec2(0, 0)) a /= pow(length(offset) / 4, 3) * 10 + 1;
+			max_a = max(max_a, a);
+		}
+		pixel.a *= mix(opacity, 1, max_a);
+	}
+	gl_FragColor = pixel;
+}' \
+	--opacity-rule="85:class_g='XTerm'" \
+	--opacity-rule="85:class_g='URxvt'" \
+	--opacity-rule="85:class_g='Gnome-terminal'"
+	--opacity-rule="85:class_g='st-256color'"
+# Add your own terminal emulators above. (You can use xprop to find the class.)
+# Change the '85' for more/less background opacity. And/or configure your
+# window manager with hotkeys to increase/decrease the opacity of windows.

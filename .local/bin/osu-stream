@@ -1,0 +1,10 @@
+#!/usr/bin/env sh
+
+cd /archive/games/osu\!/Overlay/Effects/bongocat-osu
+./bin/bongo &
+
+# osu run "C:/Program Files/StreamCompanion/osu!StreamCompanion.exe" &
+
+#osu &
+
+wait

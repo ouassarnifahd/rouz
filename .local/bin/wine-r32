@@ -1,0 +1,35 @@
+#!/usr/bin/env sh
+
+ARCH=win32
+PREFIX="$HOME/.local/share/wineprefixes/tools32"
+CORES=0x08
+
+case "$1" in
+    install)
+        ;;
+    tricks)
+        shift
+        winetricks $@
+        exit
+        ;;
+    run)
+        shift
+        case $1 in
+            altium)
+                [ "$2" == install ] && {
+                    WINEARCH="$ARCH" WINEPREFIX="$PREFIX" winetricks -q corefonts mdac28 dotnet40 msxml3 msxml6
+                }
+                DLLOVERRIDES="mshtml=d"
+                BINPATH="C:\Windows\Program Files\Altium"
+                BIN="DXP.EXE"
+                ;;
+            explorer)
+                DLLOVERRIDES=
+                BINPATH="C:\Windows\system32"
+                BIN="explorer.exe"
+                ;;
+        esac
+esac
+
+set -x
+env WINEDLLOVERRIDES="$DLLOVERRIDES" WINEDEBUG=-all WINEARCH=$ARCH WINEPREFIX=$PREFIX taskset="$CORES" wine taskmgr

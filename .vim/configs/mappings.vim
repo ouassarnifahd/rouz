@@ -17,7 +17,8 @@ nnoremap <silent> <leader>z :Goyo<cr>
 " Useful fast spliting
 noremap <leader>s :bel split<cr>
 noremap <leader>v :vsplit<cr>
-noremap <leader>o :only<cr>
+noremap <leader>o <C-W>_<C-W>\|
+noremap <leader>a <C-W>=
 
 " let's get it done
 nnoremap <Left> :echoe "Use h"<CR>
@@ -97,4 +98,3 @@ noremap <leader>t :TagbarToggle<cr>
 
 " undo
 noremap <leader>u :UndotreeToggle<cr>
-
