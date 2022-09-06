@@ -13,16 +13,14 @@
 !.tmux/plugins/tpm
 .tmux/resurrect/*
 
+# libs
+.local/lib/*
+
 # useless
-.config/gwenviewrc
-.config/discord
-.config/Caprine
-.config/pulse
-.config/dconf
-.config/mps-youtube
 .config/*
 !.config/mpv
 !.config/lemonbar
 !.config/bspwm
 !.config/fontconfig
 !.config/sxhkd
+!.config/qutebrowser
