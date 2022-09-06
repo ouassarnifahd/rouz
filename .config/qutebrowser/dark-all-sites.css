@@ -1,0 +1,1715 @@
+* {
+  border-color: #202020 !important;
+}
+a {
+  color: #bbbbbb !important;
+}
+a:visited {
+  color: #b8ddea !important;
+}
+body {
+  background-color: #202020 !important;
+  color: #bbbbbb !important;
+}
+html {
+  background-color: #202020 !important;
+}
+input,
+textarea {
+  background-color: #202020 !important;
+  color: #bbbbbb !important;
+}
+blockquote,
+pre {
+  background-color: #202020 !important;
+  color: #bbbbbb !important;
+}
+.post-actions {
+  background-color: #202020 !important;
+}
+.textarea-wrapper {
+  background-color: #202020 !important;
+  color: #bbbbbb !important;
+}
+.search--adv {
+  background-color: #202020 !important;
+}
+.search__autocomplete > .acp-wrap {
+  background-color: #202020 !important;
+}
+.search__autocomplete > .acp-wrap > .acp--highlight {
+  background-color: #202020 !important;
+  color: #bbbbbb !important;
+}
+.search__autocomplete > .acp-wrap strong {
+  color: #bbbbbb !important;
+}
+.site-wrapper > #header_wrapper {
+  background-color: #202020 !important;
+}
+.site-wrapper > #header_wrapper > #header {
+  background-color: #202020 !important;
+}
+.search--header {
+  background-color: #202020 !important;
+}
+.zci {
+  background-color: #202020 !important;
+  color: #bbbbbb !important;
+}
+.tile--info {
+  background-color: #202020 !important;
+}
+.tile--info__expand {
+  background-color: #202020 !important;
+}
+.tile--c {
+  background-color: #202020 !important;
+  color: #bbbbbb !important;
+}
+.module__text {
+  color: #bbbbbb !important;
+}
+.about-info-box__heading {
+  color: #bbbbbb !important;
+}
+.result.highlight {
+  background-color: #202020 !important;
+}
+.result__snippet {
+  color: #bbbbbb !important;
+}
+.result__snippet b {
+  color: #bbbbbb !important;
+}
+.btn--top {
+  background-color: #202020 !important;
+  color: #bbbbbb !important;
+}
+.btn--top:hover {
+  background-color: #202020 !important;
+}
+.result--sep--hr:before {
+  background-color: #202020 !important;
+}
+* {
+  border-color: #202020 !important;
+}
+.news .alert .pull-info {
+  background-color: #202020 !important;
+}
+.link-gray-dark,
+.text-gray-dark {
+  color: #bbbbbb !important;
+}
+.bg-white {
+  background-color: #202020 !important;
+}
+.border {
+  border-color: #202020 !important;
+}
+.breadcrumb .repo-root.js-repo-root a {
+  color: #bbbbbb !important;
+}
+.breadcrumb strong.final-path {
+  color: #bbbbbb !important;
+}
+button.ajax-pagination-btn {
+  background-color: #202020 !important;
+  color: #bbbbbb !important;
+}
+button.ajax-pagination-btn:hover {
+  background-color: #202020 !important;
+}
+.comment-reactions .btn-link {
+  color: #bbbbbb !important;
+}
+.comment-reactions .user-has-reacted {
+  background-color: #202020 !important;
+}
+.text-gray-dark {
+  color: #bbbbbb !important;
+}
+.contrib-number {
+  color: #bbbbbb !important;
+}
+.counter {
+  background-color: #202020 !important;
+  color: #bbbbbb !important;
+}
+.diffstat-bar {
+  color: #bbbbbb !important;
+}
+.file-header {
+  background-color: #202020 !important;
+}
+.file-history-tease .participation {
+  background-color: #202020 !important;
+  color: #bbbbbb !important;
+}
+.file-history-tease .participation .quickstat strong {
+  color: #bbbbbb !important;
+}
+.file-history-tease .participation a {
+  color: #bbbbbb !important;
+}
+.file-history-tease .author a {
+  color: #bbbbbb !important;
+}
+.file-history-tease-header {
+  background-color: #202020 !important;
+}
+.file-info-divider {
+  background-color: #202020 !important;
+}
+.file-wrap {
+  color: #bbbbbb !important;
+}
+.file-wrap * {
+  background-color: none !important;
+}
+.filter-bar {
+  background-color: #202020 !important;
+}
+a.filter-item,
+.filter-item {
+  color: #bbbbbb !important;
+}
+a.filter-item.selected,
+.filter-item.selected {
+  background-color: #202020 !important;
+  color: #bbbbbb !important;
+}
+a.filter-item:hover,
+.filter-item:hover {
+  background-color: #202020 !important;
+  color: #bbbbbb !important;
+}
+.flash {
+  background-color: #202020 !important;
+  color: #bbbbbb !important;
+}
+.gh-header {
+  background-color: #202020 !important;
+}
+.gh-header-number {
+  color: #bbbbbb !important;
+}
+.ellipsis-expander,
+.hidden-text-expander a {
+  background-color: #202020 !important;
+}
+.issue-meta {
+  color: #bbbbbb !important;
+}
+.issues-listing a {
+  color: #bbbbbb !important;
+}
+.muted-link {
+  color: #bbbbbb !important;
+}
+.new-user-avatar-cta {
+  background-color: #202020 !important;
+  border-color: #202020 !important;
+  color: #bbbbbb !important;
+}
+.overall-summary {
+  border-color: #202020 !important;
+}
+.pinned-repo-item.border {
+  border-color: #202020 !important;
+}
+.progress-bar {
+  background-color: #202020 !important;
+}
+.simple-box {
+  background-color: #202020 !important;
+}
+.social-count {
+  background-color: #202020 !important;
+  border-color: #202020 !important;
+  color: #bbbbbb !important;
+}
+.scope-badge {
+  background-color: #202020 !important;
+  color: #bbbbbb !important;
+}
+.stats-switcher-wrapper {
+  background-color: #202020 !important;
+}
+.stats-switcher-wrapper .numbers-summary li a {
+  color: #bbbbbb !important;
+}
+.table-list-header-toggle .btn-link {
+  color: #bbbbbb !important;
+}
+.table-list-header-toggle .btn-link.selected {
+  color: #bbbbbb !important;
+}
+.text-emphasized {
+  color: #bbbbbb !important;
+}
+.text-diff-added {
+  color: #bbbbbb !important;
+}
+.text-diff-deleted {
+  color: #bbbbbb !important;
+}
+.avatar,
+.timeline-comment-avatar {
+  filter: opacity(75%);
+}
+.blob-code {
+  background-color: #202020 !important;
+  color: #bbbbbb !important;
+}
+.blob-code-addition {
+  background-color: rgba(232,255,77,0.1) !important;
+}
+.blob-code-addition .x {
+  background-color: #202020 !important;
+  color: #bbbbbb !important;
+}
+.blob-code-deletion {
+  background-color: rgba(220,50,47,0.2) !important;
+}
+.blob-code-deletion .x {
+  background-color: #202020 !important;
+  color: #bbbbbb !important;
+}
+.blob-code-hunk {
+  background-color: #202020 !important;
+  border-color: #202020 !important;
+}
+.blob-code-inner {
+  color: #bbbbbb !important;
+}
+.blob-num {
+  background-color: #202020 !important;
+  color: #bbbbbb !important;
+}
+.file {
+  color: #bbbbbb !important;
+}
+.form-control {
+  background-color: #202020 !important;
+  border-color: #202020 !important;
+}
+.pl-c {
+  color: #bbbbbb !important;
+}
+.pl-c1 {
+  color: #bbbbbb !important;
+}
+.pl-e {
+  color: #bbbbbb !important;
+}
+.pl-en {
+  color: #bbbbbb !important;
+}
+.pl-k {
+  color: #bbbbbb !important;
+  font-weight: bold !important;
+}
+.pl-pds {
+  color: #bbbbbb !important;
+}
+.pl-s {
+  color: #bbbbbb !important;
+}
+.pl-smi {
+  color: #bbbbbb !important;
+}
+.pl-v {
+  color: #bbbbbb !important;
+  font-weight: bold !important;
+}
+.pl-mi1 {
+  color: #bbbbbb !important;
+  background-color: none !important;
+}
+.pl-md {
+  color: #bbbbbb !important;
+  background-color: none !important;
+}
+.border-bottom,
+.border-top {
+  border-color: #202020 !important;
+}
+.boxed-group * {
+  border-color: #202020 !important;
+}
+.boxed-group article {
+  background-color: #202020 !important;
+  color: #bbbbbb !important;
+}
+.boxed-group > h3 {
+  background-color: #202020 !important;
+  color: #bbbbbb !important;
+}
+.more-repos {
+  background-color: #202020 !important;
+  box-shadow: inset 0 1px 0 #586e75 !important;
+}
+.boxed-group-inner {
+  background-color: #202020 !important;
+}
+.branch-action-body {
+  background-color: #202020 !important;
+  border-color: #202020 !important;
+}
+.branch-action-body div {
+  border-color: #202020 !important;
+}
+.branch-action-state-clean .branch-action-icon {
+  background-color: #202020 !important;
+}
+.branch-action-state-dirty .branch-action-icon,
+.branch-action-state-unstable .branch-action-icon,
+.branch-action-state-unknown .branch-action-icon {
+  background-color: #202020 !important;
+  color: #bbbbbb !important;
+}
+.text-shadow-light,
+.branch-group-name,
+.branch-summary {
+  color: #bbbbbb !important;
+  text-shadow: none !important;
+}
+.branch-a-b-count .meter {
+  background-color: #202020 !important;
+}
+.more-branches,
+.branch-group-heading,
+.branch-infobar,
+.branch-name {
+  border-color: #202020 !important;
+  background-color: #202020 !important;
+}
+.State,
+.State:visited {
+  color: #bbbbbb !important;
+}
+.State--red {
+  background-color: #202020 !important;
+  color: #bbbbbb !important;
+}
+.State--green {
+  background-color: #202020 !important;
+  color: #bbbbbb !important;
+}
+.select-menu-filters {
+  background-color: #202020 !important;
+  color: #bbbbbb !important;
+}
+.js-select-menu-tab {
+  background-color: #202020 !important;
+  color: #bbbbbb !important;
+}
+.select-menu-tabs a.selected,
+.select-menu-tab-nav.selected {
+  background-color: #202020 !important;
+  color: #bbbbbb !important;
+}
+.signed-commit-header {
+  background-color: #202020 !important;
+}
+.build-status-item {
+  background-color: #202020 !important;
+  color: #bbbbbb !important;
+}
+.build-status-item .build-status-details {
+  color: #bbbbbb !important;
+}
+.capped-card h3 {
+  background-color: #202020 !important;
+}
+.capped-card h3 a {
+  color: #bbbbbb !important;
+}
+.capped-card-content {
+  background-color: #202020 !important;
+}
+.capped-list th {
+  background-color: #202020 !important;
+  color: #bbbbbb !important;
+}
+.capped-list tr:nth-child(2n) {
+  background-color: #202020 !important;
+}
+.commit,
+.commit-meta,
+.commit-icon .octicon,
+.commit-group-title .octicon-git-commit {
+  background-color: #202020 !important;
+}
+.commit *,
+.commit-meta *,
+.commit-icon .octicon *,
+.commit-group-title .octicon-git-commit * {
+  border-color: #202020 !important;
+}
+.commit-author {
+  color: #bbbbbb !important;
+}
+.commit-author-section {
+  color: #bbbbbb !important;
+}
+.commit-meta {
+  color: #bbbbbb !important;
+}
+.commit-meta .sha-block {
+  color: #bbbbbb !important;
+}
+.commit-meta .sha-block .sha {
+  color: #bbbbbb !important;
+}
+.commit-ref,
+code.commit-sha {
+  background-color: #202020 !important;
+  color: #bbbbbb !important;
+}
+.commit-ref .user,
+code.commit-sha .user {
+  color: #bbbbbb !important;
+}
+.commit-branches *,
+.commit-tease,
+.commit-title {
+  background-color: rgba(190,255,255,0.2) !important;
+  border: none !important;
+}
+.commit-branches * *,
+.commit-tease *,
+.commit-title * {
+  color: #bbbbbb !important;
+}
+.commit-tease-contributors {
+  background-color: #202020 !important;
+}
+div.commit-branches,
+div.commit.full-commit p.commit-title,
+qul.branches-list {
+  background-color: #202020 !important;
+  color: #bbbbbb !important;
+}
+div.commit-branches *,
+div.commit.full-commit p.commit-title *,
+qul.branches-list * {
+  background-color: #202020 !important;
+  color: #bbbbbb !important;
+}
+.commit-meta {
+  background-color: #202020 !important;
+  color: #bbbbbb !important;
+}
+.commits-listing:before {
+  background-color: #202020 !important;
+}
+.full-commit {
+  background-color: #202020 !important;
+  border-color: #202020 !important;
+}
+.full-commit * {
+  text-shadow: none !important;
+}
+.commit-desc pre {
+  background-color: none !important;
+  color: #bbbbbb !important;
+}
+.commit.table-list-item {
+  border-color: #202020 !important;
+}
+.commit-meta.commit-author-section {
+  background-color: none !important;
+  color: #bbbbbb !important;
+}
+.table-list-cell .commit-title {
+  background-color: none !important;
+  color: #bbbbbb !important;
+}
+.completeness-indicator-success {
+  background-color: #202020 !important;
+}
+.completeness-indicator-problem {
+  background-color: #202020 !important;
+  color: #bbbbbb !important;
+}
+.copyable-terminal {
+  background-color: #202020 !important;
+}
+.blankslate {
+  background-color: #202020 !important;
+  color: #bbbbbb !important;
+}
+.comment-form-head.tabnav {
+  background-color: #202020 !important;
+}
+.conversation-list-heading .inner {
+  background-color: #202020 !important;
+}
+.discussion-item-closed .discussion-item-icon {
+  background-color: #202020 !important;
+  color: #bbbbbb !important;
+}
+.discussion-item-icon {
+  background-color: #202020 !important;
+  color: #bbbbbb !important;
+}
+.discussion-item-icon.octicon {
+  color: #bbbbbb !important;
+}
+.discussion-item-entity,
+.discussion-item .renamed-was,
+.discussion-item .renamed-is {
+  color: #bbbbbb !important;
+}
+.discussion-timeline:before {
+  background-color: #202020 !important;
+}
+.discussion-timeline-actions {
+  background-color: #202020 !important;
+}
+.drag-and-drop {
+  background-color: #202020 !important;
+}
+.new-discussion-timeline .closed-banner {
+  background-color: #202020 !important;
+  border-color: #202020 !important;
+}
+.timeline-comment {
+  background-color: #202020 !important;
+  border-color: #202020 !important;
+}
+.timeline-comment-header {
+  background-color: #202020 !important;
+}
+.timeline-comment-wrapper {
+  border-color: #202020 !important;
+}
+.donut-chart > .pending {
+  fill: #202020 !important;
+}
+.dropdown-divider {
+  background-color: #202020 !important;
+}
+.dropdown-item {
+  color: #bbbbbb !important;
+}
+.dropdown-item:hover {
+  background-color: #202020 !important;
+  color: #bbbbbb !important;
+}
+.dropdown-menu {
+  background-color: #202020 !important;
+  color: #bbbbbb !important;
+  border-color: #202020 !important;
+}
+.files * {
+  color: #bbbbbb !important;
+}
+.files tbody tr {
+  border-color: #202020 !important;
+}
+.files tbody tr:nth-child(even) {
+  background-color: #202020 !important;
+}
+.files tbody tr:nth-child(odd) {
+  background-color: #202020 !important;
+}
+.files tbody tr:hover * {
+  background-color: #202020 !important;
+}
+.btn {
+  background-image: none !important;
+  border-color: #202020 !important;
+  color: #bbbbbb !important;
+}
+.btn:hover {
+  background-color: #202020 !important;
+}
+.btn-primary,
+.issues-listing .btn-primary {
+  background-color: #202020 !important;
+  background-image: none !important;
+  color: #bbbbbb !important;
+  filter: opacity(62.5%);
+}
+.entry-title a {
+  color: #bbbbbb !important;
+}
+.Header {
+  background-color: #202020 !important;
+  border-bottom-color: #586e75 !important;
+}
+.Header a {
+  color: #bbbbbb !important;
+}
+.lang {
+  color: #bbbbbb !important;
+}
+.reponav-item,
+.pagehead-tabs-item {
+  background-color: #202020 !important;
+  border-color: none !important;
+  color: #bbbbbb !important;
+}
+.reponav-item:visited,
+.pagehead-tabs-item:visited {
+  color: #bbbbbb !important;
+}
+.reponav-item.selected,
+.pagehead-tabs-item.selected {
+  background-color: #202020 !important;
+  border-color: #202020 #094352 none !important;
+}
+.site-footer-links * {
+  color: #bbbbbb !important;
+}
+.Box-row--focus-gray.navigation-focus {
+  background-color: #202020 !important;
+  color: #bbbbbb !important;
+}
+.js-directory-link {
+  color: #bbbbbb !important;
+}
+.js-site-search-form input,
+.js-chromeless-input-container {
+  background-color: #202020 !important;
+  border-color: #202020 !important;
+}
+a.label {
+  color: #bbbbbb !important;
+  filter: opacity(75%);
+}
+.notifications-list a {
+  color: #bbbbbb !important;
+}
+.notifications-list li {
+  background-color: #202020 !important;
+}
+.octicon-repo {
+  color: #bbbbbb !important;
+}
+.type-icon-state-closed {
+  color: rgba(255,54,43,0.65) !important;
+}
+.type-icon-state-merged {
+  color: #bbbbbb !important;
+}
+.type-icon-state-open {
+  color: rgba(205,212,0,0.65) !important;
+}
+.octicon-alert {
+  color: #bbbbbb !important;
+}
+.octicon-x {
+  color: #bbbbbb !important;
+}
+.octicon-check {
+  color: #bbbbbb !important;
+}
+.octicon-primitive-dot {
+  color: #bbbbbb !important;
+}
+.octicon-clippy {
+  color: #bbbbbb !important;
+}
+.octicon-diff {
+  color: #bbbbbb !important;
+}
+.octicon-markdown {
+  color: #bbbbbb !important;
+}
+.orghead {
+  background-color: #202020 !important;
+  border-color: #202020 !important;
+  border-bottom: 0px !important;
+  color: #bbbbbb !important;
+}
+.org-name {
+  color: #bbbbbb !important;
+}
+.pagehead.orghead {
+  background-color: #202020 !important;
+}
+.outline-box-highlighted {
+  background-color: #202020 !important;
+  color: #bbbbbb !important;
+}
+.pagination .current {
+  background-color: #202020 !important;
+  color: #bbbbbb !important;
+}
+.pagination .disabled {
+  background-color: #202020 !important;
+  color: #bbbbbb !important;
+}
+.pagination .disabled:hover {
+  background-color: #202020 !important;
+}
+.pagination .gap {
+  background-color: #202020 !important;
+  color: #bbbbbb !important;
+}
+.pagination a {
+  background-color: #202020 !important;
+  border-color: #202020 !important;
+  color: #bbbbbb !important;
+}
+.pagination a:hover {
+  background-color: #202020 !important;
+  color: #bbbbbb !important;
+}
+.empty-cell,
+.diffbar {
+  background-color: #202020 !important;
+}
+.merge-status-item {
+  background-color: #202020 !important;
+}
+.merge-message {
+  background-color: #202020 !important;
+}
+.pr-toolbar {
+  background-color: #202020 !important;
+}
+.review-thread-reply {
+  background-color: #202020 !important;
+}
+.review-thread-reply .inline-comment-form {
+  background-color: #202020 !important;
+}
+.merged.octicon,
+.octicon-git-merge {
+  color: #bbbbbb !important;
+}
+.uploaded-files {
+  background-color: #202020 !important;
+}
+.upload-progress {
+  background-color: #202020 !important;
+  box-shadow: 1px 0px 0px #073642 inset;
+}
+#readme .plain {
+  background-color: #202020 !important;
+}
+.markdown-body,
+.markdown-body table * {
+  background-color: #202020 !important;
+  border-color: #202020 !important;
+  color: #bbbbbb !important;
+}
+.markdown-body a,
+.markdown-body table * a {
+  color: #bbbbbb !important;
+}
+.markdown-body code,
+.markdown-body table * code,
+.markdown-body pre,
+.markdown-body table * pre {
+  background-color: #202020 !important;
+}
+.markdown-body hr,
+.markdown-body table * hr {
+  background-color: #202020 !important;
+}
+.markdown-body img,
+.markdown-body table * img {
+  background-color: #202020 !important;
+}
+.task-list-item.hovered {
+  background-color: #202020 !important;
+}
+.range-editor {
+  background-color: #202020 !important;
+}
+.compare-pr-placeholder {
+  background-color: #202020 !important;
+}
+ul.comparison-list > li.title {
+  background-color: #202020 !important;
+}
+ul.comparison-list {
+  background-color: #202020 !important;
+}
+.repository-description {
+  color: #bbbbbb !important;
+}
+.repository-meta .edit-repository-meta label {
+  color: #bbbbbb !important;
+}
+.pagehead.repohead {
+  background-color: #202020 !important;
+}
+.repository-content .RecentBranches {
+  background-color: #202020 !important;
+  border-color: #202020 !important;
+}
+.repohead-details-container a {
+  color: #bbbbbb !important;
+}
+.select-menu-modal {
+  border-color: #202020 !important;
+}
+.select-menu-modal * {
+  color: #bbbbbb !important;
+}
+.select-menu-header,
+.select-menu-header * {
+  background-color: #202020 !important;
+  color: #bbbbbb !important;
+  text-shadow: none !important;
+}
+.select-menu-item {
+  background-color: #202020 !important;
+}
+.select-menu-item.navigation-focus,
+.select-menu-item.navigation-focus.selected,
+.select-menu-item.navigation-focus.select-menu-action,
+.select-menu-item-text.navigation-focus {
+  background-color: #202020 !important;
+  color: #bbbbbb !important;
+}
+.repository-sidebar {
+  background-color: #202020 !important;
+}
+.thread-subscription-status {
+  background-color: #202020 !important;
+}
+.sunken-menu {
+  background-image: none !important;
+  box-shadow: 1px 0px 0px #073642 inset;
+}
+.sunken-menu:before {
+  background-image: none !important;
+}
+.sunken-menu:after {
+  background-image: none !important;
+}
+.sunken-menu-item {
+  border-color: #202020 !important;
+}
+.sunken-menu-item.selected {
+  background-color: #202020 !important;
+  border-color: #202020 !important;
+  color: #bbbbbb !important;
+}
+.sunken-menu-item.selected:after {
+  background-color: #202020 !important;
+}
+.sunken-menu-separator:before {
+  background-image: none !important;
+}
+.state {
+  color: #bbbbbb !important;
+}
+.state-closed {
+  background-color: #202020 !important;
+}
+.state-open {
+  background-color: #202020 !important;
+}
+.subnav-item {
+  color: #bbbbbb !important;
+}
+.subnav-item:hover {
+  background-color: #202020 !important;
+}
+.subnav-item:visited {
+  color: #bbbbbb !important;
+}
+.subnav-item.selected {
+  background-color: #202020 !important;
+}
+.subnav-links a:hover {
+  background-color: #202020 !important;
+}
+.subnav-search input {
+  border-color: #202020 !important;
+}
+.right .tabnav-extra {
+  color: #bbbbbb !important;
+}
+a.tabnav-tab,
+.tabnav-tab {
+  border-color: none !important;
+  color: #bbbbbb !important;
+}
+a.tabnav-tab.selected,
+.tabnav-tab.selected {
+  background-color: #202020 !important;
+  background-image: none !important;
+  border-color: #202020 !important;
+  color: #bbbbbb !important;
+}
+.table-list tr,
+.table-list li {
+  background-color: #202020 !important;
+}
+.table-list tr:hover,
+.table-list li:hover {
+  background-color: #202020 !important;
+}
+.table-list-header {
+  background-color: #202020 !important;
+}
+.text-pending {
+  color: #bbbbbb !important;
+}
+.text-pending .octicon-primitive-dot {
+  color: #bbbbbb !important;
+}
+.text-red {
+  color: #bbbbbb !important;
+}
+.timeline-commits .commit-meta {
+  background-color: #202020 !important;
+}
+.timeline-commits .commit-meta .commit-id {
+  color: #bbbbbb !important;
+}
+.topic-tag.topic-tag-link {
+  background-color: #202020 !important;
+  color: #bbbbbb !important;
+}
+.underline-nav-item {
+  color: #bbbbbb !important;
+}
+.underline-nav-item.selected {
+  border-bottom-color: #dc322f !important;
+  color: #bbbbbb !important;
+}
+.user-profile-nav {
+  background-color: #202020 !important;
+  border-color: #202020 !important;
+}
+.user-profile-sticky-bar:after {
+  background-color: #202020 !important;
+  border-color: #202020 !important;
+}
+.graphs .area {
+  fill: #202020;
+}
+.summary-stats li .num {
+  color: #bbbbbb !important;
+}
+.viz {
+  background-color: #202020 !important;
+}
+.facebox-popup {
+  color: #bbbbbb !important;
+  background-color: #202020 !important;
+}
+.facebox-popup .octicon {
+  color: #bbbbbb !important;
+}
+.facebox-popup .owner-select-target {
+  color: #bbbbbb !important;
+  background-color: #202020 !important;
+}
+.facebox-popup .owner-select-target:hover {
+  background-color: #202020 !important;
+}
+.suggester {
+  background-color: #202020 !important;
+}
+.suggester li.navigation-focus {
+  background-color: #202020 !important;
+}
+.menu {
+  background-color: #202020 !important;
+}
+.menu-item.selected {
+  background-color: #202020 !important;
+}
+.menu-item:hover {
+  background-color: #202020 !important;
+}
+.Box {
+  background-color: #202020 !important;
+}
+.Box-header {
+  background-color: #202020 !important;
+}
+svg > * text {
+  color: #bbbbbb !important;
+  fill: #202020 !important;
+}
+.insertions {
+  color: #bbbbbb !important;
+}
+.deletions {
+  color: #bbbbbb !important;
+}
+.sfbgg {
+  background-color: #202020 !important;
+}
+.sbib_a {
+  background: none !important;
+}
+input#lst-ib,
+#sb_ifc0.sbib_b,
+#gs_taif0 {
+  background: none !important;
+}
+#lst-ib,
+.sbsb_a {
+  background-color: #202020 !important;
+}
+.kpbb {
+  background-image: none !important;
+}
+#hdtbSum {
+  background-color: #202020 !important;
+}
+#hdtbMenus.hdtb-td-o {
+  background-color: #202020 !important;
+}
+#hdtb-tls.hdtb-tl {
+  background-image: none !important;$
+}
+#hdtb-tls.hdtb-tl.hdtb-tl-sel {
+  background-image: none !important;$
+}
+#abar_button_opt.ab_button {
+  background: none !important;
+}
+#appbar {
+  background-color: #202020 !important;
+}
+cite {
+  color: #bbbbbb !important;
+}
+.ab_dropdown {
+  background-color: #202020 !important;
+}
+div.crp {
+  background-color: #202020 !important;
+}
+#fbar {
+  background-color: #202020 !important;
+}
+tr.Even {
+  background-color: #202020 !important;
+}
+.BigQuote {
+  background-color: #202020 !important;
+  color: #bbbbbb !important;
+}
+.Cat1HL {
+  background-color: #202020 !important;
+  color: #bbbbbb !important;
+}
+.Cat2HL {
+  background-color: #202020 !important;
+}
+.Cat3HL {
+  background-color: #202020 !important;
+}
+.FeatureByline {
+  background-color: #202020 !important;
+  border: none !important;
+}
+.Headline {
+  background-color: #202020 !important;
+}
+.QuotedText {
+  color: #bbbbbb !important;
+}
+DIV.GAByline {
+  background-color: #202020 !important;
+  border: none !important;
+}
+table.OddEven tr:nth-child(even) {
+  background-color: #202020 !important;
+}
+table.OddEven tr:nth-child(odd) {
+  background-color: #202020 !important;
+}
+DIV.CommentBox {
+  border-color: #202020 !important;
+}
+DIV.CommentBox P.CommentTitle {
+  background-color: #202020 !important;
+}
+#menu,
+.topnav-container {
+  background-color: #202020 !important;
+}
+.navmenu ul {
+  background-color: #202020 !important;
+}
+body * {
+  border-color: #202020 !important;
+}
+#content {
+  background-color: #202020 !important;
+  color: #bbbbbb !important;
+}
+#mw-head,
+#mw-panel {
+  background-color: #202020 !important;
+  color: #bbbbbb !important;
+}
+#mw-head div.portal,
+#mw-panel div.portal {
+  background-image: none !important;
+}
+#mw-head {
+  background-color: #202020 !important;
+  background-image: none !important;
+}
+#mw-panel,
+#p-logo {
+  background-image: none !important;
+}
+div.vectorTabs {
+  background-image: none !important;
+}
+div.vectorTabs ul {
+  background-image: none !important;
+}
+div.vectorTabs ul li {
+  background-color: #202020 !important;
+  background-image: none !important;
+  padding: 0px 1px 0px 1px !important;
+}
+div.vectorTabs span {
+  background-color: #202020 !important;
+  background-image: none !important;
+}
+div.vectorTabs li.selected,
+div.vectorTabs li.selected span {
+  background-color: none !important;
+  background-image: none !important;
+}
+.mw-wiki-logo {
+  filter: opacity(50%);
+}
+div#simpleSearch #searchInput {
+  background-color: #202020 !important;
+  padding: 0.05em 0px 0.2em 0.2em !important;
+}
+.ambox,
+.infobox,
+#toc,
+#toctitle,
+.toclevel-1 {
+  background-color: #202020 !important;
+  border-color: #202020 !important;
+  color: #bbbbbb !important;
+}
+.catlinks {
+  background-color: #202020 !important;
+  border-color: #202020 !important;
+  color: #bbbbbb !important;
+}
+.navbox {
+  background-color: #202020 !important;
+  border-color: #202020 !important;
+  color: #bbbbbb !important;
+}
+.navbox .th,
+.navbox .navbox-title {
+  background-color: #202020 !important;
+}
+.navbox-abovebelow,
+th.navbox-group,
+.navbox-subgroup,
+.navbox-title {
+  background-color: #202020 !important;
+}
+.navbox-even {
+  background-color: #202020 !important;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  border-color: #202020 !important;
+  color: #b8ddea !important;
+}
+code {
+  background-color: #202020 !important;
+  border-color: #202020 !important;
+  color: #bbbbbb !important;
+}
+div.thumbinner {
+  background-color: #202020 !important;
+  border-color: #202020 !important;
+}
+img {
+  filter: opacity(75%);
+}
+img:hover {
+  filter: opacity(100%);
+}
+img.thumbimage {
+  border-color: #202020 !important;
+}
+.mw-body .external {
+  opacity: 0.5 !important;
+}
+table.wikitable {
+  background-color: #202020 !important;
+  border-color: #202020 !important;
+  color: #bbbbbb !important;
+}
+table.wikitable > * > tr > th {
+  background-color: #202020 !important;
+}
+table {
+  background-color: #202020 !important;
+}
+#hnmain > tbody:nth-child(1) > tr:nth-child(1) > td:nth-child(1) > tbody:nth-child(1) > tr:nth-child(1) > td:nth-child(1) > table,
+#hnmain > tbody:nth-child(1) > tr:nth-child(1) > td:nth-child(1) > table {
+  background-color: #202020 !important;
+}
+#hnmain > tbody:nth-child(1) > tr:nth-child(1) > td:nth-child(1) > tbody:nth-child(1) > tr:nth-child(1) a,
+#hnmain > tbody:nth-child(1) > tr:nth-child(1) a {
+  color: #bbbbbb !important;
+}
+#hnmain > tbody:nth-child(1) > tr:nth-child(1) > td:nth-child(1) > tbody:nth-child(1) > tr:nth-child(2),
+#hnmain > tbody:nth-child(1) > tr:nth-child(2) {
+  background-color: #202020 !important;
+}
+#hnmain > tbody:nth-child(1) > tr:nth-child(2) {
+  background-color: #202020 !important;
+}
+.title a {
+  color: #bbbbbb !important;
+}
+.title a:visited {
+  color: #bbbbbb !important;
+}
+a.storylink {
+  color: #bbbbbb !important;
+  font-weight: bold;
+}
+.sitestr {
+  color: #bbbbbb !important;
+}
+#hnmain > tbody:nth-child(1) > tr:nth-child(3) > td:nth-child(1) {
+  background-color: #202020 !important;
+}
+#hnmain .comhead {
+  color: #bbbbbb !important;
+}
+#hnmain .c00 {
+  color: #bbbbbb !important;
+}
+#hnmain a.hnuser {
+  color: #bbbbbb !important;
+}
+#hnmain span.age a {
+  color: #bbbbbb !important;
+}
+.cdd {
+  color: rgba(255,54,43,0.65) !important;
+}
+.comment i {
+  color: #bbbbbb !important;
+}
+#hnmain > tbody:nth-child(1) > tr:nth-child(4) {
+  background-color: #202020 !important;
+}
+#hnmain > tbody:nth-child(1) > tr:nth-child(4) > td:nth-child(1) > table:nth-child(2) > tbody:nth-child(1) > tr:nth-child(1) > td:nth-child(1) {
+  background-color: #202020 !important;
+}
+div#page div#header {
+  background-color: #202020 !important;
+}
+div#page div#header a {
+  color: #bbbbbb !important;
+}
+.post {
+  background-color: #202020 !important;
+}
+.post * {
+  overflow: auto !important;
+}
+.post h2 {
+  background-color: #202020 !important;
+}
+.post h2 a {
+  color: #bbbbbb !important;
+}
+.post div.entry {
+  background-color: #202020 !important;
+  color: #bbbbbb !important;
+}
+.post div.entry blockquote {
+  background-color: #202020 !important;
+}
+.post div.entry kbd {
+  background-color: #202020 !important;
+  border-color: #202020 !important;
+  box-shadow: none !important;
+  color: #bbbbbb !important;
+  text-shadow: 0px 1px 0px #000 !important;
+}
+.post pre.mode-line {
+  overflow: visible !important;
+}
+#sr-header-area {
+  background-color: #202020 !important;
+}
+#sr-header-area .srdrop .selected {
+  color: #bbbbbb !important;
+}
+#sr-header-area #sr-more-link {
+  background-color: #202020 !important;
+}
+.link.promotedlink.promoted {
+  background-color: #202020 !important;
+}
+.link .usertext .md {
+  background-color: #202020 !important;
+}
+.linkinfo {
+  background-color: #202020 !important;
+}
+.linklisting .odd {
+  background-color: #202020 !important;
+}
+.thing .title {
+  color: #bbbbbb !important;
+}
+div.md {
+  color: #bbbbbb !important;
+}
+body.comment {
+  background-color: #202020 !important;
+}
+.commentarea > .usertext {
+  background-color: #202020 !important;
+}
+.commentarea .menuarea {
+  background-color: #202020 !important;
+}
+.comments-page .panestack-title {
+  background-color: #202020 !important;
+}
+.listing-chooser {
+  background-color: #202020 !important;
+}
+.listing-chooser .intro {
+  background-color: #202020 !important;
+  color: #bbbbbb !important;
+}
+.listing-chooser .grippy {
+  background-color: #202020 !important;
+}
+.listing-chooser .grippy:after {
+  border-right: none !important;
+}
+.listing-chooser li {
+  background-color: #202020 !important;
+}
+.listing-chooser li.selected {
+  background-color: #202020 !important;
+  box-shadow: none;
+}
+.listing-chooser li a {
+  color: #bbbbbb !important;
+}
+.listing-chooser li a .description {
+  color: #bbbbbb !important;
+}
+.titlebox {
+  background-color: #202020 !important;
+}
+.titlebox form.toggle {
+  background-color: #202020 !important;
+  color: #bbbbbb !important;
+}
+.side .usertext-body .md {
+  background-color: #202020 !important;
+}
+.side {
+  background-color: #202020 !important;
+}
+.sidebox .spacer {
+  background-color: #202020 !important;
+  color: #bbbbbb !important;
+}
+.tabmenu li a {
+  background-color: #202020 !important;
+}
+#header-bottom-right {
+  background-color: #202020 !important;
+}
+.morelink .nub {
+  background-color: #202020 !important;
+}
+* {
+  border-color: #202020 !important;
+}
+a {
+  color: #bbbbbb !important;
+}
+a:visited {
+  color: #bbbbbb !important;
+}
+body {
+  background-color: #202020 !important;
+  color: #bbbbbb !important;
+}
+html {
+  background-color: #202020 !important;
+}
+input,
+textarea {
+  background-color: #202020 !important;
+  color: #bbbbbb !important;
+}
+tr:hover,
+blockquote,
+pre {
+  background-color: #202020 !important;
+  color: #bbbbbb !important;
+}
+#toolMenu li {
+  background-color: #202020 !important;
+}
+.navPanel,
+.navIntraTool {
+  background-color: #202020 !important;
+}
+.instruction,
+.sakaiCopyrightInfo {
+  color: #bbbbbb !important;
+}
+.listHier th {
+  background-color: #202020 !important;
+}
+ul.makeMenu {
+  background-color: #202020 !important;
+  border: 1px solid #094352 !important;
+}
+tr.external {
+  background-color: #202020 !important;
+}
+hr {
+  background-color: #202020 !important;
+  color: #bbbbbb !important;
+}
+.bounty-indicator,
+.bounty-indicator-tab {
+  background-color: #202020 !important;
+}
+.bottom-notice {
+  background-color: #202020 !important;
+}
+.comments-link {
+  color: #bbbbbb !important;
+}
+.page-numbers {
+  background-color: #202020 !important;
+  color: #bbbbbb !important;
+}
+.page-numbers.current {
+  background-color: #202020 !important;
+  color: #bbbbbb !important;
+}
+.post-menu a {
+  color: #bbbbbb !important;
+}
+.question-status {
+  background-color: #202020 !important;
+}
+.bg-black-050 {
+  background-color: none !important;
+}
+.val-info {
+  background-color: none !important;
+  color: #bbbbbb !important;
+}
+.s-label {
+  color: #bbbbbb !important;
+}
+pre code {
+  background-color: #202020 !important;
+  color: #bbbbbb !important;
+}
+pre code .atn {
+  color: #bbbbbb !important;
+}
+pre code .atv {
+  color: #bbbbbb !important;
+}
+pre code .com {
+  color: #bbbbbb !important;
+}
+pre code .kwd {
+  color: #bbbbbb !important;
+}
+pre code .lit {
+  color: #bbbbbb !important;
+}
+pre code .pln,
+pre code .pun {
+  color: #bbbbbb !important;
+}
+pre code .str {
+  color: #bbbbbb !important;
+}
+pre code .tag {
+  color: #bbbbbb !important;
+}
+pre code .typ {
+  color: #bbbbbb !important;
+}
+#footer {
+  background-color: #202020 !important;
+  color: #bbbbbb !important;
+}
+#footer #footer-sites th {
+  color: #bbbbbb !important;
+}
+.top-footer-links a {
+  color: #bbbbbb !important;
+}
+.so-header {
+  background-color: #202020 !important;
+  color: #bbbbbb !important;
+}
+.so-header a {
+  color: #bbbbbb !important;
+}
+.so-header .navigation .-list .-item :hover {
+  background-color: #202020 !important;
+  color: #bbbbbb !important;
+}
+.topbar-dialog {
+  background-color: #202020 !important;
+  box-shadow: #586e75 5px 5px 5px;
+}
+.topbar-dialog .current-site-container {
+  background-color: #202020 !important;
+}
+.topbar-dialog .header {
+  background-color: #202020 !important;
+}
+.topbar-dialog .header a {
+  color: #bbbbbb !important;
+}
+.topbar-dialog .site-link {
+  color: #bbbbbb !important;
+}
+#header {
+  background-color: #202020 !important;
+}
+#question-header .question-hyperlink {
+  color: #bbbbbb !important;
+}
+#hlogo a {
+  filter: opacity(75%);
+}
+.new-post-activity {
+  background-color: #202020 !important;
+}
+.tagged-interesting {
+  background-color: #202020 !important;
+}
+div.answered-accepted {
+  background-color: #202020 !important;
+  color: #bbbbbb !important;
+}
+div.answered-accepted .mini-counts {
+  background-color: #202020 !important;
+  color: #bbbbbb !important;
+}
+.answered .mini-counts span {
+  color: #bbbbbb !important;
+}
+.unanswered .mini-counts span {
+  color: #bbbbbb !important;
+}
+#hot-network-questions a {
+  color: #bbbbbb !important;
+}
+#hot-network-questions h4 a.js-gps-track {
+  color: #bbbbbb !important;
+}
+#sidebar .community-bulletin .bulletin-item-content a {
+  color: #bbbbbb !important;
+}
+#sidebar .module.community-bulletin {
+  background-color: #202020 !important;
+  color: #bbbbbb !important;
+}
+#sidebar .question-hyperlink {
+  color: #bbbbbb !important;
+}
+.newuser {
+  background-color: #202020 !important;
+  color: #bbbbbb !important;
+}
+.label-key {
+  color: #bbbbbb !important;
+}
+.label-key b {
+  color: #bbbbbb !important;
+}
+#h-chat-link {
+  color: #bbbbbb !important;
+}
+.ad502-room {
+  background-color: #202020 !important;
+  box-shadow: #586e75 0px 1px 3px;
+  color: #bbbbbb !important;
+}
+#tabs a {
+  background-color: none !important;
+  background-image: none !important;
+  color: #bbbbbb !important;
+}
+#tabs a.youarehere {
+  background-image: none !important;
+  color: #bbbbbb !important;
+}
+.post-tag {
+  background-color: #202020 !important;
+  color: #bbbbbb !important;
+}
+.post-tag::before {
+  background-color: #202020 !important;
+}
+a.comment-user.owner {
+  background-color: #202020 !important;
+  color: #bbbbbb !important;
+}
+.post-signature {
+  background-color: #202020 !important;
+  color: #bbbbbb !important;
+}
+.post-signature a {
+  color: #bbbbbb !important;
+}
+.post-signature.owner .user-info .user-details a {
+  color: #bbbbbb !important;
+}
+.post-signature span.relativetime {
+  color: #bbbbbb !important;
+}
+.vote {
+  background-color: #202020 !important;
+}
+.vote .star-off {
+  filter: opacity(75%);
+}
+.vote .star-on {
+  filter: opacity(50%) !important;
+}
+.vote .vote-down-off,
+.vote .vote-up-off {
+  filter: opacity(50%);
+}
+.answer-votes {
+  background-color: #202020 !important;
+  color: #bbbbbb !important;
+}
