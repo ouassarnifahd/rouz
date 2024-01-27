@@ -10,9 +10,10 @@ mouse=([$mLC]="playerctl -a previous"
 setmouse
 
 trap "trap - TERM; kill 0" INT TERM QUIT EXIT
-playerctl metadata -F -f '{{status}}: [{{duration(position)}}|{{duration(mpris:length)}}] {{default(xesam:albumArtist,artist)}} - {{xesam:title}}' 2>/dev/null | while read -r line; do
+playerctl metadata -F -f '{{status}}: {{default(xesam:albumArtist,artist)}} - {{xesam:title}}' 2>/dev/null | while read -r line; do
     status=${line/:*}
-    block[$bMSG]=${line/*: }
+    line_sed=$(echo "$line" | sed 's/  - / /')
+    block[$bMSG]=${line_sed/*: }
     block[$bICON]=""
     case $status in
         Playing)

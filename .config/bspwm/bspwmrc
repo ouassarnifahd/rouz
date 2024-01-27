@@ -6,7 +6,7 @@ xsetroot -cursor_name left_ptr
 . "${HOME}/.cache/wal/colors.sh"
 
 # start hotkeys daemon
-pgrep sxhkd || sxhkd -m 1 &
+pgrep -u `whoami` sxhkd || sxhkd -m 1 &
 
 MON=1
 NDES=12

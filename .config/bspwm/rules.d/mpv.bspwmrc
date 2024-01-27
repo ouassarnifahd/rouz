@@ -1,4 +1,5 @@
 #! /bin/sh
 
-bspc rule -a mpv:mpvnews  sticky=on state=floating layer=above
-bspc rule -a mpv:mpvfloat sticky=on state=floating layer=above
+bspc rule -a 'mpv:mpvnews'  sticky=on state=floating layer=above
+bspc rule -a 'mpv:mpvfloat' sticky=on state=floating layer=above
+bspc rule -a 'mpv:*' state=floating layer=above

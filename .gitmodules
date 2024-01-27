@@ -73,3 +73,9 @@
 [submodule ".local/src/cproc"]
 	path = .local/src/cproc
 	url = https://git.sr.ht/~mcf/cproc
+[submodule ".local/src/ytdl-mpv"]
+	path = .local/src/ytdl-mpv
+	url = https://github.com/andros21/ytdl-mpv
+[submodule ".local/src/magic-tape"]
+	path = .local/src/magic-tape
+	url = https://gitlab.com/christosangel/magic-tape

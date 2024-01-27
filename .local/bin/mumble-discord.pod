@@ -1,0 +1,25 @@
+#!/usr/bin/env sh
+
+
+BOT="OTE2MzE3NTA5MTA2NDIxODIy.YaoZLg.55AcqQs7TNNo1yquPeOaPIlx2BQ"
+GUILD="859155522800189461"
+CHANNEL="882381881558065202"
+
+HOST="mumble.stalkers.work.gd"
+PORT="443"
+PASS="tikchbila.tiwliwla"
+
+# clean
+podman stop mumble-discord;
+podman rm mumble-discord;
+
+# start
+ podman run -it --name mumble-discord --restart=always -v ~/.mumble:/mumble:ro \
+     -e MUMBLE_ADDRESS=$HOST -e MUMBLE_PORT=$PORT -e MUMBLE_PASSWORD=$PASS \
+     -e MUMBLE_CERTIFICATE="/mumble/bridge.pem" -e MUMBLE_INSECURE=false \
+     -e MUMBLE_USERNAME="TkTw.Poste1" -e MUMBLE_CHANNEL="/TKTw/Poste1" \
+     -e DEBUG_LEVEL=3 -e MODE=auto \
+     -e DISCORD_DISABLE_TEXT=true -e DISCORD_DISABLE_BOT_STATUS=true \
+     -e DISCORD_TOKEN=$BOT -e DISCORD_COMMAND=mum \
+     -e DISCORD_GID=$GUILD -e DISCORD_CID=$CHANNEL \
+     -d docker.io/stieneee/mumble-discord-bridge:latest

@@ -1,32 +1,47 @@
 # 1. Specify the path to wine(64)
 #    This can be either system-wide or a custom installation
-WINE="/usr/share/steam/compatibilitytools.d/proton-ge-custom/files/bin/wine64"
-#WINE="/usr/share/steam/compatibilitytools.d/proton-6.16-GE-1/files/bin/wine64"
-#WINE="/usr/share/steam/compatibilitytools.d/proton-6.13-GE-1/files/bin/wine64"
-#WINE="/archive/games/SteamLibrary/steamapps/common/Proton 6.3/dist/bin/wine64"
+WINE="/usr/share/steam/compatibilitytools.d/proton-ge-custom/files/bin/wine"
 
 #RESOLUTION=1920x1080
-
 #LANG=C
 
 # get the right wine libs
-winebindir=$(dirname $WINE)
+WINEBINDIR=$(dirname $WINE)
 
 if [ -z "$PATH" ]; then
-  PATH="$winebindir"
+  PATH="$WINEBINDIR"
 else
-  PATH="$winebindir:$PATH"
+  PATH="$WINEBINDIR:$PATH"
 fi
 
 if [ -z "$LD_LIBRARY_PATH" ]; then
-  LD_LIBRARY_PATH="$winebindir/../lib64:$winebindir/../lib:$winebindir/../lib32"
+  LD_LIBRARY_PATH="$WINEBINDIR/../lib64:$WINEBINDIR/../lib:$WINEBINDIR/../lib32"
 else
-  LD_LIBRARY_PATH="$winebindir/../lib64:$winebindir/../lib:$winebindir/../lib32:$LD_LIBRARY_PATH"
+  LD_LIBRARY_PATH="$WINEBINDIR/../lib64:$WINEBINDIR/../lib:$WINEBINDIR/../lib32:$LD_LIBRARY_PATH"
 fi
+
+# append dll paths to WINEDLLPATH
+appendwinepath() {
+        case ":$WINEDLLPATH:" in
+                *:"$1":*)
+                        ;;
+                *)
+                        WINEDLLPATH="${WINEDLLPATH:+$WINEDLLPATH:}$1"
+        esac
+}
+appendwinepath '/usr/lib/discord-rpc-wine/i686'
+
+unset appendwinepath
+export WINEDLLPATH
+
+## Uncomment the following line to always use the dll override
+## This might break some games as not everything is implemented in this discord-rpc implementation
+# export WINEDLLOVERRIDES="${WINEDLLOVERRIDES:+$WINEDLLOVERRIDES;}discord-rpc=b"
 
 export vblank_mode=0
 export __GL_SYNC_TO_VBLANK=0
 
+# FIXME log to file
 export ENABLE_VKBASALT=1
 export VKBASALT_LOG_FILE="vkBasalt.log"
 
@@ -38,7 +53,7 @@ export WINEDEBUG=fixme-all,err-all
 export WINEPREFIX="/home/archer/.local/share/wineprefixes/dxvk"
 
 # 2. Create or update WINEPREFIX
-#"$WINE" wineboot -u
+"$WINE" wineboot -u
 
 # [3. Install DXVK (v1.9.0, for Wine 5.14+)]
 #    Use the newest Winetricks script from GitHub

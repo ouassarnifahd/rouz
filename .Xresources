@@ -5,6 +5,8 @@ Xft*hintstyle: hintfull
 Xft*hinting:   1
 Xft*antialias: 1
 Xft*dpi:       96
+!Xft*dpi:       72
+!Xft*dpi:       107
 Xft*rgba:      rgb
 
 Xcursor*theme: captaine-cursors
@@ -14,5 +16,5 @@ Xcursor*size:  16
 *pixelsize: 16
 ! *font: xft:Hack\ Nerd\ Font\ Mono:Regular, xft:Noto\ Sans\ Mono\ CJK\ JP:Regular, xft:Noto\ Color\ Emoji:Regular
 *font: xft:Noto\ Sans\ Mono\ CJK\ JP:Regular
-! st*alpha: 0.6
+st*alpha: 0.6
 ! st*alphaUnfocussed: 0.3

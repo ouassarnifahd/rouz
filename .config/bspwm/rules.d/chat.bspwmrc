@@ -1,5 +1,15 @@
 #! /bin/sh
 
-bspc rule -a Ferdi desktop='^12'
-bspc rule -a discord desktop='^12'
-bspc rule -a ripcord desktop='^12'
+bspc rule -a Ferdi desktop='^6'
+
+bspc rule -a discord desktop='^6'
+
+bspc rule -a "ripcord:*" desktop='^6' state=pseudo_tiled
+bspc rule -a "ripcord:*:Ripcord Voice Chat" state=floating sticky=on
+bspc rule -a "ripcord:*:Discord Servers" state=floating
+bspc rule -a "ripcord:*:Discord Games" state=floating
+bspc rule -a "ripcord:*:Preferences" state=floating
+
+bspc rule -a Mumble:* state=floating
+
+bspc rule -a Pidgin:* state=floating

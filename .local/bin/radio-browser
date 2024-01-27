@@ -12,7 +12,7 @@ RADIO_SEARCH_PROMPT='RadioBrowser> '
 RADIO_SEARCH_LIMIT='5000'
 RADIO_SEARCH_SORTBY='votes'
 
-RADIO_BROWSER_URL='https://www.radio-browser.info/webservice'
+RADIO_BROWSER_URL='https://de1.api.radio-browser.info/'
 
 RADIO_DATA_FORMAT=( 'json' 'xml' 'm3u' 'pls' 'xspf' 'ttl' )
 RADIO_DATA_LISTS=( 'countrycodes' 'codecs' 'states' 'languages' 'tags' )

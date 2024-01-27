@@ -1,8 +1,8 @@
 #! /bin/echo this file should be called by iceblocks
 
 # params
-block=([$bPOS]="S0R1" [$bUPDATE]="60"  [$bICON]="")
-mouse=([$mLC]='sh ./newspanel')
+#block=([$bPOS]="S0R1" [$bUPDATE]="60"  [$bICON]="")
+#mouse=([$mLC]='sh ./newspanel')
 
 # TODO add this in script to .local/bin
 [ -f newspanel ] || {
